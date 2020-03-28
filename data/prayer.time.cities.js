@@ -1,0 +1,5341 @@
+const cities = [{
+    "IlceAdi": "AALSMEER",
+    "IlceAdiEn": "AALSMEER",
+    "IlceID": "19013"
+}, {
+    "IlceAdi": "AALTEN",
+    "IlceAdiEn": "AALTEN",
+    "IlceID": "13908"
+}, {
+    "IlceAdi": "ABCOUDE",
+    "IlceAdiEn": "ABCOUDE",
+    "IlceID": "13717"
+}, {
+    "IlceAdi": "ALBERGEN",
+    "IlceAdiEn": "ALBERGEN",
+    "IlceID": "13733"
+}, {
+    "IlceAdi": "ALBLASSERDAM",
+    "IlceAdiEn": "ALBLASSERDAM",
+    "IlceID": "13822"
+}, {
+    "IlceAdi": "ALKMAAR",
+    "IlceAdiEn": "ALKMAAR",
+    "IlceID": "13882"
+}, {
+    "IlceAdi": "ALMELO",
+    "IlceAdiEn": "ALMELO",
+    "IlceID": "13715"
+}, {
+    "IlceAdi": "ALMERE-HAVEN",
+    "IlceAdiEn": "ALMERE-HAVEN",
+    "IlceID": "13902"
+}, {
+    "IlceAdi": "ALMERE-STAD",
+    "IlceAdiEn": "ALMERE-STAD",
+    "IlceID": "13906"
+}, {
+    "IlceAdi": "ALPHEN AAN DEN RIJN",
+    "IlceAdiEn": "ALPHEN AAN DEN RIJN",
+    "IlceID": "13909"
+}, {
+    "IlceAdi": "AMERSFOORT",
+    "IlceAdiEn": "AMERSFOORT",
+    "IlceID": "13876"
+}, {
+    "IlceAdi": "AMSTELVEEN",
+    "IlceAdiEn": "AMSTELVEEN",
+    "IlceID": "13718"
+}, {
+    "IlceAdi": "AMSTERDAM",
+    "IlceAdiEn": "AMSTERDAM",
+    "IlceID": "13976"
+}, {
+    "IlceAdi": "APELDOORN",
+    "IlceAdiEn": "APELDOORN",
+    "IlceID": "13895"
+}, {
+    "IlceAdi": "APPINGEDAM",
+    "IlceAdiEn": "APPINGEDAM",
+    "IlceID": "13789"
+}, {
+    "IlceAdi": "ARNHEM",
+    "IlceAdiEn": "ARNHEM",
+    "IlceID": "13894"
+}, {
+    "IlceAdi": "ASSEN",
+    "IlceAdiEn": "ASSEN",
+    "IlceID": "13910"
+}, {
+    "IlceAdi": "BAARN",
+    "IlceAdiEn": "BAARN",
+    "IlceID": "13911"
+}, {
+    "IlceAdi": "BARENDRECHT",
+    "IlceAdiEn": "BARENDRECHT",
+    "IlceID": "13823"
+}, {
+    "IlceAdi": "BARNEVELD",
+    "IlceAdiEn": "BARNEVELD",
+    "IlceID": "13912"
+}, {
+    "IlceAdi": "BEDUM",
+    "IlceAdiEn": "BEDUM",
+    "IlceID": "13790"
+}, {
+    "IlceAdi": "BEEK",
+    "IlceAdiEn": "BEEK",
+    "IlceID": "13798"
+}, {
+    "IlceAdi": "BEILEN",
+    "IlceAdiEn": "BEILEN",
+    "IlceID": "13862"
+}, {
+    "IlceAdi": "BEMMEL",
+    "IlceAdiEn": "BEMMEL",
+    "IlceID": "13812"
+}, {
+    "IlceAdi": "BERG EN DAL",
+    "IlceAdiEn": "BERG EN DAL",
+    "IlceID": "13813"
+}, {
+    "IlceAdi": "BERGEN OP ZOOM",
+    "IlceAdiEn": "BERGEN OP ZOOM",
+    "IlceID": "13888"
+}, {
+    "IlceAdi": "BEST",
+    "IlceAdiEn": "BEST",
+    "IlceID": "13769"
+}, {
+    "IlceAdi": "BEUNINGEN",
+    "IlceAdiEn": "BEUNINGEN",
+    "IlceID": "13814"
+}, {
+    "IlceAdi": "BEVERWIJK",
+    "IlceAdiEn": "BEVERWIJK",
+    "IlceID": "13873"
+}, {
+    "IlceAdi": "BILTHOVEN",
+    "IlceAdiEn": "BILTHOVEN",
+    "IlceID": "13913"
+}, {
+    "IlceAdi": "BLERICK",
+    "IlceAdiEn": "BLERICK",
+    "IlceID": "13854"
+}, {
+    "IlceAdi": "BODEGRAVEN",
+    "IlceAdiEn": "BODEGRAVEN",
+    "IlceID": "13843"
+}, {
+    "IlceAdi": "BORNE",
+    "IlceAdiEn": "BORNE",
+    "IlceID": "13782"
+}, {
+    "IlceAdi": "BOSKOOP",
+    "IlceAdiEn": "BOSKOOP",
+    "IlceID": "13844"
+}, {
+    "IlceAdi": "BOXMEER",
+    "IlceAdiEn": "BOXMEER",
+    "IlceID": "13747"
+}, {
+    "IlceAdi": "BOXTEL",
+    "IlceAdiEn": "BOXTEL",
+    "IlceID": "13704"
+}, {
+    "IlceAdi": "BREDA",
+    "IlceAdiEn": "BREDA",
+    "IlceID": "13887"
+}, {
+    "IlceAdi": "BRESKENS",
+    "IlceAdiEn": "BRESKENS",
+    "IlceID": "13807"
+}, {
+    "IlceAdi": "BRIELLE",
+    "IlceAdiEn": "BRIELLE",
+    "IlceID": "13824"
+}, {
+    "IlceAdi": "BRUMMEN",
+    "IlceAdiEn": "BRUMMEN",
+    "IlceID": "13764"
+}, {
+    "IlceAdi": "BRUNSSUM",
+    "IlceAdiEn": "BRUNSSUM",
+    "IlceID": "13799"
+}, {
+    "IlceAdi": "BUNNIK",
+    "IlceAdiEn": "BUNNIK",
+    "IlceID": "13845"
+}, {
+    "IlceAdi": "BUNSCHOTEN",
+    "IlceAdiEn": "BUNSCHOTEN",
+    "IlceID": "13846"
+}, {
+    "IlceAdi": "BUSSUM",
+    "IlceAdiEn": "BUSSUM",
+    "IlceID": "13719"
+}, {
+    "IlceAdi": "BUURSE",
+    "IlceAdiEn": "BUURSE",
+    "IlceID": "13783"
+}, {
+    "IlceAdi": "CAPELLE AAN DEN LJSSEL",
+    "IlceAdiEn": "CAPELLE AAN DEN LJSSEL",
+    "IlceID": "13914"
+}, {
+    "IlceAdi": "CASTRICUM",
+    "IlceAdiEn": "CASTRICUM",
+    "IlceID": "13915"
+}, {
+    "IlceAdi": "COEVORDEN",
+    "IlceAdiEn": "COEVORDEN",
+    "IlceID": "13863"
+}, {
+    "IlceAdi": "CUIJK",
+    "IlceAdiEn": "CUIJK",
+    "IlceID": "13816"
+}, {
+    "IlceAdi": "CULEMBORG",
+    "IlceAdiEn": "CULEMBORG",
+    "IlceID": "13916"
+}, {
+    "IlceAdi": "DALFSEN",
+    "IlceAdiEn": "DALFSEN",
+    "IlceID": "13864"
+}, {
+    "IlceAdi": "DE BILT",
+    "IlceAdiEn": "DE BILT",
+    "IlceID": "13917"
+}, {
+    "IlceAdi": "DE KRIM",
+    "IlceAdiEn": "DE KRIM",
+    "IlceID": "13866"
+}, {
+    "IlceAdi": "DEDEMSVAART",
+    "IlceAdiEn": "DEDEMSVAART",
+    "IlceID": "13865"
+}, {
+    "IlceAdi": "DELFT",
+    "IlceAdiEn": "DELFT",
+    "IlceID": "13874"
+}, {
+    "IlceAdi": "DELFZIJL",
+    "IlceAdiEn": "DELFZIJL",
+    "IlceID": "13791"
+}, {
+    "IlceAdi": "DEN DOLDER",
+    "IlceAdiEn": "DEN DOLDER",
+    "IlceID": "13740"
+}, {
+    "IlceAdi": "DEN HAAG",
+    "IlceAdiEn": "DEN HAAG",
+    "IlceID": "13977"
+}, {
+    "IlceAdi": "DEN HELDER",
+    "IlceAdiEn": "DEN HELDER",
+    "IlceID": "13714"
+}, {
+    "IlceAdi": "DENEKAMP",
+    "IlceAdiEn": "DENEKAMP",
+    "IlceID": "13735"
+}, {
+    "IlceAdi": "DEURNE",
+    "IlceAdiEn": "DEURNE",
+    "IlceID": "13770"
+}, {
+    "IlceAdi": "DEVENTER",
+    "IlceAdiEn": "DEVENTER",
+    "IlceID": "13974"
+}, {
+    "IlceAdi": "DIEMEN",
+    "IlceAdiEn": "DIEMEN",
+    "IlceID": "13720"
+}, {
+    "IlceAdi": "DIEREN",
+    "IlceAdiEn": "DIEREN",
+    "IlceID": "13749"
+}, {
+    "IlceAdi": "DIJK",
+    "IlceAdiEn": "DIJK",
+    "IlceID": "13855"
+}, {
+    "IlceAdi": "DODEWAARD",
+    "IlceAdiEn": "DODEWAARD",
+    "IlceID": "13817"
+}, {
+    "IlceAdi": "DOESBURG",
+    "IlceAdiEn": "DOESBURG",
+    "IlceID": "13750"
+}, {
+    "IlceAdi": "DOETINCHEM",
+    "IlceAdiEn": "DOETINCHEM",
+    "IlceID": "13918"
+}, {
+    "IlceAdi": "DOKKUM",
+    "IlceAdiEn": "DOKKUM",
+    "IlceID": "13792"
+}, {
+    "IlceAdi": "DONGEN",
+    "IlceAdiEn": "DONGEN",
+    "IlceID": "13892"
+}, {
+    "IlceAdi": "DORDRECHT",
+    "IlceAdiEn": "DORDRECHT",
+    "IlceID": "13889"
+}, {
+    "IlceAdi": "DRACHTEN",
+    "IlceAdiEn": "DRACHTEN",
+    "IlceID": "13919"
+}, {
+    "IlceAdi": "DRIEBERGEN-RIJSENBURG",
+    "IlceAdiEn": "DRIEBERGEN-RIJSENBURG",
+    "IlceID": "17805"
+}, {
+    "IlceAdi": "DRONTEN",
+    "IlceAdiEn": "DRONTEN",
+    "IlceID": "13920"
+}, {
+    "IlceAdi": "DRUNEN",
+    "IlceAdiEn": "DRUNEN",
+    "IlceID": "18952"
+}, {
+    "IlceAdi": "DRUTEN",
+    "IlceAdiEn": "DRUTEN",
+    "IlceID": "13818"
+}, {
+    "IlceAdi": "EBERGEN",
+    "IlceAdiEn": "EBERGEN",
+    "IlceID": "13784"
+}, {
+    "IlceAdi": "EDE",
+    "IlceAdiEn": "EDE",
+    "IlceID": "13709"
+}, {
+    "IlceAdi": "EERBEEK",
+    "IlceAdiEn": "EERBEEK",
+    "IlceID": "13710"
+}, {
+    "IlceAdi": "EINDHOVEN",
+    "IlceAdiEn": "EINDHOVEN",
+    "IlceID": "13978"
+}, {
+    "IlceAdi": "ELST",
+    "IlceAdiEn": "ELST",
+    "IlceID": "13815"
+}, {
+    "IlceAdi": "EMMELOORD",
+    "IlceAdiEn": "EMMELOORD",
+    "IlceID": "13921"
+}, {
+    "IlceAdi": "EMMEN",
+    "IlceAdiEn": "EMMEN",
+    "IlceID": "13880"
+}, {
+    "IlceAdi": "ENGELAND",
+    "IlceAdiEn": "ENGELAND",
+    "IlceID": "13742"
+}, {
+    "IlceAdi": "ENKHUIZEN",
+    "IlceAdiEn": "ENKHUIZEN",
+    "IlceID": "13705"
+}, {
+    "IlceAdi": "ENSCHEDE",
+    "IlceAdiEn": "ENSCHEDE",
+    "IlceID": "13883"
+}, {
+    "IlceAdi": "EPE",
+    "IlceAdiEn": "EPE",
+    "IlceID": "13743"
+}, {
+    "IlceAdi": "EPEN",
+    "IlceAdiEn": "EPEN",
+    "IlceID": "13800"
+}, {
+    "IlceAdi": "ERMELO",
+    "IlceAdiEn": "ERMELO",
+    "IlceID": "13721"
+}, {
+    "IlceAdi": "ESSEN",
+    "IlceAdiEn": "ESSEN",
+    "IlceID": "13744"
+}, {
+    "IlceAdi": "ETTEN-LEUR",
+    "IlceAdiEn": "ETTEN-LEUR",
+    "IlceID": "13771"
+}, {
+    "IlceAdi": "EURSINGE",
+    "IlceAdiEn": "EURSINGE",
+    "IlceID": "13867"
+}, {
+    "IlceAdi": "GELDROP",
+    "IlceAdiEn": "GELDROP",
+    "IlceID": "13772"
+}, {
+    "IlceAdi": "GELEEN",
+    "IlceAdiEn": "GELEEN",
+    "IlceID": "13922"
+}, {
+    "IlceAdi": "GEMERT",
+    "IlceAdiEn": "GEMERT",
+    "IlceID": "13773"
+}, {
+    "IlceAdi": "GILZE",
+    "IlceAdiEn": "GILZE",
+    "IlceID": "13835"
+}, {
+    "IlceAdi": "GINNEKEN",
+    "IlceAdiEn": "GINNEKEN",
+    "IlceID": "13774"
+}, {
+    "IlceAdi": "GOES",
+    "IlceAdiEn": "GOES",
+    "IlceID": "13923"
+}, {
+    "IlceAdi": "GOIRLE",
+    "IlceAdiEn": "GOIRLE",
+    "IlceID": "13836"
+}, {
+    "IlceAdi": "GOOR",
+    "IlceAdiEn": "GOOR",
+    "IlceID": "13785"
+}, {
+    "IlceAdi": "GORINCHEM",
+    "IlceAdiEn": "GORINCHEM",
+    "IlceID": "13716"
+}, {
+    "IlceAdi": "GOUDA",
+    "IlceAdiEn": "GOUDA",
+    "IlceID": "13924"
+}, {
+    "IlceAdi": "GRAVE",
+    "IlceAdiEn": "GRAVE",
+    "IlceID": "13819"
+}, {
+    "IlceAdi": "GROESBEEK",
+    "IlceAdiEn": "GROESBEEK",
+    "IlceID": "13820"
+}, {
+    "IlceAdi": "GRONINGEN",
+    "IlceAdiEn": "GRONINGEN",
+    "IlceID": "13979"
+}, {
+    "IlceAdi": "GRONSVELD",
+    "IlceAdiEn": "GRONSVELD",
+    "IlceID": "13801"
+}, {
+    "IlceAdi": "HAAKSBERGEN",
+    "IlceAdiEn": "HAAKSBERGEN",
+    "IlceID": "13786"
+}, {
+    "IlceAdi": "HAARLEM",
+    "IlceAdiEn": "HAARLEM",
+    "IlceID": "13877"
+}, {
+    "IlceAdi": "HALSTEREN",
+    "IlceAdiEn": "HALSTEREN",
+    "IlceID": "13754"
+}, {
+    "IlceAdi": "HARDENBERG",
+    "IlceAdiEn": "HARDENBERG",
+    "IlceID": "13868"
+}, {
+    "IlceAdi": "HARDERWIJK",
+    "IlceAdiEn": "HARDERWIJK",
+    "IlceID": "13891"
+}, {
+    "IlceAdi": "HEEMSKERK",
+    "IlceAdiEn": "HEEMSKERK",
+    "IlceID": "13925"
+}, {
+    "IlceAdi": "HEEMSTEDE",
+    "IlceAdiEn": "HEEMSTEDE",
+    "IlceID": "13926"
+}, {
+    "IlceAdi": "HEERDE",
+    "IlceAdiEn": "HEERDE",
+    "IlceID": "13765"
+}, {
+    "IlceAdi": "HEERENVEEN",
+    "IlceAdiEn": "HEERENVEEN",
+    "IlceID": "13927"
+}, {
+    "IlceAdi": "HEERHUGOWAARD",
+    "IlceAdiEn": "HEERHUGOWAARD",
+    "IlceID": "13905"
+}, {
+    "IlceAdi": "HEERLEN",
+    "IlceAdiEn": "HEERLEN",
+    "IlceID": "13928"
+}, {
+    "IlceAdi": "HEESCH",
+    "IlceAdiEn": "HEESCH",
+    "IlceID": "13775"
+}, {
+    "IlceAdi": "HELLENDOORN",
+    "IlceAdiEn": "HELLENDOORN",
+    "IlceID": "13766"
+}, {
+    "IlceAdi": "HELLEVOETSLUIS",
+    "IlceAdiEn": "HELLEVOETSLUIS",
+    "IlceID": "13825"
+}, {
+    "IlceAdi": "HELMOND",
+    "IlceAdiEn": "HELMOND",
+    "IlceID": "13929"
+}, {
+    "IlceAdi": "HENGELO",
+    "IlceAdiEn": "HENGELO",
+    "IlceID": "17926"
+}, {
+    "IlceAdi": "HENGELO",
+    "IlceAdiEn": "HENGELO",
+    "IlceID": "13875"
+}, {
+    "IlceAdi": "HILLEGOM",
+    "IlceAdiEn": "HILLEGOM",
+    "IlceID": "13930"
+}, {
+    "IlceAdi": "HILVARENBEEK",
+    "IlceAdiEn": "HILVARENBEEK",
+    "IlceID": "13837"
+}, {
+    "IlceAdi": "HILVERSUM",
+    "IlceAdiEn": "HILVERSUM",
+    "IlceID": "13708"
+}, {
+    "IlceAdi": "HOENSBROEK",
+    "IlceAdiEn": "HOENSBROEK",
+    "IlceID": "13802"
+}, {
+    "IlceAdi": "HOOFDDORP",
+    "IlceAdiEn": "HOOFDDORP",
+    "IlceID": "13931"
+}, {
+    "IlceAdi": "HOOGERHEIDE",
+    "IlceAdiEn": "HOOGERHEIDE",
+    "IlceID": "13755"
+}, {
+    "IlceAdi": "HOOGEVEEN",
+    "IlceAdiEn": "HOOGEVEEN",
+    "IlceID": "13932"
+}, {
+    "IlceAdi": "HOOGEZAND",
+    "IlceAdiEn": "HOOGEZAND",
+    "IlceID": "13793"
+}, {
+    "IlceAdi": "HOOGVLIET",
+    "IlceAdiEn": "HOOGVLIET",
+    "IlceID": "13826"
+}, {
+    "IlceAdi": "HOORN",
+    "IlceAdiEn": "HOORN",
+    "IlceID": "13878"
+}, {
+    "IlceAdi": "HORST",
+    "IlceAdiEn": "HORST",
+    "IlceID": "13776"
+}, {
+    "IlceAdi": "HOUTEN",
+    "IlceAdiEn": "HOUTEN",
+    "IlceID": "13848"
+}, {
+    "IlceAdi": "HUIZEN",
+    "IlceAdiEn": "HUIZEN",
+    "IlceID": "13933"
+}, {
+    "IlceAdi": "IJMUIDEN",
+    "IlceAdiEn": "IJMUIDEN",
+    "IlceID": "13722"
+}, {
+    "IlceAdi": "IJSSELSTEIN",
+    "IlceAdiEn": "IJSSELSTEIN",
+    "IlceID": "13847"
+}, {
+    "IlceAdi": "KAATSHEUVEL",
+    "IlceAdiEn": "KAATSHEUVEL",
+    "IlceID": "13838"
+}, {
+    "IlceAdi": "KAMPEN",
+    "IlceAdiEn": "KAMPEN",
+    "IlceID": "13934"
+}, {
+    "IlceAdi": "KATWIJK AAN DE RIJN",
+    "IlceAdiEn": "KATWIJK AAN DE RIJN",
+    "IlceID": "13935"
+}, {
+    "IlceAdi": "KERKRADE",
+    "IlceAdiEn": "KERKRADE",
+    "IlceID": "13803"
+}, {
+    "IlceAdi": "KLARENBEEK",
+    "IlceAdiEn": "KLARENBEEK",
+    "IlceID": "13745"
+}, {
+    "IlceAdi": "KLOETINGE",
+    "IlceAdiEn": "KLOETINGE",
+    "IlceID": "13808"
+}, {
+    "IlceAdi": "KRIMPEN AN DEN USSEL",
+    "IlceAdiEn": "KRIMPEN AN DEN USSEL",
+    "IlceID": "13827"
+}, {
+    "IlceAdi": "KROMMONIE",
+    "IlceAdiEn": "KROMMONIE",
+    "IlceID": "13723"
+}, {
+    "IlceAdi": "LEERDAM",
+    "IlceAdiEn": "LEERDAM",
+    "IlceID": "13896"
+}, {
+    "IlceAdi": "LEERSUM",
+    "IlceAdiEn": "LEERSUM",
+    "IlceID": "13849"
+}, {
+    "IlceAdi": "LEEUWARDEN",
+    "IlceAdiEn": "LEEUWARDEN",
+    "IlceID": "13879"
+}, {
+    "IlceAdi": "LEIDEN",
+    "IlceAdiEn": "LEIDEN",
+    "IlceID": "13973"
+}, {
+    "IlceAdi": "LEIDERDORP",
+    "IlceAdiEn": "LEIDERDORP",
+    "IlceID": "13936"
+}, {
+    "IlceAdi": "LEIDSCHENDAM",
+    "IlceAdiEn": "LEIDSCHENDAM",
+    "IlceID": "13937"
+}, {
+    "IlceAdi": "LELYSTAD",
+    "IlceAdiEn": "LELYSTAD",
+    "IlceID": "13900"
+}, {
+    "IlceAdi": "LISSE",
+    "IlceAdiEn": "LISSE",
+    "IlceID": "13938"
+}, {
+    "IlceAdi": "LOCHEM",
+    "IlceAdiEn": "LOCHEM",
+    "IlceID": "13767"
+}, {
+    "IlceAdi": "LOERBEEK",
+    "IlceAdiEn": "LOERBEEK",
+    "IlceID": "13711"
+}, {
+    "IlceAdi": "LOSSER",
+    "IlceAdiEn": "LOSSER",
+    "IlceID": "13787"
+}, {
+    "IlceAdi": "MAARSSEN",
+    "IlceAdiEn": "MAARSSEN",
+    "IlceID": "13850"
+}, {
+    "IlceAdi": "MAASBREE",
+    "IlceAdiEn": "MAASBREE",
+    "IlceID": "13856"
+}, {
+    "IlceAdi": "MAASSLUIS",
+    "IlceAdiEn": "MAASSLUIS",
+    "IlceID": "13939"
+}, {
+    "IlceAdi": "MAASTRICHT",
+    "IlceAdiEn": "MAASTRICHT",
+    "IlceID": "13904"
+}, {
+    "IlceAdi": "MEDEMBLIK",
+    "IlceAdiEn": "MEDEMBLIK",
+    "IlceID": "13724"
+}, {
+    "IlceAdi": "MEPPEL",
+    "IlceAdiEn": "MEPPEL",
+    "IlceID": "13940"
+}, {
+    "IlceAdi": "MIDDELBURG",
+    "IlceAdiEn": "MIDDELBURG",
+    "IlceID": "13885"
+}, {
+    "IlceAdi": "NAALDWIJK",
+    "IlceAdiEn": "NAALDWIJK",
+    "IlceID": "13941"
+}, {
+    "IlceAdi": "NAARDEN",
+    "IlceAdiEn": "NAARDEN",
+    "IlceID": "13725"
+}, {
+    "IlceAdi": "NEEDE",
+    "IlceAdiEn": "NEEDE",
+    "IlceID": "13788"
+}, {
+    "IlceAdi": "NIEUWEGEIN",
+    "IlceAdiEn": "NIEUWEGEIN",
+    "IlceID": "13942"
+}, {
+    "IlceAdi": "NIEUWLEUSEN",
+    "IlceAdiEn": "NIEUWLEUSEN",
+    "IlceID": "13869"
+}, {
+    "IlceAdi": "NIJKERK",
+    "IlceAdiEn": "NIJKERK",
+    "IlceID": "13741"
+}, {
+    "IlceAdi": "NIJMEGEN",
+    "IlceAdiEn": "NIJMEGEN",
+    "IlceID": "13897"
+}, {
+    "IlceAdi": "NIJVERDAL",
+    "IlceAdiEn": "NIJVERDAL",
+    "IlceID": "13736"
+}, {
+    "IlceAdi": "NUENEN",
+    "IlceAdiEn": "NUENEN",
+    "IlceID": "13777"
+}, {
+    "IlceAdi": "NUMMER EEN",
+    "IlceAdiEn": "NUMMER EEN",
+    "IlceID": "13809"
+}, {
+    "IlceAdi": "NUNSPEET",
+    "IlceAdiEn": "NUNSPEET",
+    "IlceID": "13870"
+}, {
+    "IlceAdi": "OISTERWIJK",
+    "IlceAdiEn": "OISTERWIJK",
+    "IlceID": "13839"
+}, {
+    "IlceAdi": "OLDEBROEK",
+    "IlceAdiEn": "OLDEBROEK",
+    "IlceID": "13768"
+}, {
+    "IlceAdi": "OLDENZAAL",
+    "IlceAdiEn": "OLDENZAAL",
+    "IlceID": "13943"
+}, {
+    "IlceAdi": "OOSTBURG",
+    "IlceAdiEn": "OOSTBURG",
+    "IlceID": "13810"
+}, {
+    "IlceAdi": "OOSTERHOUT",
+    "IlceAdiEn": "OOSTERHOUT",
+    "IlceID": "13944"
+}, {
+    "IlceAdi": "OOSTZAAN",
+    "IlceAdiEn": "OOSTZAAN",
+    "IlceID": "13726"
+}, {
+    "IlceAdi": "OSS",
+    "IlceAdiEn": "OSS",
+    "IlceID": "13907"
+}, {
+    "IlceAdi": "OUDENBOSCH",
+    "IlceAdiEn": "OUDENBOSCH",
+    "IlceID": "18964"
+}, {
+    "IlceAdi": "OUDEWATER",
+    "IlceAdiEn": "OUDEWATER",
+    "IlceID": "13851"
+}, {
+    "IlceAdi": "OUDOVER",
+    "IlceAdiEn": "OUDOVER",
+    "IlceID": "13852"
+}, {
+    "IlceAdi": "PANNINGEN",
+    "IlceAdiEn": "PANNINGEN",
+    "IlceID": "13858"
+}, {
+    "IlceAdi": "PAPENDRECHT",
+    "IlceAdiEn": "PAPENDRECHT",
+    "IlceID": "13706"
+}, {
+    "IlceAdi": "POELDIJK",
+    "IlceAdiEn": "POELDIJK",
+    "IlceID": "13757"
+}, {
+    "IlceAdi": "POORTUGAAL",
+    "IlceAdiEn": "POORTUGAAL",
+    "IlceID": "13828"
+}, {
+    "IlceAdi": "PURMEREND",
+    "IlceAdiEn": "PURMEREND",
+    "IlceID": "13945"
+}, {
+    "IlceAdi": "PUTTEN",
+    "IlceAdiEn": "PUTTEN",
+    "IlceID": "13727"
+}, {
+    "IlceAdi": "RAALTE",
+    "IlceAdiEn": "RAALTE",
+    "IlceID": "13946"
+}, {
+    "IlceAdi": "REUVER",
+    "IlceAdiEn": "REUVER",
+    "IlceID": "13857"
+}, {
+    "IlceAdi": "RIDDERKERK",
+    "IlceAdiEn": "RIDDERKERK",
+    "IlceID": "13829"
+}, {
+    "IlceAdi": "RIJEN",
+    "IlceAdiEn": "RIJEN",
+    "IlceID": "13840"
+}, {
+    "IlceAdi": "RIJKSDORP",
+    "IlceAdiEn": "RIJKSDORP",
+    "IlceID": "13758"
+}, {
+    "IlceAdi": "RIJSSEN",
+    "IlceAdiEn": "RIJSSEN",
+    "IlceID": "13893"
+}, {
+    "IlceAdi": "RIJSWIJK",
+    "IlceAdiEn": "RIJSWIJK",
+    "IlceID": "13759"
+}, {
+    "IlceAdi": "ROERMOND",
+    "IlceAdiEn": "ROERMOND",
+    "IlceID": "13884"
+}, {
+    "IlceAdi": "ROOSENDAAL",
+    "IlceAdiEn": "ROOSENDAAL",
+    "IlceID": "13901"
+}, {
+    "IlceAdi": "ROSMALEN",
+    "IlceAdiEn": "ROSMALEN",
+    "IlceID": "13947"
+}, {
+    "IlceAdi": "ROTTERDAM",
+    "IlceAdiEn": "ROTTERDAM",
+    "IlceID": "13980"
+}, {
+    "IlceAdi": "SCHIEDAM",
+    "IlceAdiEn": "SCHIEDAM",
+    "IlceID": "13948"
+}, {
+    "IlceAdi": "SCHIJNDEL",
+    "IlceAdiEn": "SCHIJNDEL",
+    "IlceID": "13778"
+}, {
+    "IlceAdi": "SCHOONHOVEN",
+    "IlceAdiEn": "SCHOONHOVEN",
+    "IlceID": "13830"
+}, {
+    "IlceAdi": "SEVENUM",
+    "IlceAdiEn": "SEVENUM",
+    "IlceID": "13859"
+}, {
+    "IlceAdi": "S-HERTOGENBOSCH",
+    "IlceAdiEn": "S-HERTOGENBOSCH",
+    "IlceID": "13886"
+}, {
+    "IlceAdi": "SIMPELVELD",
+    "IlceAdiEn": "SIMPELVELD",
+    "IlceID": "13804"
+}, {
+    "IlceAdi": "SITTARD",
+    "IlceAdiEn": "SITTARD",
+    "IlceID": "13949"
+}, {
+    "IlceAdi": "SLIEDRECHT",
+    "IlceAdiEn": "SLIEDRECHT",
+    "IlceID": "13950"
+}, {
+    "IlceAdi": "SNEEK",
+    "IlceAdiEn": "SNEEK",
+    "IlceID": "13951"
+}, {
+    "IlceAdi": "SOEST",
+    "IlceAdiEn": "SOEST",
+    "IlceID": "13952"
+}, {
+    "IlceAdi": "SON EN BREUGEL",
+    "IlceAdiEn": "SON EN BREUGEL",
+    "IlceID": "13779"
+}, {
+    "IlceAdi": "SPIJKENISSE",
+    "IlceAdiEn": "SPIJKENISSE",
+    "IlceID": "13953"
+}, {
+    "IlceAdi": "STADSKANAAL",
+    "IlceAdiEn": "STADSKANAAL",
+    "IlceID": "13954"
+}, {
+    "IlceAdi": "STEENBERGEN",
+    "IlceAdiEn": "STEENBERGEN",
+    "IlceID": "13756"
+}, {
+    "IlceAdi": "STEENWIJK",
+    "IlceAdiEn": "STEENWIJK",
+    "IlceID": "13903"
+}, {
+    "IlceAdi": "STEIN",
+    "IlceAdiEn": "STEIN",
+    "IlceID": "13955"
+}, {
+    "IlceAdi": "STRIJEN",
+    "IlceAdiEn": "STRIJEN",
+    "IlceID": "13831"
+}, {
+    "IlceAdi": "SUSTEREN",
+    "IlceAdiEn": "SUSTEREN",
+    "IlceID": "13805"
+}, {
+    "IlceAdi": "SWALMEN",
+    "IlceAdiEn": "SWALMEN",
+    "IlceID": "13860"
+}, {
+    "IlceAdi": "TEGELEN",
+    "IlceAdiEn": "TEGELEN",
+    "IlceID": "13861"
+}, {
+    "IlceAdi": "TERBORG",
+    "IlceAdiEn": "TERBORG",
+    "IlceID": "13752"
+}, {
+    "IlceAdi": "TERNEUZEN",
+    "IlceAdiEn": "TERNEUZEN",
+    "IlceID": "13713"
+}, {
+    "IlceAdi": "THE HAGUE",
+    "IlceAdiEn": "THE HAGUE",
+    "IlceID": "13956"
+}, {
+    "IlceAdi": "TIEL",
+    "IlceAdiEn": "TIEL",
+    "IlceID": "13957"
+}, {
+    "IlceAdi": "TILBURG",
+    "IlceAdiEn": "TILBURG",
+    "IlceID": "13890"
+}, {
+    "IlceAdi": "TUBBERGEN",
+    "IlceAdiEn": "TUBBERGEN",
+    "IlceID": "13737"
+}, {
+    "IlceAdi": "TWELLO",
+    "IlceAdiEn": "TWELLO",
+    "IlceID": "13746"
+}, {
+    "IlceAdi": "UBACHSBERG",
+    "IlceAdiEn": "UBACHSBERG",
+    "IlceID": "13806"
+}, {
+    "IlceAdi": "UDEN",
+    "IlceAdiEn": "UDEN",
+    "IlceID": "13958"
+}, {
+    "IlceAdi": "UITHOORN",
+    "IlceAdiEn": "UITHOORN",
+    "IlceID": "13728"
+}, {
+    "IlceAdi": "ULFT",
+    "IlceAdiEn": "ULFT",
+    "IlceID": "17806"
+}, {
+    "IlceAdi": "URK",
+    "IlceAdiEn": "URK",
+    "IlceID": "13871"
+}, {
+    "IlceAdi": "UTRECHT",
+    "IlceAdiEn": "UTRECHT",
+    "IlceID": "13975"
+}, {
+    "IlceAdi": "VAASSEN",
+    "IlceAdiEn": "VAASSEN",
+    "IlceID": "18958"
+}, {
+    "IlceAdi": "VALKENSWAARD",
+    "IlceAdiEn": "VALKENSWAARD",
+    "IlceID": "13959"
+}, {
+    "IlceAdi": "VEENDAM",
+    "IlceAdiEn": "VEENDAM",
+    "IlceID": "13794"
+}, {
+    "IlceAdi": "VEENENDAAL",
+    "IlceAdiEn": "VEENENDAAL",
+    "IlceID": "13960"
+}, {
+    "IlceAdi": "VEGHEL",
+    "IlceAdiEn": "VEGHEL",
+    "IlceID": "13780"
+}, {
+    "IlceAdi": "VELDHOVEN",
+    "IlceAdiEn": "VELDHOVEN",
+    "IlceID": "13961"
+}, {
+    "IlceAdi": "VENLO",
+    "IlceAdiEn": "VENLO",
+    "IlceID": "13898"
+}, {
+    "IlceAdi": "VENRAY",
+    "IlceAdiEn": "VENRAY",
+    "IlceID": "13899"
+}, {
+    "IlceAdi": "VLAARDINGEN",
+    "IlceAdiEn": "VLAARDINGEN",
+    "IlceID": "13962"
+}, {
+    "IlceAdi": "VLIJMEN",
+    "IlceAdiEn": "VLIJMEN",
+    "IlceID": "13841"
+}, {
+    "IlceAdi": "VLISSINGEN",
+    "IlceAdiEn": "VLISSINGEN",
+    "IlceID": "13963"
+}, {
+    "IlceAdi": "VOORBURG",
+    "IlceAdiEn": "VOORBURG",
+    "IlceID": "13964"
+}, {
+    "IlceAdi": "VOORSCHOTEN",
+    "IlceAdiEn": "VOORSCHOTEN",
+    "IlceID": "13760"
+}, {
+    "IlceAdi": "VRIEZENVEEN",
+    "IlceAdiEn": "VRIEZENVEEN",
+    "IlceID": "13738"
+}, {
+    "IlceAdi": "VUGHT",
+    "IlceAdiEn": "VUGHT",
+    "IlceID": "13781"
+}, {
+    "IlceAdi": "WAALWIJK",
+    "IlceAdiEn": "WAALWIJK",
+    "IlceID": "13965"
+}, {
+    "IlceAdi": "WADDINXVEEN",
+    "IlceAdiEn": "WADDINXVEEN",
+    "IlceID": "13832"
+}, {
+    "IlceAdi": "WAGENINGEN",
+    "IlceAdiEn": "WAGENINGEN",
+    "IlceID": "13966"
+}, {
+    "IlceAdi": "WASSENAAR",
+    "IlceAdiEn": "WASSENAAR",
+    "IlceID": "13761"
+}, {
+    "IlceAdi": "WATERINGEN",
+    "IlceAdiEn": "WATERINGEN",
+    "IlceID": "13762"
+}, {
+    "IlceAdi": "WEERT",
+    "IlceAdiEn": "WEERT",
+    "IlceID": "13967"
+}, {
+    "IlceAdi": "WEESP",
+    "IlceAdiEn": "WEESP",
+    "IlceID": "13729"
+}, {
+    "IlceAdi": "WESTHOEK",
+    "IlceAdiEn": "WESTHOEK",
+    "IlceID": "13811"
+}, {
+    "IlceAdi": "WIERDEN",
+    "IlceAdiEn": "WIERDEN",
+    "IlceID": "13739"
+}, {
+    "IlceAdi": "WIJCHEN",
+    "IlceAdiEn": "WIJCHEN",
+    "IlceID": "13753"
+}, {
+    "IlceAdi": "WILLEMSTAD",
+    "IlceAdiEn": "WILLEMSTAD",
+    "IlceID": "13833"
+}, {
+    "IlceAdi": "WINSCHOTEN",
+    "IlceAdiEn": "WINSCHOTEN",
+    "IlceID": "13795"
+}, {
+    "IlceAdi": "WINSUM",
+    "IlceAdiEn": "WINSUM",
+    "IlceID": "13796"
+}, {
+    "IlceAdi": "WINTERSWIJK",
+    "IlceAdiEn": "WINTERSWIJK",
+    "IlceID": "13707"
+}, {
+    "IlceAdi": "WOERDEN",
+    "IlceAdiEn": "WOERDEN",
+    "IlceID": "13968"
+}, {
+    "IlceAdi": "WOERDENSE VERLAAT",
+    "IlceAdiEn": "WOERDENSE VERLAAT",
+    "IlceID": "13853"
+}, {
+    "IlceAdi": "WOLVEGA",
+    "IlceAdiEn": "WOLVEGA",
+    "IlceID": "13872"
+}, {
+    "IlceAdi": "ZAANDAM",
+    "IlceAdiEn": "ZAANDAM",
+    "IlceID": "13712"
+}, {
+    "IlceAdi": "ZAANSTAD",
+    "IlceAdiEn": "ZAANSTAD",
+    "IlceID": "13730"
+}, {
+    "IlceAdi": "ZANDVOORT",
+    "IlceAdiEn": "ZANDVOORT",
+    "IlceID": "13731"
+}, {
+    "IlceAdi": "ZEEVOLDE",
+    "IlceAdiEn": "ZEEVOLDE",
+    "IlceID": "13797"
+}, {
+    "IlceAdi": "ZEIST",
+    "IlceAdiEn": "ZEIST",
+    "IlceID": "13969"
+}, {
+    "IlceAdi": "ZEVENAAR",
+    "IlceAdiEn": "ZEVENAAR",
+    "IlceID": "13970"
+}, {
+    "IlceAdi": "ZOETERMEER",
+    "IlceAdiEn": "ZOETERMEER",
+    "IlceID": "13971"
+}, {
+    "IlceAdi": "ZOETERWOUDE",
+    "IlceAdiEn": "ZOETERWOUDE",
+    "IlceID": "13763"
+}, {
+    "IlceAdi": "ZUTPHEN",
+    "IlceAdiEn": "ZUTPHEN",
+    "IlceID": "13972"
+}, {
+    "IlceAdi": "ZWANENBURG",
+    "IlceAdiEn": "ZWANENBURG",
+    "IlceID": "13732"
+}, {
+    "IlceAdi": "ZWIJNDRECHT",
+    "IlceAdiEn": "ZWIJNDRECHT",
+    "IlceID": "13834"
+}, {
+    "IlceAdi": "ZWOLLE",
+    "IlceAdiEn": "ZWOLLE",
+    "IlceID": "13881"
+}, {
+    "IlceAdi": "AALST",
+    "IlceAdiEn": "AALST",
+    "IlceID": "11704"
+}, {
+    "IlceAdi": "AARSCHOT",
+    "IlceAdiEn": "AARSCHOT",
+    "IlceID": "11707"
+}, {
+    "IlceAdi": "ACHEL",
+    "IlceAdiEn": "ACHEL",
+    "IlceID": "11796"
+}, {
+    "IlceAdi": "ADEGEM",
+    "IlceAdiEn": "ADEGEM",
+    "IlceID": "11853"
+}, {
+    "IlceAdi": "ALKEN",
+    "IlceAdiEn": "ALKEN",
+    "IlceID": "11877"
+}, {
+    "IlceAdi": "ALLEUD",
+    "IlceAdiEn": "ALLEUD",
+    "IlceID": "11722"
+}, {
+    "IlceAdi": "AMAY",
+    "IlceAdiEn": "AMAY",
+    "IlceID": "11790"
+}, {
+    "IlceAdi": "ANDENNE",
+    "IlceAdiEn": "ANDENNE",
+    "IlceID": "11716"
+}, {
+    "IlceAdi": "ANDERLUES",
+    "IlceAdiEn": "ANDERLUES",
+    "IlceID": "11862"
+}, {
+    "IlceAdi": "ANS",
+    "IlceAdiEn": "ANS",
+    "IlceID": "11791"
+}, {
+    "IlceAdi": "ANTWERPEN",
+    "IlceAdiEn": "ANTWERPEN",
+    "IlceID": "11914"
+}, {
+    "IlceAdi": "ARENDONK",
+    "IlceAdiEn": "ARENDONK",
+    "IlceID": "11708"
+}, {
+    "IlceAdi": "ARLON",
+    "IlceAdiEn": "ARLON",
+    "IlceID": "11709"
+}, {
+    "IlceAdi": "ASSE",
+    "IlceAdiEn": "ASSE",
+    "IlceID": "11847"
+}, {
+    "IlceAdi": "ATH",
+    "IlceAdiEn": "ATH",
+    "IlceID": "11710"
+}, {
+    "IlceAdi": "ATHUS",
+    "IlceAdiEn": "ATHUS",
+    "IlceID": "11835"
+}, {
+    "IlceAdi": "BALEN",
+    "IlceAdiEn": "BALEN",
+    "IlceID": "11797"
+}, {
+    "IlceAdi": "BASTOGNE",
+    "IlceAdiEn": "BASTOGNE",
+    "IlceID": "11808"
+}, {
+    "IlceAdi": "BAUDOUR",
+    "IlceAdiEn": "BAUDOUR",
+    "IlceID": "11816"
+}, {
+    "IlceAdi": "BEAURAING",
+    "IlceAdiEn": "BEAURAING",
+    "IlceID": "11807"
+}, {
+    "IlceAdi": "BEERNEM",
+    "IlceAdiEn": "BEERNEM",
+    "IlceID": "11854"
+}, {
+    "IlceAdi": "BERINGEN",
+    "IlceAdiEn": "BERINGEN",
+    "IlceID": "11703"
+}, {
+    "IlceAdi": "BERLAAR",
+    "IlceAdiEn": "BERLAAR",
+    "IlceID": "11711"
+}, {
+    "IlceAdi": "BERTRIX",
+    "IlceAdiEn": "BERTRIX",
+    "IlceID": "11836"
+}, {
+    "IlceAdi": "BEVEREN",
+    "IlceAdiEn": "BEVEREN",
+    "IlceID": "11764"
+}, {
+    "IlceAdi": "BEVERLO",
+    "IlceAdiEn": "BEVERLO",
+    "IlceID": "11882"
+}, {
+    "IlceAdi": "BILZEN",
+    "IlceAdiEn": "BILZEN",
+    "IlceID": "11724"
+}, {
+    "IlceAdi": "BINCHE",
+    "IlceAdiEn": "BINCHE",
+    "IlceID": "11712"
+}, {
+    "IlceAdi": "BLANKENBERGE",
+    "IlceAdiEn": "BLANKENBERGE",
+    "IlceID": "11855"
+}, {
+    "IlceAdi": "BOCHOLT",
+    "IlceAdiEn": "BOCHOLT",
+    "IlceID": "11798"
+}, {
+    "IlceAdi": "BOECHOUT",
+    "IlceAdiEn": "BOECHOUT",
+    "IlceID": "11841"
+}, {
+    "IlceAdi": "BOOM",
+    "IlceAdiEn": "BOOM",
+    "IlceID": "11842"
+}, {
+    "IlceAdi": "BOORTMEERBEEK",
+    "IlceAdiEn": "BOORTMEERBEEK",
+    "IlceID": "11713"
+}, {
+    "IlceAdi": "BORGLOON",
+    "IlceAdiEn": "BORGLOON",
+    "IlceID": "11805"
+}, {
+    "IlceAdi": "BORNEM",
+    "IlceAdiEn": "BORNEM",
+    "IlceID": "11825"
+}, {
+    "IlceAdi": "BOUILLON",
+    "IlceAdiEn": "BOUILLON",
+    "IlceID": "11837"
+}, {
+    "IlceAdi": "BOUSSU",
+    "IlceAdiEn": "BOUSSU",
+    "IlceID": "11737"
+}, {
+    "IlceAdi": "BRASSCHAAT",
+    "IlceAdiEn": "BRASSCHAAT",
+    "IlceID": "11775"
+}, {
+    "IlceAdi": "BRECHT",
+    "IlceAdiEn": "BRECHT",
+    "IlceID": "11777"
+}, {
+    "IlceAdi": "BREDENE",
+    "IlceAdiEn": "BREDENE",
+    "IlceID": "11856"
+}, {
+    "IlceAdi": "BREE",
+    "IlceAdiEn": "BREE",
+    "IlceID": "11715"
+}, {
+    "IlceAdi": "BRUGGE",
+    "IlceAdiEn": "BRUGGE",
+    "IlceID": "11891"
+}, {
+    "IlceAdi": "BRUKSEL",
+    "IlceAdiEn": "BRUXELLES",
+    "IlceID": "11915"
+}, {
+    "IlceAdi": "BUGGENHOUT",
+    "IlceAdiEn": "BUGGENHOUT",
+    "IlceID": "11848"
+}, {
+    "IlceAdi": "CHARLEROI",
+    "IlceAdiEn": "CHARLEROI",
+    "IlceID": "11895"
+}, {
+    "IlceAdi": "CHATELET",
+    "IlceAdiEn": "CHATELET",
+    "IlceID": "11906"
+}, {
+    "IlceAdi": "CHATELINEAU",
+    "IlceAdiEn": "CHATELINEAU",
+    "IlceID": "11863"
+}, {
+    "IlceAdi": "CINEY",
+    "IlceAdiEn": "CINEY",
+    "IlceID": "11812"
+}, {
+    "IlceAdi": "COLFONTAINE",
+    "IlceAdiEn": "COLFONTAINE",
+    "IlceID": "11729"
+}, {
+    "IlceAdi": "CORON",
+    "IlceAdiEn": "CORON",
+    "IlceID": "11817"
+}, {
+    "IlceAdi": "CUESMES",
+    "IlceAdiEn": "CUESMES",
+    "IlceID": "11864"
+}, {
+    "IlceAdi": "DE HAAN",
+    "IlceAdiEn": "DE HAAN",
+    "IlceID": "11857"
+}, {
+    "IlceAdi": "DEERLIJK",
+    "IlceAdiEn": "DEERLIJK",
+    "IlceID": "11782"
+}, {
+    "IlceAdi": "DEINZE",
+    "IlceAdiEn": "DEINZE",
+    "IlceID": "11759"
+}, {
+    "IlceAdi": "DENDERMONDE",
+    "IlceAdiEn": "DENDERMONDE",
+    "IlceID": "11896"
+}, {
+    "IlceAdi": "DESSEL",
+    "IlceAdiEn": "DESSEL",
+    "IlceID": "11799"
+}, {
+    "IlceAdi": "DIEPENBEEK",
+    "IlceAdiEn": "DIEPENBEEK",
+    "IlceID": "11878"
+}, {
+    "IlceAdi": "DIEST",
+    "IlceAdiEn": "DIEST",
+    "IlceID": "11897"
+}, {
+    "IlceAdi": "DIKSMUIDE",
+    "IlceAdiEn": "DIKSMUIDE",
+    "IlceID": "11717"
+}, {
+    "IlceAdi": "DILBEEK",
+    "IlceAdiEn": "DILBEEK",
+    "IlceID": "11718"
+}, {
+    "IlceAdi": "DILSEN",
+    "IlceAdiEn": "DILSEN",
+    "IlceID": "11870"
+}, {
+    "IlceAdi": "DINANT",
+    "IlceAdiEn": "DINANT",
+    "IlceID": "11813"
+}, {
+    "IlceAdi": "DISON",
+    "IlceAdiEn": "DISON",
+    "IlceID": "11829"
+}, {
+    "IlceAdi": "DOUR",
+    "IlceAdiEn": "DOUR",
+    "IlceID": "11818"
+}, {
+    "IlceAdi": "EDEGEM",
+    "IlceAdiEn": "EDEGEM",
+    "IlceID": "11778"
+}, {
+    "IlceAdi": "EDINGEN",
+    "IlceAdiEn": "EDINGEN",
+    "IlceID": "11849"
+}, {
+    "IlceAdi": "EISDEN",
+    "IlceAdiEn": "EISDEN",
+    "IlceID": "11887"
+}, {
+    "IlceAdi": "ENSIVAL",
+    "IlceAdiEn": "ENSIVAL",
+    "IlceID": "11830"
+}, {
+    "IlceAdi": "ERBAUT",
+    "IlceAdiEn": "ERBAUT",
+    "IlceID": "11819"
+}, {
+    "IlceAdi": "ERTVELDE",
+    "IlceAdiEn": "ERTVELDE",
+    "IlceID": "11871"
+}, {
+    "IlceAdi": "ESNEUX",
+    "IlceAdiEn": "ESNEUX",
+    "IlceID": "11792"
+}, {
+    "IlceAdi": "EUPEN",
+    "IlceAdiEn": "EUPEN",
+    "IlceID": "11831"
+}, {
+    "IlceAdi": "EVERGEM",
+    "IlceAdiEn": "EVERGEM",
+    "IlceID": "11744"
+}, {
+    "IlceAdi": "FLEURUS",
+    "IlceAdiEn": "FLEURUS",
+    "IlceID": "11865"
+}, {
+    "IlceAdi": "FLOREFFE",
+    "IlceAdiEn": "FLOREFFE",
+    "IlceID": "11814"
+}, {
+    "IlceAdi": "FLORENNES",
+    "IlceAdiEn": "FLORENNES",
+    "IlceID": "11866"
+}, {
+    "IlceAdi": "FLORENVILLE",
+    "IlceAdiEn": "FLORENVILLE",
+    "IlceID": "11838"
+}, {
+    "IlceAdi": "FRAMERIES",
+    "IlceAdiEn": "FRAMERIES",
+    "IlceID": "11719"
+}, {
+    "IlceAdi": "GAVERE",
+    "IlceAdiEn": "GAVERE",
+    "IlceID": "11720"
+}, {
+    "IlceAdi": "GEEL",
+    "IlceAdiEn": "GEEL",
+    "IlceID": "11721"
+}, {
+    "IlceAdi": "GEMBLOUX",
+    "IlceAdiEn": "GEMBLOUX",
+    "IlceID": "11850"
+}, {
+    "IlceAdi": "GENK",
+    "IlceAdiEn": "GENK",
+    "IlceID": "11898"
+}, {
+    "IlceAdi": "GENT",
+    "IlceAdiEn": "GENT",
+    "IlceID": "11916"
+}, {
+    "IlceAdi": "GERAARDSBERGEN",
+    "IlceAdiEn": "GERAARDSBERGEN",
+    "IlceID": "11774"
+}, {
+    "IlceAdi": "GISTEL",
+    "IlceAdiEn": "GISTEL",
+    "IlceID": "11858"
+}, {
+    "IlceAdi": "GRIMBERGEN",
+    "IlceAdiEn": "GRIMBERGEN",
+    "IlceID": "11725"
+}, {
+    "IlceAdi": "HABAY LA NEUVE",
+    "IlceAdiEn": "HABAY LA NEUVE",
+    "IlceID": "11839"
+}, {
+    "IlceAdi": "HAMME",
+    "IlceAdiEn": "HAMME",
+    "IlceID": "11714"
+}, {
+    "IlceAdi": "HAMONT",
+    "IlceAdiEn": "HAMONT",
+    "IlceID": "11800"
+}, {
+    "IlceAdi": "HARELBEKE",
+    "IlceAdiEn": "HARELBEKE",
+    "IlceID": "11727"
+}, {
+    "IlceAdi": "HASSELT",
+    "IlceAdiEn": "HASSELT",
+    "IlceID": "11899"
+}, {
+    "IlceAdi": "HAVRE",
+    "IlceAdiEn": "HAVRE",
+    "IlceID": "11821"
+}, {
+    "IlceAdi": "HECHTEL",
+    "IlceAdiEn": "HECHTEL",
+    "IlceID": "11801"
+}, {
+    "IlceAdi": "HEIST-OP-DEN-BERG",
+    "IlceAdiEn": "HEIST-OP-DEN-BERG",
+    "IlceID": "11728"
+}, {
+    "IlceAdi": "HEMIKSEM",
+    "IlceAdiEn": "HEMIKSEM",
+    "IlceID": "11843"
+}, {
+    "IlceAdi": "HERENTALS",
+    "IlceAdiEn": "HERENTALS",
+    "IlceID": "11730"
+}, {
+    "IlceAdi": "HERK-DE-STAD",
+    "IlceAdiEn": "HERK-DE-STAD",
+    "IlceID": "11879"
+}, {
+    "IlceAdi": "HERSTAL",
+    "IlceAdiEn": "HERSTAL",
+    "IlceID": "11793"
+}, {
+    "IlceAdi": "HEULE",
+    "IlceAdiEn": "HEULE",
+    "IlceID": "11783"
+}, {
+    "IlceAdi": "HEUSDEN",
+    "IlceAdiEn": "HEUSDEN",
+    "IlceID": "11910"
+}, {
+    "IlceAdi": "HOBOKEN",
+    "IlceAdiEn": "HOBOKEN",
+    "IlceID": "11905"
+}, {
+    "IlceAdi": "HOESELT",
+    "IlceAdiEn": "HOESELT",
+    "IlceID": "11806"
+}, {
+    "IlceAdi": "HOOGLEDE",
+    "IlceAdiEn": "HOOGLEDE",
+    "IlceID": "11784"
+}, {
+    "IlceAdi": "HORNU",
+    "IlceAdiEn": "HORNU",
+    "IlceID": "11822"
+}, {
+    "IlceAdi": "HOUTHALEN",
+    "IlceAdiEn": "HOUTHALEN",
+    "IlceID": "11781"
+}, {
+    "IlceAdi": "HUY",
+    "IlceAdiEn": "HUY",
+    "IlceID": "11732"
+}, {
+    "IlceAdi": "IEPER",
+    "IlceAdiEn": "IEPER",
+    "IlceID": "11748"
+}, {
+    "IlceAdi": "IZEGEM",
+    "IlceAdiEn": "IZEGEM",
+    "IlceID": "11733"
+}, {
+    "IlceAdi": "JEMAPPES",
+    "IlceAdiEn": "JEMAPPES",
+    "IlceID": "11820"
+}, {
+    "IlceAdi": "JODOIGNE",
+    "IlceAdiEn": "JODOIGNE",
+    "IlceID": "11734"
+}, {
+    "IlceAdi": "KAPELLEN",
+    "IlceAdiEn": "KAPELLEN",
+    "IlceID": "11769"
+}, {
+    "IlceAdi": "KEERBERGEN",
+    "IlceAdiEn": "KEERBERGEN",
+    "IlceID": "11735"
+}, {
+    "IlceAdi": "KINROOI",
+    "IlceAdiEn": "KINROOI",
+    "IlceID": "11802"
+}, {
+    "IlceAdi": "KNOKKE-HEIST",
+    "IlceAdiEn": "KNOKKE-HEIST",
+    "IlceID": "11738"
+}, {
+    "IlceAdi": "KOERSEL",
+    "IlceAdiEn": "KOERSEL",
+    "IlceID": "11883"
+}, {
+    "IlceAdi": "KONTICH",
+    "IlceAdiEn": "KONTICH",
+    "IlceID": "11844"
+}, {
+    "IlceAdi": "KORTRIJK",
+    "IlceAdiEn": "KORTRIJK",
+    "IlceID": "11888"
+}, {
+    "IlceAdi": "KRUIBEKE",
+    "IlceAdiEn": "KRUIBEKE",
+    "IlceID": "11826"
+}, {
+    "IlceAdi": "LA CALAMINE",
+    "IlceAdiEn": "LA CALAMINE",
+    "IlceID": "11832"
+}, {
+    "IlceAdi": "LA LOUVIERE",
+    "IlceAdiEn": "LA LOUVIERE",
+    "IlceID": "11907"
+}, {
+    "IlceAdi": "LA ROCHE EN ARDENNE",
+    "IlceAdiEn": "LA ROCHE EN ARDENNE",
+    "IlceID": "11809"
+}, {
+    "IlceAdi": "LAARNE",
+    "IlceAdiEn": "LAARNE",
+    "IlceID": "11872"
+}, {
+    "IlceAdi": "LANAKEN",
+    "IlceAdiEn": "LANAKEN",
+    "IlceID": "11739"
+}, {
+    "IlceAdi": "LAUWE",
+    "IlceAdiEn": "LAUWE",
+    "IlceID": "11785"
+}, {
+    "IlceAdi": "LE HOUISSE",
+    "IlceAdiEn": "LE HOUISSE",
+    "IlceID": "11810"
+}, {
+    "IlceAdi": "LEOPOLDSBURG",
+    "IlceAdiEn": "LEOPOLDSBURG",
+    "IlceID": "11884"
+}, {
+    "IlceAdi": "LEUVEN",
+    "IlceAdiEn": "LEUVEN",
+    "IlceID": "11706"
+}, {
+    "IlceAdi": "LIEGE",
+    "IlceAdiEn": "LIEGE",
+    "IlceID": "11917"
+}, {
+    "IlceAdi": "LIER",
+    "IlceAdiEn": "LIER",
+    "IlceID": "11701"
+}, {
+    "IlceAdi": "LOCHRISTI",
+    "IlceAdiEn": "LOCHRISTI",
+    "IlceID": "11873"
+}, {
+    "IlceAdi": "LOKEREN",
+    "IlceAdiEn": "LOKEREN",
+    "IlceID": "11741"
+}, {
+    "IlceAdi": "LOMMEL",
+    "IlceAdiEn": "LOMMEL",
+    "IlceID": "11736"
+}, {
+    "IlceAdi": "M.FAMENNE",
+    "IlceAdiEn": "M.FAMENNE",
+    "IlceID": "11890"
+}, {
+    "IlceAdi": "MAASEIK",
+    "IlceAdiEn": "MAASEIK",
+    "IlceID": "11742"
+}, {
+    "IlceAdi": "MAASMECHELEN",
+    "IlceAdiEn": "MAASMECHELEN",
+    "IlceID": "11909"
+}, {
+    "IlceAdi": "MALDEGEM",
+    "IlceAdiEn": "MALDEGEM",
+    "IlceID": "11743"
+}, {
+    "IlceAdi": "MALMEDY",
+    "IlceAdiEn": "MALMEDY",
+    "IlceID": "11900"
+}, {
+    "IlceAdi": "MANAGE",
+    "IlceAdiEn": "MANAGE",
+    "IlceID": "11867"
+}, {
+    "IlceAdi": "MECHELEN",
+    "IlceAdiEn": "MECHELEN",
+    "IlceID": "11745"
+}, {
+    "IlceAdi": "MENEN",
+    "IlceAdiEn": "MENEN",
+    "IlceID": "11757"
+}, {
+    "IlceAdi": "MERELBEKE",
+    "IlceAdiEn": "MERELBEKE",
+    "IlceID": "11746"
+}, {
+    "IlceAdi": "MEULEBEKE",
+    "IlceAdiEn": "MEULEBEKE",
+    "IlceID": "11786"
+}, {
+    "IlceAdi": "MOL",
+    "IlceAdiEn": "MOL",
+    "IlceID": "11773"
+}, {
+    "IlceAdi": "MONS",
+    "IlceAdiEn": "MONS",
+    "IlceID": "11901"
+}, {
+    "IlceAdi": "MOORSLEDE",
+    "IlceAdiEn": "MOORSLEDE",
+    "IlceID": "11787"
+}, {
+    "IlceAdi": "MORTSEL",
+    "IlceAdiEn": "MORTSEL",
+    "IlceID": "11749"
+}, {
+    "IlceAdi": "MOUSCRON",
+    "IlceAdiEn": "MOUSCRON",
+    "IlceID": "11726"
+}, {
+    "IlceAdi": "NAMUR",
+    "IlceAdiEn": "NAMUR",
+    "IlceID": "11889"
+}, {
+    "IlceAdi": "NEUFCHATEAU",
+    "IlceAdiEn": "NEUFCHATEAU",
+    "IlceID": "11840"
+}, {
+    "IlceAdi": "NIJLEN",
+    "IlceAdiEn": "NIJLEN",
+    "IlceID": "11845"
+}, {
+    "IlceAdi": "NINOVE",
+    "IlceAdiEn": "NINOVE",
+    "IlceID": "11750"
+}, {
+    "IlceAdi": "NIVELLES",
+    "IlceAdiEn": "NIVELLES",
+    "IlceID": "11751"
+}, {
+    "IlceAdi": "OODELEM",
+    "IlceAdiEn": "OODELEM",
+    "IlceID": "11859"
+}, {
+    "IlceAdi": "OOSTENDE",
+    "IlceAdiEn": "OOSTENDE",
+    "IlceID": "11705"
+}, {
+    "IlceAdi": "OOSTKAMP",
+    "IlceAdiEn": "OOSTKAMP",
+    "IlceID": "11755"
+}, {
+    "IlceAdi": "OTTIGNIES-LAUVAIN-LA-NUVE",
+    "IlceAdiEn": "OTTIGNIES-LAUVAIN-LA-NUVE",
+    "IlceID": "11752"
+}, {
+    "IlceAdi": "OUDENAARDE",
+    "IlceAdiEn": "OUDENAARDE",
+    "IlceID": "11753"
+}, {
+    "IlceAdi": "OVERIJSE",
+    "IlceAdiEn": "OVERIJSE",
+    "IlceID": "11754"
+}, {
+    "IlceAdi": "OVERPELT",
+    "IlceAdiEn": "OVERPELT",
+    "IlceID": "11803"
+}, {
+    "IlceAdi": "PAAL",
+    "IlceAdiEn": "PAAL",
+    "IlceID": "11885"
+}, {
+    "IlceAdi": "PATURAGES",
+    "IlceAdiEn": "PATURAGES",
+    "IlceID": "11823"
+}, {
+    "IlceAdi": "PEER",
+    "IlceAdiEn": "PEER",
+    "IlceID": "11804"
+}, {
+    "IlceAdi": "PERUWELZ",
+    "IlceAdiEn": "PERUWELZ",
+    "IlceID": "11824"
+}, {
+    "IlceAdi": "PHILIPPEVILLE",
+    "IlceAdiEn": "PHILIPPEVILLE",
+    "IlceID": "11868"
+}, {
+    "IlceAdi": "PROFONDEVILLE",
+    "IlceAdiEn": "PROFONDEVILLE",
+    "IlceID": "11815"
+}, {
+    "IlceAdi": "QUAREGNON",
+    "IlceAdiEn": "QUAREGNON",
+    "IlceID": "17842"
+}, {
+    "IlceAdi": "RIXENSARD",
+    "IlceAdiEn": "RIXENSARD",
+    "IlceID": "11723"
+}, {
+    "IlceAdi": "ROESELARE",
+    "IlceAdiEn": "ROESELARE",
+    "IlceID": "11747"
+}, {
+    "IlceAdi": "RONSE",
+    "IlceAdiEn": "RONSE",
+    "IlceID": "11760"
+}, {
+    "IlceAdi": "RUDDERVOORDE",
+    "IlceAdiEn": "RUDDERVOORDE",
+    "IlceID": "11860"
+}, {
+    "IlceAdi": "RUISELEDE",
+    "IlceAdiEn": "RUISELEDE",
+    "IlceID": "11874"
+}, {
+    "IlceAdi": "RUMBEKE",
+    "IlceAdiEn": "RUMBEKE",
+    "IlceID": "11788"
+}, {
+    "IlceAdi": "RUMST",
+    "IlceAdiEn": "RUMST",
+    "IlceID": "11846"
+}, {
+    "IlceAdi": "SAINT-GHISLAIN",
+    "IlceAdiEn": "SAINT-GHISLAIN",
+    "IlceID": "11731"
+}, {
+    "IlceAdi": "SCHERPENHEUVEL",
+    "IlceAdiEn": "SCHERPENHEUVEL",
+    "IlceID": "11779"
+}, {
+    "IlceAdi": "SCHOTEN",
+    "IlceAdiEn": "SCHOTEN",
+    "IlceID": "11776"
+}, {
+    "IlceAdi": "SINT-TRUIDEN",
+    "IlceAdiEn": "SINT-TRUIDEN",
+    "IlceID": "11852"
+}, {
+    "IlceAdi": "SOIGNIES",
+    "IlceAdiEn": "SOIGNIES",
+    "IlceID": "11913"
+}, {
+    "IlceAdi": "SPA",
+    "IlceAdiEn": "SPA",
+    "IlceID": "11794"
+}, {
+    "IlceAdi": "ST. HUBERT",
+    "IlceAdiEn": "ST. HUBERT",
+    "IlceID": "11811"
+}, {
+    "IlceAdi": "ST. NIKLAAS",
+    "IlceAdiEn": "ST. NIKLAAS",
+    "IlceID": "11912"
+}, {
+    "IlceAdi": "ST. TRUIDEN",
+    "IlceAdiEn": "ST. TRUIDEN",
+    "IlceID": "11740"
+}, {
+    "IlceAdi": "STAVELOT",
+    "IlceAdiEn": "STAVELOT",
+    "IlceID": "11795"
+}, {
+    "IlceAdi": "STEKENE",
+    "IlceAdiEn": "STEKENE",
+    "IlceID": "11827"
+}, {
+    "IlceAdi": "TEMSE",
+    "IlceAdiEn": "TEMSE",
+    "IlceID": "11902"
+}, {
+    "IlceAdi": "TESSENDERLO",
+    "IlceAdiEn": "TESSENDERLO",
+    "IlceID": "11886"
+}, {
+    "IlceAdi": "THEUX",
+    "IlceAdiEn": "THEUX",
+    "IlceID": "11833"
+}, {
+    "IlceAdi": "THUIN",
+    "IlceAdiEn": "THUIN",
+    "IlceID": "11869"
+}, {
+    "IlceAdi": "TIELT",
+    "IlceAdiEn": "TIELT",
+    "IlceID": "11851"
+}, {
+    "IlceAdi": "TIENEN",
+    "IlceAdiEn": "TIENEN",
+    "IlceID": "11761"
+}, {
+    "IlceAdi": "TONGEREN",
+    "IlceAdiEn": "TONGEREN",
+    "IlceID": "11762"
+}, {
+    "IlceAdi": "TOURNAI",
+    "IlceAdiEn": "TOURNAI",
+    "IlceID": "11763"
+}, {
+    "IlceAdi": "TURNHOUT",
+    "IlceAdiEn": "TURNHOUT",
+    "IlceID": "11893"
+}, {
+    "IlceAdi": "VERVIERS",
+    "IlceAdiEn": "VERVIERS",
+    "IlceID": "11903"
+}, {
+    "IlceAdi": "VILVOORDE",
+    "IlceAdiEn": "VILVOORDE",
+    "IlceID": "11765"
+}, {
+    "IlceAdi": "VIRTON",
+    "IlceAdiEn": "VIRTON",
+    "IlceID": "11892"
+}, {
+    "IlceAdi": "WAARSCHOOT",
+    "IlceAdiEn": "WAARSCHOOT",
+    "IlceID": "11875"
+}, {
+    "IlceAdi": "WACHTEBEKE",
+    "IlceAdiEn": "WACHTEBEKE",
+    "IlceID": "11828"
+}, {
+    "IlceAdi": "WAREGEM",
+    "IlceAdiEn": "WAREGEM",
+    "IlceID": "11766"
+}, {
+    "IlceAdi": "WATERLOO",
+    "IlceAdiEn": "WATERLOO",
+    "IlceID": "11767"
+}, {
+    "IlceAdi": "WATERSCHEI",
+    "IlceAdiEn": "WATERSCHEI",
+    "IlceID": "11908"
+}, {
+    "IlceAdi": "WAVRE",
+    "IlceAdiEn": "WAVRE",
+    "IlceID": "11768"
+}, {
+    "IlceAdi": "WELKENRAEDT",
+    "IlceAdiEn": "WELKENRAEDT",
+    "IlceID": "11834"
+}, {
+    "IlceAdi": "WENDUINE",
+    "IlceAdiEn": "WENDUINE",
+    "IlceID": "11861"
+}, {
+    "IlceAdi": "WESTERLOO",
+    "IlceAdiEn": "WESTERLOO",
+    "IlceID": "11780"
+}, {
+    "IlceAdi": "WETTEREN",
+    "IlceAdiEn": "WETTEREN",
+    "IlceID": "11876"
+}, {
+    "IlceAdi": "WEVELGEM",
+    "IlceAdiEn": "WEVELGEM",
+    "IlceID": "11756"
+}, {
+    "IlceAdi": "WINTERSLAG",
+    "IlceAdiEn": "WINTERSLAG",
+    "IlceID": "11702"
+}, {
+    "IlceAdi": "WOLUWE-SAINT-LAMBERT",
+    "IlceAdiEn": "WOLUWE-SAINT-LAMBERT",
+    "IlceID": "11770"
+}, {
+    "IlceAdi": "WOLUWE-SAINT-PIERRE",
+    "IlceAdiEn": "WOLUWE-SAINT-PIERRE",
+    "IlceID": "11771"
+}, {
+    "IlceAdi": "ZEEBRUGGE",
+    "IlceAdiEn": "ZEEBRUGGE",
+    "IlceID": "11894"
+}, {
+    "IlceAdi": "ZELE",
+    "IlceAdiEn": "ZELE",
+    "IlceID": "11904"
+}, {
+    "IlceAdi": "ZOLDER",
+    "IlceAdiEn": "ZOLDER",
+    "IlceID": "11911"
+}, {
+    "IlceAdi": "ZONHOVEN",
+    "IlceAdiEn": "ZONHOVEN",
+    "IlceID": "11880"
+}, {
+    "IlceAdi": "ZOTTEGEM",
+    "IlceAdiEn": "ZOTTEGEM",
+    "IlceID": "11772"
+}, {
+    "IlceAdi": "ZOUTLEEUW",
+    "IlceAdiEn": "ZOUTLEEUW",
+    "IlceID": "11881"
+}, {
+    "IlceAdi": "ZULTE",
+    "IlceAdiEn": "ZULTE",
+    "IlceID": "11789"
+}, {
+    "IlceAdi": "ZWEVEGEM",
+    "IlceAdiEn": "ZWEVEGEM",
+    "IlceID": "11758"
+}, {
+    "IlceAdi": "ADANA",
+    "IlceAdiEn": "ADANA",
+    "IlceID": "9146"
+}, {
+    "IlceAdi": "ALADAĞ",
+    "IlceAdiEn": "ALADAG",
+    "IlceID": "9147"
+}, {
+    "IlceAdi": "CEYHAN",
+    "IlceAdiEn": "CEYHAN",
+    "IlceID": "9148"
+}, {
+    "IlceAdi": "FEKE",
+    "IlceAdiEn": "FEKE",
+    "IlceID": "9149"
+}, {
+    "IlceAdi": "İMAMOĞLU",
+    "IlceAdiEn": "IMAMOGLU",
+    "IlceID": "9150"
+}, {
+    "IlceAdi": "KARAISALI",
+    "IlceAdiEn": "KARAISALI",
+    "IlceID": "9151"
+}, {
+    "IlceAdi": "KARATAŞ",
+    "IlceAdiEn": "KARATAS",
+    "IlceID": "9152"
+}, {
+    "IlceAdi": "KOZAN",
+    "IlceAdiEn": "KOZAN",
+    "IlceID": "9153"
+}, {
+    "IlceAdi": "POZANTI",
+    "IlceAdiEn": "POZANTI",
+    "IlceID": "9154"
+}, {
+    "IlceAdi": "SAİMBEYLİ",
+    "IlceAdiEn": "SAIMBEYLI",
+    "IlceID": "9155"
+}, {
+    "IlceAdi": "TUFANBEYLİ",
+    "IlceAdiEn": "TUFANBEYLI",
+    "IlceID": "9156"
+}, {
+    "IlceAdi": "YUMURTALIK",
+    "IlceAdiEn": "YUMURTALIK",
+    "IlceID": "9157"
+}, {
+    "IlceAdi": "ADIYAMAN",
+    "IlceAdiEn": "ADIYAMAN",
+    "IlceID": "9158"
+}, {
+    "IlceAdi": "BESNİ",
+    "IlceAdiEn": "BESNI",
+    "IlceID": "9159"
+}, {
+    "IlceAdi": "ÇELİKHAN",
+    "IlceAdiEn": "CELIKHAN",
+    "IlceID": "9160"
+}, {
+    "IlceAdi": "GERGER",
+    "IlceAdiEn": "GERGER",
+    "IlceID": "9161"
+}, {
+    "IlceAdi": "GÖLBAŞI",
+    "IlceAdiEn": "GOLBASI",
+    "IlceID": "9162"
+}, {
+    "IlceAdi": "KAHTA",
+    "IlceAdiEn": "KAHTA",
+    "IlceID": "9163"
+}, {
+    "IlceAdi": "SAMSAT",
+    "IlceAdiEn": "SAMSAT",
+    "IlceID": "9164"
+}, {
+    "IlceAdi": "SİNCİK",
+    "IlceAdiEn": "SINCIK",
+    "IlceID": "9165"
+}, {
+    "IlceAdi": "TUT",
+    "IlceAdiEn": "TUT",
+    "IlceID": "9166"
+}, {
+    "IlceAdi": "AĞRI",
+    "IlceAdiEn": "AGRI",
+    "IlceID": "9185"
+}, {
+    "IlceAdi": "DİYADİN",
+    "IlceAdiEn": "DIYADIN",
+    "IlceID": "9186"
+}, {
+    "IlceAdi": "DOĞUBEYAZIT",
+    "IlceAdiEn": "DOGUBEYAZIT",
+    "IlceID": "9187"
+}, {
+    "IlceAdi": "ELEŞKİRT",
+    "IlceAdiEn": "ELESKIRT",
+    "IlceID": "9188"
+}, {
+    "IlceAdi": "PATNOS",
+    "IlceAdiEn": "PATNOS",
+    "IlceID": "9189"
+}, {
+    "IlceAdi": "TAŞLIÇAY",
+    "IlceAdiEn": "TASLICAY",
+    "IlceID": "9190"
+}, {
+    "IlceAdi": "TUTAK",
+    "IlceAdiEn": "TUTAK",
+    "IlceID": "9191"
+}, {
+    "IlceAdi": "AĞAÇÖREN",
+    "IlceAdiEn": "AGACOREN",
+    "IlceID": "9192"
+}, {
+    "IlceAdi": "AKSARAY",
+    "IlceAdiEn": "AKSARAY",
+    "IlceID": "9193"
+}, {
+    "IlceAdi": "ESKİL",
+    "IlceAdiEn": "ESKIL",
+    "IlceID": "9194"
+}, {
+    "IlceAdi": "GÜLAĞAÇ",
+    "IlceAdiEn": "GULAGAC",
+    "IlceID": "9195"
+}, {
+    "IlceAdi": "GÜZELYURT",
+    "IlceAdiEn": "GUZELYURT",
+    "IlceID": "9196"
+}, {
+    "IlceAdi": "ORTAKÖY",
+    "IlceAdiEn": "ORTAKÖY",
+    "IlceID": "17877"
+}, {
+    "IlceAdi": "SARIYAHŞİ",
+    "IlceAdiEn": "SARIYAHSI",
+    "IlceID": "9197"
+}, {
+    "IlceAdi": "SULTANHANI",
+    "IlceAdiEn": "SULTANHANI",
+    "IlceID": "20069"
+}, {
+    "IlceAdi": "AMASYA",
+    "IlceAdiEn": "AMASYA",
+    "IlceID": "9198"
+}, {
+    "IlceAdi": "GÖYNÜCEK",
+    "IlceAdiEn": "GOYNUCEK",
+    "IlceID": "9199"
+}, {
+    "IlceAdi": "GÜMÜŞHACIKÖY",
+    "IlceAdiEn": "GUMUSHACIKOY",
+    "IlceID": "9200"
+}, {
+    "IlceAdi": "HAMAMÖZÜ",
+    "IlceAdiEn": "HAMAMOZU",
+    "IlceID": "9201"
+}, {
+    "IlceAdi": "MERZİFON",
+    "IlceAdiEn": "MERZIFON",
+    "IlceID": "9202"
+}, {
+    "IlceAdi": "SULUOVA",
+    "IlceAdiEn": "SULUOVA",
+    "IlceID": "9203"
+}, {
+    "IlceAdi": "TAŞOVA",
+    "IlceAdiEn": "TASOVA",
+    "IlceID": "9204"
+}, {
+    "IlceAdi": "AKYURT",
+    "IlceAdiEn": "AKYURT",
+    "IlceID": "9205"
+}, {
+    "IlceAdi": "ANKARA",
+    "IlceAdiEn": "ANKARA",
+    "IlceID": "9206"
+}, {
+    "IlceAdi": "AYAŞ",
+    "IlceAdiEn": "AYAS",
+    "IlceID": "9207"
+}, {
+    "IlceAdi": "BALA",
+    "IlceAdiEn": "BALA",
+    "IlceID": "9208"
+}, {
+    "IlceAdi": "BEYPAZARI",
+    "IlceAdiEn": "BEYPAZARI",
+    "IlceID": "9209"
+}, {
+    "IlceAdi": "ÇAMLIDERE",
+    "IlceAdiEn": "CAMLIDERE",
+    "IlceID": "9210"
+}, {
+    "IlceAdi": "CUBUK",
+    "IlceAdiEn": "CUBUK",
+    "IlceID": "9211"
+}, {
+    "IlceAdi": "ELMADAĞ",
+    "IlceAdiEn": "ELMADAG",
+    "IlceID": "9212"
+}, {
+    "IlceAdi": "EVREN",
+    "IlceAdiEn": "EVREN",
+    "IlceID": "9213"
+}, {
+    "IlceAdi": "GÜDÜL",
+    "IlceAdiEn": "GUDUL",
+    "IlceID": "9214"
+}, {
+    "IlceAdi": "HAYMANA",
+    "IlceAdiEn": "HAYMANA",
+    "IlceID": "9215"
+}, {
+    "IlceAdi": "KAHRAMANKAZAN",
+    "IlceAdiEn": "KAHRAMANKAZAN",
+    "IlceID": "9217"
+}, {
+    "IlceAdi": "KALECİK",
+    "IlceAdiEn": "KALECIK",
+    "IlceID": "9216"
+}, {
+    "IlceAdi": "KIZILCAHAMAM",
+    "IlceAdiEn": "KIZILCAHAMAM",
+    "IlceID": "9218"
+}, {
+    "IlceAdi": "NALLIHAN",
+    "IlceAdiEn": "NALLIHAN",
+    "IlceID": "9219"
+}, {
+    "IlceAdi": "POLATLI",
+    "IlceAdiEn": "POLATLI",
+    "IlceID": "9220"
+}, {
+    "IlceAdi": "ŞEREFLİKOÇHİSAR",
+    "IlceAdiEn": "SEREFLIKOCHISAR",
+    "IlceID": "9221"
+}, {
+    "IlceAdi": "AKSEKİ",
+    "IlceAdiEn": "AKSEKI",
+    "IlceID": "9222"
+}, {
+    "IlceAdi": "AKSU",
+    "IlceAdiEn": "AKSU",
+    "IlceID": "9223"
+}, {
+    "IlceAdi": "ALANYA",
+    "IlceAdiEn": "ALANYA",
+    "IlceID": "9224"
+}, {
+    "IlceAdi": "ANTALYA",
+    "IlceAdiEn": "ANTALYA",
+    "IlceID": "9225"
+}, {
+    "IlceAdi": "DEMRE",
+    "IlceAdiEn": "DEMRE",
+    "IlceID": "9226"
+}, {
+    "IlceAdi": "ELMALI",
+    "IlceAdiEn": "ELMALI",
+    "IlceID": "9227"
+}, {
+    "IlceAdi": "FİNİKE",
+    "IlceAdiEn": "FINIKE",
+    "IlceID": "9228"
+}, {
+    "IlceAdi": "GAZİPAŞA",
+    "IlceAdiEn": "GAZIPASA",
+    "IlceID": "9229"
+}, {
+    "IlceAdi": "GÜNDOĞMUŞ",
+    "IlceAdiEn": "GUNDOGMUS",
+    "IlceID": "9230"
+}, {
+    "IlceAdi": "İBRADI",
+    "IlceAdiEn": "IBRADI",
+    "IlceID": "9231"
+}, {
+    "IlceAdi": "KAŞ",
+    "IlceAdiEn": "KAS",
+    "IlceID": "9232"
+}, {
+    "IlceAdi": "KEMER",
+    "IlceAdiEn": "KEMER",
+    "IlceID": "9233"
+}, {
+    "IlceAdi": "KORKUTELİ",
+    "IlceAdiEn": "KORKUTELI",
+    "IlceID": "9234"
+}, {
+    "IlceAdi": "KUMLUCA",
+    "IlceAdiEn": "KUMLUCA",
+    "IlceID": "9235"
+}, {
+    "IlceAdi": "MANAVGAT",
+    "IlceAdiEn": "MANAVGAT",
+    "IlceID": "9236"
+}, {
+    "IlceAdi": "SERİK",
+    "IlceAdiEn": "SERIK",
+    "IlceID": "9237"
+}, {
+    "IlceAdi": "ARDAHAN",
+    "IlceAdiEn": "ARDAHAN",
+    "IlceID": "9238"
+}, {
+    "IlceAdi": "ÇILDIR",
+    "IlceAdiEn": "CILDIR",
+    "IlceID": "9239"
+}, {
+    "IlceAdi": "DAMAL",
+    "IlceAdiEn": "DAMAL",
+    "IlceID": "9240"
+}, {
+    "IlceAdi": "GÖLE",
+    "IlceAdiEn": "GOLE",
+    "IlceID": "9241"
+}, {
+    "IlceAdi": "HANAK",
+    "IlceAdiEn": "HANAK",
+    "IlceID": "9242"
+}, {
+    "IlceAdi": "POSOF",
+    "IlceAdiEn": "POSOF",
+    "IlceID": "9243"
+}, {
+    "IlceAdi": "ARDANUÇ",
+    "IlceAdiEn": "ARDANUC",
+    "IlceID": "9244"
+}, {
+    "IlceAdi": "ARHAVİ",
+    "IlceAdiEn": "ARHAVI",
+    "IlceID": "9245"
+}, {
+    "IlceAdi": "ARTVİN",
+    "IlceAdiEn": "ARTVIN",
+    "IlceID": "9246"
+}, {
+    "IlceAdi": "BORÇKA",
+    "IlceAdiEn": "BORCKA",
+    "IlceID": "9247"
+}, {
+    "IlceAdi": "HOPA",
+    "IlceAdiEn": "HOPA",
+    "IlceID": "9248"
+}, {
+    "IlceAdi": "KEMALPAŞA",
+    "IlceAdiEn": "KEMALPASA",
+    "IlceID": "20070"
+}, {
+    "IlceAdi": "MURGUL",
+    "IlceAdiEn": "MURGUL",
+    "IlceID": "9249"
+}, {
+    "IlceAdi": "ŞAVŞAT",
+    "IlceAdiEn": "SAVSAT",
+    "IlceID": "9250"
+}, {
+    "IlceAdi": "YUSUFELİ",
+    "IlceAdiEn": "YUSUFELI",
+    "IlceID": "9251"
+}, {
+    "IlceAdi": "AYDIN",
+    "IlceAdiEn": "AYDIN",
+    "IlceID": "9252"
+}, {
+    "IlceAdi": "BOZDOĞAN",
+    "IlceAdiEn": "BOZDOGAN",
+    "IlceID": "9253"
+}, {
+    "IlceAdi": "BUHARKENT",
+    "IlceAdiEn": "BUHARKENT",
+    "IlceID": "9254"
+}, {
+    "IlceAdi": "ÇİNE",
+    "IlceAdiEn": "ÇINE",
+    "IlceID": "9255"
+}, {
+    "IlceAdi": "DİDİM",
+    "IlceAdiEn": "DIDIM",
+    "IlceID": "9256"
+}, {
+    "IlceAdi": "GERMENCİK",
+    "IlceAdiEn": "GERMENCIK",
+    "IlceID": "9257"
+}, {
+    "IlceAdi": "İNCİRLİOVA",
+    "IlceAdiEn": "INCIRLIOVA",
+    "IlceID": "9258"
+}, {
+    "IlceAdi": "KARACASU",
+    "IlceAdiEn": "KARACASU",
+    "IlceID": "9259"
+}, {
+    "IlceAdi": "KARPUZLU",
+    "IlceAdiEn": "KARPUZLU",
+    "IlceID": "9260"
+}, {
+    "IlceAdi": "KOÇARLI",
+    "IlceAdiEn": "KOCARLI",
+    "IlceID": "9261"
+}, {
+    "IlceAdi": "KÖŞK",
+    "IlceAdiEn": "KOŞK",
+    "IlceID": "9262"
+}, {
+    "IlceAdi": "KUŞADASI",
+    "IlceAdiEn": "KUSADASI",
+    "IlceID": "9263"
+}, {
+    "IlceAdi": "KUYUCAK",
+    "IlceAdiEn": "KUYUCAK",
+    "IlceID": "9264"
+}, {
+    "IlceAdi": "NAZİLLİ",
+    "IlceAdiEn": "NAZILLI",
+    "IlceID": "9265"
+}, {
+    "IlceAdi": "SÖKE",
+    "IlceAdiEn": "SOKE",
+    "IlceID": "9266"
+}, {
+    "IlceAdi": "SULTANHİSAR",
+    "IlceAdiEn": "SULTANHISAR",
+    "IlceID": "9267"
+}, {
+    "IlceAdi": "YENİPAZAR",
+    "IlceAdiEn": "YENIPAZAR",
+    "IlceID": "9268"
+}, {
+    "IlceAdi": "AYVALIK",
+    "IlceAdiEn": "AYVALIK",
+    "IlceID": "9269"
+}, {
+    "IlceAdi": "BALIKESİR",
+    "IlceAdiEn": "BALIKESIR",
+    "IlceID": "9270"
+}, {
+    "IlceAdi": "BALYA",
+    "IlceAdiEn": "BALYA",
+    "IlceID": "9271"
+}, {
+    "IlceAdi": "BANDIRMA",
+    "IlceAdiEn": "BANDIRMA",
+    "IlceID": "17917"
+}, {
+    "IlceAdi": "BİGADİÇ",
+    "IlceAdiEn": "BIGADIC",
+    "IlceID": "9272"
+}, {
+    "IlceAdi": "BURHANİYE",
+    "IlceAdiEn": "BURHANIYE",
+    "IlceID": "9273"
+}, {
+    "IlceAdi": "DURSUNBEY",
+    "IlceAdiEn": "DURSUNBEY",
+    "IlceID": "9274"
+}, {
+    "IlceAdi": "EDREMİT",
+    "IlceAdiEn": "EDREMIT",
+    "IlceID": "9275"
+}, {
+    "IlceAdi": "ERDEK",
+    "IlceAdiEn": "ERDEK",
+    "IlceID": "17881"
+}, {
+    "IlceAdi": "GÖMEÇ",
+    "IlceAdiEn": "GOMEC",
+    "IlceID": "9276"
+}, {
+    "IlceAdi": "GÖNEN",
+    "IlceAdiEn": "GONEN",
+    "IlceID": "9277"
+}, {
+    "IlceAdi": "HAVRAN",
+    "IlceAdiEn": "HAVRAN",
+    "IlceID": "9278"
+}, {
+    "IlceAdi": "İVRİNDİ",
+    "IlceAdiEn": "IVRINDI",
+    "IlceID": "9279"
+}, {
+    "IlceAdi": "KEPSUT",
+    "IlceAdiEn": "KEPSUT",
+    "IlceID": "9280"
+}, {
+    "IlceAdi": "MANYAS",
+    "IlceAdiEn": "MANYAS",
+    "IlceID": "17918"
+}, {
+    "IlceAdi": "MARMARA",
+    "IlceAdiEn": "MARMARA",
+    "IlceID": "9281"
+}, {
+    "IlceAdi": "SAVAŞTEPE",
+    "IlceAdiEn": "SAVASTEPE",
+    "IlceID": "9282"
+}, {
+    "IlceAdi": "SINDIRGI",
+    "IlceAdiEn": "SINDIRGI",
+    "IlceID": "9283"
+}, {
+    "IlceAdi": "SUSURLUK",
+    "IlceAdiEn": "SUSURLUK",
+    "IlceID": "9284"
+}, {
+    "IlceAdi": "BARTIN",
+    "IlceAdiEn": "BARTIN",
+    "IlceID": "9285"
+}, {
+    "IlceAdi": "KURUCAŞİLE",
+    "IlceAdiEn": "KURUCASILE",
+    "IlceID": "9286"
+}, {
+    "IlceAdi": "ULUS",
+    "IlceAdiEn": "ULUS",
+    "IlceID": "9287"
+}, {
+    "IlceAdi": "BATMAN",
+    "IlceAdiEn": "BATMAN",
+    "IlceID": "9288"
+}, {
+    "IlceAdi": "BEŞİRİ",
+    "IlceAdiEn": "BESIRI",
+    "IlceID": "9289"
+}, {
+    "IlceAdi": "GERCÜŞ",
+    "IlceAdiEn": "GERCUS",
+    "IlceID": "9290"
+}, {
+    "IlceAdi": "HASANKEYF",
+    "IlceAdiEn": "HASANKEYF",
+    "IlceID": "9291"
+}, {
+    "IlceAdi": "KOZLUK",
+    "IlceAdiEn": "KOZLUK",
+    "IlceID": "9292"
+}, {
+    "IlceAdi": "SASON",
+    "IlceAdiEn": "SASON",
+    "IlceID": "9293"
+}, {
+    "IlceAdi": "AYDINTEPE",
+    "IlceAdiEn": "AYDINTEPE",
+    "IlceID": "9294"
+}, {
+    "IlceAdi": "BAYBURT",
+    "IlceAdiEn": "BAYBURT",
+    "IlceID": "9295"
+}, {
+    "IlceAdi": "DEMİRÖZÜ",
+    "IlceAdiEn": "DEMIROZU",
+    "IlceID": "9296"
+}, {
+    "IlceAdi": "BİLECİK",
+    "IlceAdiEn": "BILECIK",
+    "IlceID": "9297"
+}, {
+    "IlceAdi": "BOZÜYÜK",
+    "IlceAdiEn": "BOZUYUK",
+    "IlceID": "9298"
+}, {
+    "IlceAdi": "GÖLPAZARI",
+    "IlceAdiEn": "GOLPAZARI",
+    "IlceID": "9299"
+}, {
+    "IlceAdi": "İNHİSAR",
+    "IlceAdiEn": "INHISAR",
+    "IlceID": "9300"
+}, {
+    "IlceAdi": "OSMANELİ",
+    "IlceAdiEn": "OSMANELİ",
+    "IlceID": "17895"
+}, {
+    "IlceAdi": "PAZARYERİ",
+    "IlceAdiEn": "PAZARYERİ",
+    "IlceID": "17896"
+}, {
+    "IlceAdi": "SÖĞÜT",
+    "IlceAdiEn": "SOGUT",
+    "IlceID": "9301"
+}, {
+    "IlceAdi": "YENİPAZAR",
+    "IlceAdiEn": "YENIPAZAR",
+    "IlceID": "9302"
+}, {
+    "IlceAdi": "ADAKLI",
+    "IlceAdiEn": "ADAKLI",
+    "IlceID": "17889"
+}, {
+    "IlceAdi": "BİNGÖL",
+    "IlceAdiEn": "BINGOL",
+    "IlceID": "9303"
+}, {
+    "IlceAdi": "KARLIOVA",
+    "IlceAdiEn": "KARLIOVA",
+    "IlceID": "9304"
+}, {
+    "IlceAdi": "KİGI",
+    "IlceAdiEn": "KIGI",
+    "IlceID": "9305"
+}, {
+    "IlceAdi": "SOLHAN",
+    "IlceAdiEn": "SOLHAN",
+    "IlceID": "9306"
+}, {
+    "IlceAdi": "YAYLADERE",
+    "IlceAdiEn": "YAYLADERE",
+    "IlceID": "9307"
+}, {
+    "IlceAdi": "YEDİSU",
+    "IlceAdiEn": "YEDISU",
+    "IlceID": "9308"
+}, {
+    "IlceAdi": "ADİLCEVAZ",
+    "IlceAdiEn": "ADILCEVAZ",
+    "IlceID": "9309"
+}, {
+    "IlceAdi": "AHLAT",
+    "IlceAdiEn": "AHLAT",
+    "IlceID": "9310"
+}, {
+    "IlceAdi": "BİTLİS",
+    "IlceAdiEn": "BITLIS",
+    "IlceID": "9311"
+}, {
+    "IlceAdi": "GÜROYMAK",
+    "IlceAdiEn": "GÜROYMAK",
+    "IlceID": "17887"
+}, {
+    "IlceAdi": "HİZAN",
+    "IlceAdiEn": "HIZAN",
+    "IlceID": "9312"
+}, {
+    "IlceAdi": "MUTKİ",
+    "IlceAdiEn": "MUTKI",
+    "IlceID": "9313"
+}, {
+    "IlceAdi": "TATVAN",
+    "IlceAdiEn": "TATVAN",
+    "IlceID": "9314"
+}, {
+    "IlceAdi": "BOLU",
+    "IlceAdiEn": "BOLU",
+    "IlceID": "9315"
+}, {
+    "IlceAdi": "DÖRTDİVAN",
+    "IlceAdiEn": "DORTDIVAN",
+    "IlceID": "9316"
+}, {
+    "IlceAdi": "GEREDE",
+    "IlceAdiEn": "GEREDE",
+    "IlceID": "9317"
+}, {
+    "IlceAdi": "GÖYNÜK",
+    "IlceAdiEn": "GOYNUK",
+    "IlceID": "9318"
+}, {
+    "IlceAdi": "KIBRISCIK",
+    "IlceAdiEn": "KIBRISCIK",
+    "IlceID": "9319"
+}, {
+    "IlceAdi": "MENGEN",
+    "IlceAdiEn": "MENGEN",
+    "IlceID": "9320"
+}, {
+    "IlceAdi": "MUDURNU",
+    "IlceAdiEn": "MUDURNU",
+    "IlceID": "9321"
+}, {
+    "IlceAdi": "SEBEN",
+    "IlceAdiEn": "SEBEN",
+    "IlceID": "9322"
+}, {
+    "IlceAdi": "YENİÇAĞA",
+    "IlceAdiEn": "YENICAGA",
+    "IlceID": "9323"
+}, {
+    "IlceAdi": "AĞLASUN",
+    "IlceAdiEn": "AGLASUN",
+    "IlceID": "9324"
+}, {
+    "IlceAdi": "ALTINYAYLA",
+    "IlceAdiEn": "ALTINYAYLA",
+    "IlceID": "9325"
+}, {
+    "IlceAdi": "BUCAK",
+    "IlceAdiEn": "BUCAK",
+    "IlceID": "9326"
+}, {
+    "IlceAdi": "BURDUR",
+    "IlceAdiEn": "BURDUR",
+    "IlceID": "9327"
+}, {
+    "IlceAdi": "ÇAVDIR",
+    "IlceAdiEn": "CAVDIR",
+    "IlceID": "9328"
+}, {
+    "IlceAdi": "ÇELTİKCİ",
+    "IlceAdiEn": "CELTIKCI",
+    "IlceID": "9329"
+}, {
+    "IlceAdi": "GÖLHİSAR",
+    "IlceAdiEn": "GOLHISAR",
+    "IlceID": "9330"
+}, {
+    "IlceAdi": "KARAMANLI",
+    "IlceAdiEn": "KARAMANLI",
+    "IlceID": "9331"
+}, {
+    "IlceAdi": "KEMER",
+    "IlceAdiEn": "KEMER",
+    "IlceID": "9332"
+}, {
+    "IlceAdi": "TEFENNİ",
+    "IlceAdiEn": "TEFENNI",
+    "IlceID": "9333"
+}, {
+    "IlceAdi": "YEŞİLOVA",
+    "IlceAdiEn": "YESILOVA",
+    "IlceID": "9334"
+}, {
+    "IlceAdi": "BURSA",
+    "IlceAdiEn": "BURSA",
+    "IlceID": "9335"
+}, {
+    "IlceAdi": "BÜYÜK ORHAN",
+    "IlceAdiEn": "BUYUK ORHAN",
+    "IlceID": "9336"
+}, {
+    "IlceAdi": "GEMLİK",
+    "IlceAdiEn": "GEMLIK",
+    "IlceID": "9337"
+}, {
+    "IlceAdi": "HARMANCIK",
+    "IlceAdiEn": "HARMANCIK",
+    "IlceID": "9338"
+}, {
+    "IlceAdi": "İNEGÖL",
+    "IlceAdiEn": "INEGOL",
+    "IlceID": "9339"
+}, {
+    "IlceAdi": "İZNİK",
+    "IlceAdiEn": "IZNIK",
+    "IlceID": "9340"
+}, {
+    "IlceAdi": "KARACABEY",
+    "IlceAdiEn": "KARACABEY",
+    "IlceID": "9341"
+}, {
+    "IlceAdi": "KELES",
+    "IlceAdiEn": "KELES",
+    "IlceID": "9342"
+}, {
+    "IlceAdi": "KESTEL",
+    "IlceAdiEn": "KESTEL",
+    "IlceID": "17893"
+}, {
+    "IlceAdi": "MUDANYA",
+    "IlceAdiEn": "MUDANYA",
+    "IlceID": "9343"
+}, {
+    "IlceAdi": "MUSTAFA KEMALPAŞA",
+    "IlceAdiEn": "MUSTAFA KEMALPASA",
+    "IlceID": "9344"
+}, {
+    "IlceAdi": "ORHANELİ",
+    "IlceAdiEn": "ORHANELİ",
+    "IlceID": "17894"
+}, {
+    "IlceAdi": "ORHANGAZİ",
+    "IlceAdiEn": "ORHANGAZI",
+    "IlceID": "9345"
+}, {
+    "IlceAdi": "YENİŞEHİR",
+    "IlceAdiEn": "YENISEHIR",
+    "IlceID": "9346"
+}, {
+    "IlceAdi": "AYVACIK",
+    "IlceAdiEn": "AYVACIK",
+    "IlceID": "9347"
+}, {
+    "IlceAdi": "BAYRAMİÇ",
+    "IlceAdiEn": "BAYRAMİC",
+    "IlceID": "9348"
+}, {
+    "IlceAdi": "BİGA",
+    "IlceAdiEn": "BIGA",
+    "IlceID": "9349"
+}, {
+    "IlceAdi": "BOZCAADA",
+    "IlceAdiEn": "BOZCAADA",
+    "IlceID": "9350"
+}, {
+    "IlceAdi": "ÇAN",
+    "IlceAdiEn": "CAN",
+    "IlceID": "9351"
+}, {
+    "IlceAdi": "ÇANAKKALE",
+    "IlceAdiEn": "CANAKKALE",
+    "IlceID": "9352"
+}, {
+    "IlceAdi": "EZİNE",
+    "IlceAdiEn": "EZİNE",
+    "IlceID": "17882"
+}, {
+    "IlceAdi": "GELİBOLU",
+    "IlceAdiEn": "GELIBOLU",
+    "IlceID": "9353"
+}, {
+    "IlceAdi": "GÖKÇEADA",
+    "IlceAdiEn": "GOKCEADA",
+    "IlceID": "9354"
+}, {
+    "IlceAdi": "LAPSEKİ",
+    "IlceAdiEn": "LAPSEKI",
+    "IlceID": "9355"
+}, {
+    "IlceAdi": "YENİCE",
+    "IlceAdiEn": "YENICE",
+    "IlceID": "9356"
+}, {
+    "IlceAdi": "ATKARACALAR",
+    "IlceAdiEn": "ATKARACALAR",
+    "IlceID": "9357"
+}, {
+    "IlceAdi": "BAYRAMÖREN",
+    "IlceAdiEn": "BAYRAMOREN",
+    "IlceID": "9358"
+}, {
+    "IlceAdi": "ÇANKIRI",
+    "IlceAdiEn": "CANKIRI",
+    "IlceID": "9359"
+}, {
+    "IlceAdi": "CERKEŞ",
+    "IlceAdiEn": "CERKES",
+    "IlceID": "9360"
+}, {
+    "IlceAdi": "ILGAZ",
+    "IlceAdiEn": "ILGAZ",
+    "IlceID": "9361"
+}, {
+    "IlceAdi": "KIZILIRMAK",
+    "IlceAdiEn": "KIZILIRMAK",
+    "IlceID": "9362"
+}, {
+    "IlceAdi": "KURŞUNLU",
+    "IlceAdiEn": "KURSUNLU",
+    "IlceID": "9363"
+}, {
+    "IlceAdi": "ORTA",
+    "IlceAdiEn": "ORTA",
+    "IlceID": "9364"
+}, {
+    "IlceAdi": "ŞABANÖZÜ",
+    "IlceAdiEn": "SABANOZU",
+    "IlceID": "9365"
+}, {
+    "IlceAdi": "YAPRAKLI",
+    "IlceAdiEn": "YAPRAKLI",
+    "IlceID": "9366"
+}, {
+    "IlceAdi": "ALACA",
+    "IlceAdiEn": "ALACA",
+    "IlceID": "9367"
+}, {
+    "IlceAdi": "BAYAT",
+    "IlceAdiEn": "BAYAT",
+    "IlceID": "9368"
+}, {
+    "IlceAdi": "BOĞAZKALE",
+    "IlceAdiEn": "BOGAZKALE",
+    "IlceID": "9369"
+}, {
+    "IlceAdi": "ÇORUM",
+    "IlceAdiEn": "CORUM",
+    "IlceID": "9370"
+}, {
+    "IlceAdi": "DODURGA",
+    "IlceAdiEn": "DODURGA",
+    "IlceID": "9371"
+}, {
+    "IlceAdi": "İSKİLİP",
+    "IlceAdiEn": "ISKILIP",
+    "IlceID": "9372"
+}, {
+    "IlceAdi": "KARGI",
+    "IlceAdiEn": "KARGI",
+    "IlceID": "9373"
+}, {
+    "IlceAdi": "LAÇİN",
+    "IlceAdiEn": "LACIN",
+    "IlceID": "9374"
+}, {
+    "IlceAdi": "MECİTÖZÜ",
+    "IlceAdiEn": "MECITOZU",
+    "IlceID": "9375"
+}, {
+    "IlceAdi": "OĞUZLAR",
+    "IlceAdiEn": "OGUZLAR",
+    "IlceID": "9376"
+}, {
+    "IlceAdi": "ORTAKÖY",
+    "IlceAdiEn": "ORTAKOY",
+    "IlceID": "9377"
+}, {
+    "IlceAdi": "OSMANCIK",
+    "IlceAdiEn": "OSMANCIK",
+    "IlceID": "9378"
+}, {
+    "IlceAdi": "SUNGURLU",
+    "IlceAdiEn": "SUNGURLU",
+    "IlceID": "9379"
+}, {
+    "IlceAdi": "UĞURLUDAĞ",
+    "IlceAdiEn": "UGURLUDAG",
+    "IlceID": "9380"
+}, {
+    "IlceAdi": "ACIPAYAM",
+    "IlceAdiEn": "ACIPAYAM",
+    "IlceID": "19020"
+}, {
+    "IlceAdi": "BABADAĞ",
+    "IlceAdiEn": "BABADAG",
+    "IlceID": "9382"
+}, {
+    "IlceAdi": "BAKLAN",
+    "IlceAdiEn": "BAKLAN",
+    "IlceID": "9383"
+}, {
+    "IlceAdi": "BEKİLLİ",
+    "IlceAdiEn": "BEKILLI",
+    "IlceID": "9384"
+}, {
+    "IlceAdi": "BEYAĞAÇ",
+    "IlceAdiEn": "BEYAGAC",
+    "IlceID": "9385"
+}, {
+    "IlceAdi": "BOZKURT",
+    "IlceAdiEn": "BOZKURT",
+    "IlceID": "9386"
+}, {
+    "IlceAdi": "BULDAN",
+    "IlceAdiEn": "BULDAN",
+    "IlceID": "9387"
+}, {
+    "IlceAdi": "ÇAL",
+    "IlceAdiEn": "CAL",
+    "IlceID": "9388"
+}, {
+    "IlceAdi": "ÇAMELİ",
+    "IlceAdiEn": "CAMELI",
+    "IlceID": "9389"
+}, {
+    "IlceAdi": "ÇARDAK",
+    "IlceAdiEn": "CARDAK",
+    "IlceID": "9390"
+}, {
+    "IlceAdi": "ÇİVRİL",
+    "IlceAdiEn": "CIVRIL",
+    "IlceID": "9391"
+}, {
+    "IlceAdi": "DENİZLİ",
+    "IlceAdiEn": "DENIZLI",
+    "IlceID": "9392"
+}, {
+    "IlceAdi": "GÜNEY",
+    "IlceAdiEn": "GÜNEY",
+    "IlceID": "9381"
+}, {
+    "IlceAdi": "HONAZ",
+    "IlceAdiEn": "HONAZ",
+    "IlceID": "9393"
+}, {
+    "IlceAdi": "KALE",
+    "IlceAdiEn": "KALE",
+    "IlceID": "17899"
+}, {
+    "IlceAdi": "SARAYKÖY",
+    "IlceAdiEn": "SARAYKOY",
+    "IlceID": "9395"
+}, {
+    "IlceAdi": "SERİNHİSAR",
+    "IlceAdiEn": "SERINHISAR",
+    "IlceID": "9396"
+}, {
+    "IlceAdi": "TAVAS",
+    "IlceAdiEn": "TAVAS",
+    "IlceID": "17900"
+}, {
+    "IlceAdi": "BİSMİL",
+    "IlceAdiEn": "BISMIL",
+    "IlceID": "9397"
+}, {
+    "IlceAdi": "ÇERMİK",
+    "IlceAdiEn": "CERMIK",
+    "IlceID": "9398"
+}, {
+    "IlceAdi": "ÇINAR",
+    "IlceAdiEn": "CINAR",
+    "IlceID": "9399"
+}, {
+    "IlceAdi": "ÇÜNGÜŞ",
+    "IlceAdiEn": "CUNGUS",
+    "IlceID": "9400"
+}, {
+    "IlceAdi": "DİCLE",
+    "IlceAdiEn": "DICLE",
+    "IlceID": "9401"
+}, {
+    "IlceAdi": "DİYARBAKIR",
+    "IlceAdiEn": "DIYARBAKIR",
+    "IlceID": "9402"
+}, {
+    "IlceAdi": "EĞİL",
+    "IlceAdiEn": "EGIL",
+    "IlceID": "9403"
+}, {
+    "IlceAdi": "ERGANİ",
+    "IlceAdiEn": "ERGANI",
+    "IlceID": "9404"
+}, {
+    "IlceAdi": "HANİ",
+    "IlceAdiEn": "HANI",
+    "IlceID": "9405"
+}, {
+    "IlceAdi": "HAZRO",
+    "IlceAdiEn": "HAZRO",
+    "IlceID": "9406"
+}, {
+    "IlceAdi": "KOCAKÖY",
+    "IlceAdiEn": "KOCAKOY",
+    "IlceID": "9407"
+}, {
+    "IlceAdi": "KULP",
+    "IlceAdiEn": "KULP",
+    "IlceID": "9408"
+}, {
+    "IlceAdi": "LİCE",
+    "IlceAdiEn": "LICE",
+    "IlceID": "9409"
+}, {
+    "IlceAdi": "SİLVAN",
+    "IlceAdiEn": "SILVAN",
+    "IlceID": "9410"
+}, {
+    "IlceAdi": "AKÇAKOCA",
+    "IlceAdiEn": "AKCAKOCA",
+    "IlceID": "9411"
+}, {
+    "IlceAdi": "ÇİLİMLİ",
+    "IlceAdiEn": "CILIMLI",
+    "IlceID": "9412"
+}, {
+    "IlceAdi": "CUMAYERİ",
+    "IlceAdiEn": "CUMAYERI",
+    "IlceID": "9413"
+}, {
+    "IlceAdi": "DÜZCE",
+    "IlceAdiEn": "DUZCE",
+    "IlceID": "9414"
+}, {
+    "IlceAdi": "GÖLYAKA",
+    "IlceAdiEn": "GOLYAKA",
+    "IlceID": "9415"
+}, {
+    "IlceAdi": "GÜMÜŞOVA",
+    "IlceAdiEn": "GUMUSOVA",
+    "IlceID": "9416"
+}, {
+    "IlceAdi": "KAYNAŞLI",
+    "IlceAdiEn": "KAYNASLI",
+    "IlceID": "9417"
+}, {
+    "IlceAdi": "YIĞILCA",
+    "IlceAdiEn": "YIGILCA",
+    "IlceID": "9418"
+}, {
+    "IlceAdi": "EDİRNE",
+    "IlceAdiEn": "EDIRNE",
+    "IlceID": "9419"
+}, {
+    "IlceAdi": "ENEZ",
+    "IlceAdiEn": "ENEZ",
+    "IlceID": "9420"
+}, {
+    "IlceAdi": "HAVSA",
+    "IlceAdiEn": "HAVSA",
+    "IlceID": "9421"
+}, {
+    "IlceAdi": "İPSALA",
+    "IlceAdiEn": "IPSALA",
+    "IlceID": "9422"
+}, {
+    "IlceAdi": "KEŞAN",
+    "IlceAdiEn": "KESAN",
+    "IlceID": "9423"
+}, {
+    "IlceAdi": "LALAPAŞA",
+    "IlceAdiEn": "LALAPASA",
+    "IlceID": "9424"
+}, {
+    "IlceAdi": "MERİÇ",
+    "IlceAdiEn": "MERİC",
+    "IlceID": "9425"
+}, {
+    "IlceAdi": "SÜLOĞLU",
+    "IlceAdiEn": "SULOGLU",
+    "IlceID": "9426"
+}, {
+    "IlceAdi": "UZUNKÖPRÜ",
+    "IlceAdiEn": "UZUNKOPRU",
+    "IlceID": "9427"
+}, {
+    "IlceAdi": "AĞIN",
+    "IlceAdiEn": "AGIN",
+    "IlceID": "9428"
+}, {
+    "IlceAdi": "ALACAKAYA",
+    "IlceAdiEn": "ALACAKAYA",
+    "IlceID": "9429"
+}, {
+    "IlceAdi": "ARICAK",
+    "IlceAdiEn": "ARICAK",
+    "IlceID": "9430"
+}, {
+    "IlceAdi": "BASKİL",
+    "IlceAdiEn": "BASKIL",
+    "IlceID": "9431"
+}, {
+    "IlceAdi": "ELAZIĞ",
+    "IlceAdiEn": "ELAZIG",
+    "IlceID": "9432"
+}, {
+    "IlceAdi": "KARAKOÇAN",
+    "IlceAdiEn": "KARAKOCAN",
+    "IlceID": "9433"
+}, {
+    "IlceAdi": "KEBAN",
+    "IlceAdiEn": "KEBAN",
+    "IlceID": "9434"
+}, {
+    "IlceAdi": "KOVANCILAR",
+    "IlceAdiEn": "KOVANCILAR",
+    "IlceID": "9435"
+}, {
+    "IlceAdi": "MADEN",
+    "IlceAdiEn": "MADEN",
+    "IlceID": "9436"
+}, {
+    "IlceAdi": "PALU",
+    "IlceAdiEn": "PALU",
+    "IlceID": "9437"
+}, {
+    "IlceAdi": "SİVRİCE",
+    "IlceAdiEn": "SIVRICE",
+    "IlceID": "9438"
+}, {
+    "IlceAdi": "ÇAYIRLI",
+    "IlceAdiEn": "CAYIRLI",
+    "IlceID": "9439"
+}, {
+    "IlceAdi": "ERZİNCAN",
+    "IlceAdiEn": "ERZINCAN",
+    "IlceID": "9440"
+}, {
+    "IlceAdi": "İLİÇ",
+    "IlceAdiEn": "ILIÇ",
+    "IlceID": "9441"
+}, {
+    "IlceAdi": "KEMAH",
+    "IlceAdiEn": "KEMAH",
+    "IlceID": "9442"
+}, {
+    "IlceAdi": "KEMALİYE",
+    "IlceAdiEn": "KEMALIYE",
+    "IlceID": "9443"
+}, {
+    "IlceAdi": "OTLUKBELİ",
+    "IlceAdiEn": "OTLUKBELI",
+    "IlceID": "9444"
+}, {
+    "IlceAdi": "REFAHİYE",
+    "IlceAdiEn": "REFAHIYE",
+    "IlceID": "9445"
+}, {
+    "IlceAdi": "TERCAN",
+    "IlceAdiEn": "TERCAN",
+    "IlceID": "9446"
+}, {
+    "IlceAdi": "ÜZÜMLÜ",
+    "IlceAdiEn": "UZUMLU",
+    "IlceID": "9447"
+}, {
+    "IlceAdi": "AŞKALE",
+    "IlceAdiEn": "ASKALE",
+    "IlceID": "9448"
+}, {
+    "IlceAdi": "AZİZİYE",
+    "IlceAdiEn": "AZIZIYE",
+    "IlceID": "9449"
+}, {
+    "IlceAdi": "ÇAT",
+    "IlceAdiEn": "CAT",
+    "IlceID": "9450"
+}, {
+    "IlceAdi": "ERZURUM",
+    "IlceAdiEn": "ERZURUM",
+    "IlceID": "9451"
+}, {
+    "IlceAdi": "HINIS",
+    "IlceAdiEn": "HINIS",
+    "IlceID": "9452"
+}, {
+    "IlceAdi": "HORASAN",
+    "IlceAdiEn": "HORASAN",
+    "IlceID": "9453"
+}, {
+    "IlceAdi": "İSPİR",
+    "IlceAdiEn": "ISPIR",
+    "IlceID": "9454"
+}, {
+    "IlceAdi": "KARAÇOBAN",
+    "IlceAdiEn": "KARACOBAN",
+    "IlceID": "9455"
+}, {
+    "IlceAdi": "KARAYAZI",
+    "IlceAdiEn": "KARAYAZI",
+    "IlceID": "9456"
+}, {
+    "IlceAdi": "KÖPRÜKÖY",
+    "IlceAdiEn": "KOPRUKOY",
+    "IlceID": "9457"
+}, {
+    "IlceAdi": "NARMAN",
+    "IlceAdiEn": "NARMAN",
+    "IlceID": "9458"
+}, {
+    "IlceAdi": "OLTU",
+    "IlceAdiEn": "OLTU",
+    "IlceID": "9459"
+}, {
+    "IlceAdi": "OLUR",
+    "IlceAdiEn": "OLUR",
+    "IlceID": "9460"
+}, {
+    "IlceAdi": "PASİNLER",
+    "IlceAdiEn": "PASINLER",
+    "IlceID": "9461"
+}, {
+    "IlceAdi": "PAZARYOLU",
+    "IlceAdiEn": "PAZARYOLU",
+    "IlceID": "9462"
+}, {
+    "IlceAdi": "ŞENKAYA",
+    "IlceAdiEn": "SENKAYA",
+    "IlceID": "9463"
+}, {
+    "IlceAdi": "TEKMAN",
+    "IlceAdiEn": "TEKMAN",
+    "IlceID": "9464"
+}, {
+    "IlceAdi": "TORTUM",
+    "IlceAdiEn": "TORTUM",
+    "IlceID": "9465"
+}, {
+    "IlceAdi": "UZUNDERE",
+    "IlceAdiEn": "UZUNDERE",
+    "IlceID": "9466"
+}, {
+    "IlceAdi": "ALPU",
+    "IlceAdiEn": "ALPU",
+    "IlceID": "9467"
+}, {
+    "IlceAdi": "BEYLİKOVA",
+    "IlceAdiEn": "BEYLIKOVA",
+    "IlceID": "9468"
+}, {
+    "IlceAdi": "ÇİFTELER",
+    "IlceAdiEn": "CIFTELER",
+    "IlceID": "9469"
+}, {
+    "IlceAdi": "ESKİŞEHİR",
+    "IlceAdiEn": "ESKISEHIR",
+    "IlceID": "9470"
+}, {
+    "IlceAdi": "GÜNYÜZÜ",
+    "IlceAdiEn": "GUNYUZU",
+    "IlceID": "9471"
+}, {
+    "IlceAdi": "HAN",
+    "IlceAdiEn": "HAN",
+    "IlceID": "9472"
+}, {
+    "IlceAdi": "İNÖNÜ",
+    "IlceAdiEn": "INONU",
+    "IlceID": "9473"
+}, {
+    "IlceAdi": "MAHMUDİYE",
+    "IlceAdiEn": "MAHMUDIYE",
+    "IlceID": "9474"
+}, {
+    "IlceAdi": "MİHALIÇÇIK",
+    "IlceAdiEn": "MIHALICCIK",
+    "IlceID": "9475"
+}, {
+    "IlceAdi": "SARICAKAYA",
+    "IlceAdiEn": "SARICAKAYA",
+    "IlceID": "17919"
+}, {
+    "IlceAdi": "SEYİTGAZİ",
+    "IlceAdiEn": "SEYITGAZI",
+    "IlceID": "9476"
+}, {
+    "IlceAdi": "SİVRİHİSAR",
+    "IlceAdiEn": "SIVRIHISAR",
+    "IlceID": "9477"
+}, {
+    "IlceAdi": "ARABAN",
+    "IlceAdiEn": "ARABAN",
+    "IlceID": "9478"
+}, {
+    "IlceAdi": "GAZİANTEP",
+    "IlceAdiEn": "GAZIANTEP",
+    "IlceID": "9479"
+}, {
+    "IlceAdi": "İSLAHİYE",
+    "IlceAdiEn": "ISLAHIYE",
+    "IlceID": "9480"
+}, {
+    "IlceAdi": "KARKAMIŞ",
+    "IlceAdiEn": "KARKAMIS",
+    "IlceID": "9481"
+}, {
+    "IlceAdi": "NİZİP",
+    "IlceAdiEn": "NIZIP",
+    "IlceID": "9482"
+}, {
+    "IlceAdi": "NURDAĞI",
+    "IlceAdiEn": "NURDAGI",
+    "IlceID": "9483"
+}, {
+    "IlceAdi": "OĞUZELİ",
+    "IlceAdiEn": "OGUZELI",
+    "IlceID": "9484"
+}, {
+    "IlceAdi": "YAVUZELİ",
+    "IlceAdiEn": "YAVUZELI",
+    "IlceID": "9485"
+}, {
+    "IlceAdi": "ALUCRA",
+    "IlceAdiEn": "ALUCRA",
+    "IlceID": "9486"
+}, {
+    "IlceAdi": "BULANCAK",
+    "IlceAdiEn": "BULANCAK",
+    "IlceID": "9487"
+}, {
+    "IlceAdi": "ÇAMOLUK",
+    "IlceAdiEn": "CAMOLUK",
+    "IlceID": "9488"
+}, {
+    "IlceAdi": "ÇANAKÇI",
+    "IlceAdiEn": "CANAKCI",
+    "IlceID": "9489"
+}, {
+    "IlceAdi": "DERELİ",
+    "IlceAdiEn": "DERELI",
+    "IlceID": "9490"
+}, {
+    "IlceAdi": "DOĞANKENT",
+    "IlceAdiEn": "DOGANKENT",
+    "IlceID": "9491"
+}, {
+    "IlceAdi": "ESPİYE",
+    "IlceAdiEn": "ESPIYE",
+    "IlceID": "9492"
+}, {
+    "IlceAdi": "EYNESİL",
+    "IlceAdiEn": "EYNESIL",
+    "IlceID": "9493"
+}, {
+    "IlceAdi": "GİRESUN",
+    "IlceAdiEn": "GIRESUN",
+    "IlceID": "9494"
+}, {
+    "IlceAdi": "GÖRELE",
+    "IlceAdiEn": "GORELE",
+    "IlceID": "9495"
+}, {
+    "IlceAdi": "GÜCE",
+    "IlceAdiEn": "GUCE",
+    "IlceID": "9496"
+}, {
+    "IlceAdi": "KEŞAP",
+    "IlceAdiEn": "KESAP",
+    "IlceID": "9497"
+}, {
+    "IlceAdi": "PİRAZİZ",
+    "IlceAdiEn": "PIRAZIZ",
+    "IlceID": "9498"
+}, {
+    "IlceAdi": "ŞEBİNKARAHİSAR",
+    "IlceAdiEn": "SEBINKARAHISAR",
+    "IlceID": "16706"
+}, {
+    "IlceAdi": "TİREBOLU",
+    "IlceAdiEn": "TIREBOLU",
+    "IlceID": "9499"
+}, {
+    "IlceAdi": "YAĞLIDERE",
+    "IlceAdiEn": "YAGLIDERE",
+    "IlceID": "9500"
+}, {
+    "IlceAdi": "GÜMÜŞHANE",
+    "IlceAdiEn": "GUMUSHANE",
+    "IlceID": "9501"
+}, {
+    "IlceAdi": "KELKİT",
+    "IlceAdiEn": "KELKİT",
+    "IlceID": "16746"
+}, {
+    "IlceAdi": "KÖSE",
+    "IlceAdiEn": "KOSE",
+    "IlceID": "9502"
+}, {
+    "IlceAdi": "KÜRTÜN",
+    "IlceAdiEn": "KURTUN",
+    "IlceID": "9503"
+}, {
+    "IlceAdi": "ŞİRAN",
+    "IlceAdiEn": "SIRAN",
+    "IlceID": "9504"
+}, {
+    "IlceAdi": "TORUL",
+    "IlceAdiEn": "TORUL",
+    "IlceID": "9505"
+}, {
+    "IlceAdi": "ÇUKURCA",
+    "IlceAdiEn": "CUKURCA",
+    "IlceID": "9506"
+}, {
+    "IlceAdi": "DERECİK",
+    "IlceAdiEn": "DERECİK",
+    "IlceID": "20067"
+}, {
+    "IlceAdi": "HAKKARİ",
+    "IlceAdiEn": "HAKKARI",
+    "IlceID": "9507"
+}, {
+    "IlceAdi": "ŞEMDİNLİ",
+    "IlceAdiEn": "SEMDINLI",
+    "IlceID": "9508"
+}, {
+    "IlceAdi": "YÜKSEKOVA",
+    "IlceAdiEn": "YUKSEKOVA",
+    "IlceID": "9509"
+}, {
+    "IlceAdi": "ALTINÖZÜ",
+    "IlceAdiEn": "ALTINÖZÜ",
+    "IlceID": "9510"
+}, {
+    "IlceAdi": "BELEN",
+    "IlceAdiEn": "BELEN",
+    "IlceID": "9511"
+}, {
+    "IlceAdi": "DÖRTYOL",
+    "IlceAdiEn": "DORTYOL",
+    "IlceID": "9512"
+}, {
+    "IlceAdi": "ERZİN",
+    "IlceAdiEn": "ERZIN",
+    "IlceID": "9513"
+}, {
+    "IlceAdi": "HASSA",
+    "IlceAdiEn": "HASSA",
+    "IlceID": "9514"
+}, {
+    "IlceAdi": "HATAY",
+    "IlceAdiEn": "HATAY",
+    "IlceID": "9515"
+}, {
+    "IlceAdi": "İSKENDERUN",
+    "IlceAdiEn": "ISKENDERUN",
+    "IlceID": "9516"
+}, {
+    "IlceAdi": "KIRIKHAN",
+    "IlceAdiEn": "KIRIKHAN",
+    "IlceID": "9517"
+}, {
+    "IlceAdi": "KUMLU",
+    "IlceAdiEn": "KUMLU",
+    "IlceID": "9518"
+}, {
+    "IlceAdi": "PAYAS",
+    "IlceAdiEn": "PAYAS",
+    "IlceID": "17810"
+}, {
+    "IlceAdi": "REYHANLI",
+    "IlceAdiEn": "REYHANLI",
+    "IlceID": "9519"
+}, {
+    "IlceAdi": "SAMANDAĞ",
+    "IlceAdiEn": "SAMANDAG",
+    "IlceID": "9520"
+}, {
+    "IlceAdi": "YAYLADAĞ",
+    "IlceAdiEn": "YAYLADAG",
+    "IlceID": "16730"
+}, {
+    "IlceAdi": "ARALIK",
+    "IlceAdiEn": "ARALIK",
+    "IlceID": "9521"
+}, {
+    "IlceAdi": "IĞDIR",
+    "IlceAdiEn": "IGDIR",
+    "IlceID": "9522"
+}, {
+    "IlceAdi": "KARAKOYUNLU",
+    "IlceAdiEn": "KARAKOYUNLU",
+    "IlceID": "9523"
+}, {
+    "IlceAdi": "TUZLUCA",
+    "IlceAdiEn": "TUZLUCA",
+    "IlceID": "9524"
+}, {
+    "IlceAdi": "AKSU",
+    "IlceAdiEn": "AKSU",
+    "IlceID": "9525"
+}, {
+    "IlceAdi": "ATABEY",
+    "IlceAdiEn": "ATABEY",
+    "IlceID": "17891"
+}, {
+    "IlceAdi": "EĞİRDİR",
+    "IlceAdiEn": "EGIRDIR",
+    "IlceID": "9526"
+}, {
+    "IlceAdi": "GELENDOST",
+    "IlceAdiEn": "GELENDOST",
+    "IlceID": "9527"
+}, {
+    "IlceAdi": "GÖNEN",
+    "IlceAdiEn": "GÖNEN",
+    "IlceID": "17892"
+}, {
+    "IlceAdi": "ISPARTA",
+    "IlceAdiEn": "ISPARTA",
+    "IlceID": "9528"
+}, {
+    "IlceAdi": "KEÇİBORLU",
+    "IlceAdiEn": "KECIBORLU",
+    "IlceID": "9529"
+}, {
+    "IlceAdi": "ŞARKİ KARAAĞAÇ",
+    "IlceAdiEn": "SARKI KARAAGAC",
+    "IlceID": "9530"
+}, {
+    "IlceAdi": "SENİRKENT",
+    "IlceAdiEn": "SENİRKENT",
+    "IlceID": "17816"
+}, {
+    "IlceAdi": "SÜTCÜLER",
+    "IlceAdiEn": "SUTCULER",
+    "IlceID": "9531"
+}, {
+    "IlceAdi": "ULUBORLU",
+    "IlceAdiEn": "ULUBORLU",
+    "IlceID": "9532"
+}, {
+    "IlceAdi": "YALVAÇ",
+    "IlceAdiEn": "YALVAC",
+    "IlceID": "9533"
+}, {
+    "IlceAdi": "YENİSAR BADEMLİ",
+    "IlceAdiEn": "YENISAR BADEMLI",
+    "IlceID": "9534"
+}, {
+    "IlceAdi": "ARNAVUTKOY",
+    "IlceAdiEn": "ARNAVUTKOY",
+    "IlceID": "9535"
+}, {
+    "IlceAdi": "AVCILAR",
+    "IlceAdiEn": "AVCILAR",
+    "IlceID": "17865"
+}, {
+    "IlceAdi": "BAŞAKŞEHİR",
+    "IlceAdiEn": "BAŞAKŞEHİR",
+    "IlceID": "17866"
+}, {
+    "IlceAdi": "BEYLİKDÜZÜ",
+    "IlceAdiEn": "BEYLIKDUZU",
+    "IlceID": "9536"
+}, {
+    "IlceAdi": "BÜYÜKÇEKMECE",
+    "IlceAdiEn": "BUYUKCEKMECE",
+    "IlceID": "9537"
+}, {
+    "IlceAdi": "ÇATALCA",
+    "IlceAdiEn": "CATALCA",
+    "IlceID": "9538"
+}, {
+    "IlceAdi": "ÇEKMEKÖY",
+    "IlceAdiEn": "CEKMEKOY",
+    "IlceID": "9539"
+}, {
+    "IlceAdi": "ESENYURT",
+    "IlceAdiEn": "ESENYURT",
+    "IlceID": "9540"
+}, {
+    "IlceAdi": "İSTANBUL",
+    "IlceAdiEn": "ISTANBUL",
+    "IlceID": "9541"
+}, {
+    "IlceAdi": "KARTAL",
+    "IlceAdiEn": "KARTAL",
+    "IlceID": "9542"
+}, {
+    "IlceAdi": "KÜÇÜKÇEKMECE",
+    "IlceAdiEn": "KUCUKCEKMECE",
+    "IlceID": "9543"
+}, {
+    "IlceAdi": "MALTEPE",
+    "IlceAdiEn": "MALTEPE",
+    "IlceID": "9544"
+}, {
+    "IlceAdi": "PENDİK",
+    "IlceAdiEn": "PENDIK",
+    "IlceID": "9545"
+}, {
+    "IlceAdi": "SANCAKTEPE",
+    "IlceAdiEn": "SANCAKTEPE",
+    "IlceID": "9546"
+}, {
+    "IlceAdi": "ŞİLE",
+    "IlceAdiEn": "SILE",
+    "IlceID": "9547"
+}, {
+    "IlceAdi": "SİLİVRİ",
+    "IlceAdiEn": "SILIVRI",
+    "IlceID": "9548"
+}, {
+    "IlceAdi": "SULTANBEYLİ",
+    "IlceAdiEn": "SULTANBEYLI",
+    "IlceID": "9549"
+}, {
+    "IlceAdi": "SULTANGAZİ",
+    "IlceAdiEn": "SULTANGAZI",
+    "IlceID": "9550"
+}, {
+    "IlceAdi": "TUZLA",
+    "IlceAdiEn": "TUZLA",
+    "IlceID": "9551"
+}, {
+    "IlceAdi": "ALİAĞA",
+    "IlceAdiEn": "ALIAGA",
+    "IlceID": "9552"
+}, {
+    "IlceAdi": "BAYINDIR",
+    "IlceAdiEn": "BAYINDIR",
+    "IlceID": "9553"
+}, {
+    "IlceAdi": "BERGAMA",
+    "IlceAdiEn": "BERGAMA",
+    "IlceID": "9554"
+}, {
+    "IlceAdi": "BEYDAĞ",
+    "IlceAdiEn": "BEYDAG",
+    "IlceID": "9555"
+}, {
+    "IlceAdi": "CEŞME",
+    "IlceAdiEn": "CESME",
+    "IlceID": "9556"
+}, {
+    "IlceAdi": "DİKİLİ",
+    "IlceAdiEn": "DIKILI",
+    "IlceID": "9557"
+}, {
+    "IlceAdi": "FOÇA",
+    "IlceAdiEn": "FOCA",
+    "IlceID": "9558"
+}, {
+    "IlceAdi": "GÜZELBAHÇE",
+    "IlceAdiEn": "GUZELBAHCE",
+    "IlceID": "9559"
+}, {
+    "IlceAdi": "İZMİR",
+    "IlceAdiEn": "IZMIR",
+    "IlceID": "9560"
+}, {
+    "IlceAdi": "KARABURUN",
+    "IlceAdiEn": "KARABURUN",
+    "IlceID": "9561"
+}, {
+    "IlceAdi": "KEMALPAŞA",
+    "IlceAdiEn": "KEMALPASA",
+    "IlceID": "9562"
+}, {
+    "IlceAdi": "KINIK",
+    "IlceAdiEn": "KINIK",
+    "IlceID": "9563"
+}, {
+    "IlceAdi": "KİRAZ",
+    "IlceAdiEn": "KIRAZ",
+    "IlceID": "9564"
+}, {
+    "IlceAdi": "MENDERES",
+    "IlceAdiEn": "MENDERES",
+    "IlceID": "17868"
+}, {
+    "IlceAdi": "MENEMEN",
+    "IlceAdiEn": "MENEMEN",
+    "IlceID": "17869"
+}, {
+    "IlceAdi": "ÖDEMİŞ",
+    "IlceAdiEn": "ODEMIS",
+    "IlceID": "9565"
+}, {
+    "IlceAdi": "SEFERIHİSAR",
+    "IlceAdiEn": "SEFERIHISAR",
+    "IlceID": "9566"
+}, {
+    "IlceAdi": "SELÇUK",
+    "IlceAdiEn": "SELCUK",
+    "IlceID": "9567"
+}, {
+    "IlceAdi": "TİRE",
+    "IlceAdiEn": "TIRE",
+    "IlceID": "9568"
+}, {
+    "IlceAdi": "TORBALI",
+    "IlceAdiEn": "TORBALI",
+    "IlceID": "9569"
+}, {
+    "IlceAdi": "URLA",
+    "IlceAdiEn": "URLA",
+    "IlceID": "9570"
+}, {
+    "IlceAdi": "AFŞİN",
+    "IlceAdiEn": "AFSIN",
+    "IlceID": "9571"
+}, {
+    "IlceAdi": "ANDIRIN",
+    "IlceAdiEn": "ANDIRIN",
+    "IlceID": "9572"
+}, {
+    "IlceAdi": "ÇAĞLAYANCERİT",
+    "IlceAdiEn": "ÇAĞLAYANCERİT",
+    "IlceID": "9573"
+}, {
+    "IlceAdi": "EKİNÖZÜ",
+    "IlceAdiEn": "EKİNÖZÜ",
+    "IlceID": "9574"
+}, {
+    "IlceAdi": "ELBİSTAN",
+    "IlceAdiEn": "ELBİSTAN",
+    "IlceID": "9575"
+}, {
+    "IlceAdi": "GÖKSUN",
+    "IlceAdiEn": "GÖKSUN",
+    "IlceID": "9576"
+}, {
+    "IlceAdi": "KAHRAMANMARAŞ",
+    "IlceAdiEn": "KAHRAMANMARAŞ",
+    "IlceID": "9577"
+}, {
+    "IlceAdi": "NURHAK",
+    "IlceAdiEn": "NURHAK",
+    "IlceID": "9578"
+}, {
+    "IlceAdi": "PAZARCIK",
+    "IlceAdiEn": "PAZARCIK",
+    "IlceID": "9579"
+}, {
+    "IlceAdi": "TÜRKOĞLU",
+    "IlceAdiEn": "TÜRKOĞLU",
+    "IlceID": "17908"
+}, {
+    "IlceAdi": "EFLANİ",
+    "IlceAdiEn": "EFLANI",
+    "IlceID": "9580"
+}, {
+    "IlceAdi": "ESKİPAZAR",
+    "IlceAdiEn": "ESKİPAZAR",
+    "IlceID": "17890"
+}, {
+    "IlceAdi": "KARABÜK",
+    "IlceAdiEn": "KARABUK",
+    "IlceID": "9581"
+}, {
+    "IlceAdi": "OVACIK",
+    "IlceAdiEn": "OVACIK",
+    "IlceID": "9582"
+}, {
+    "IlceAdi": "YENİCE",
+    "IlceAdiEn": "YENICE",
+    "IlceID": "9583"
+}, {
+    "IlceAdi": "AYRANCI",
+    "IlceAdiEn": "AYRANCI",
+    "IlceID": "9584"
+}, {
+    "IlceAdi": "BAŞYAYLA",
+    "IlceAdiEn": "BASYAYLA",
+    "IlceID": "9585"
+}, {
+    "IlceAdi": "ERMENEK",
+    "IlceAdiEn": "ERMENEK",
+    "IlceID": "9586"
+}, {
+    "IlceAdi": "KARAMAN",
+    "IlceAdiEn": "KARAMAN",
+    "IlceID": "9587"
+}, {
+    "IlceAdi": "KAZIMKARABEKİR",
+    "IlceAdiEn": "KAZIMKARABEKIR",
+    "IlceID": "9588"
+}, {
+    "IlceAdi": "SARIVELİLER",
+    "IlceAdiEn": "SARIVELILER",
+    "IlceID": "9589"
+}, {
+    "IlceAdi": "AKYAKA",
+    "IlceAdiEn": "AKYAKA",
+    "IlceID": "9590"
+}, {
+    "IlceAdi": "ARPAÇAY",
+    "IlceAdiEn": "ARPACAY",
+    "IlceID": "9591"
+}, {
+    "IlceAdi": "DİGOR",
+    "IlceAdiEn": "DIGOR",
+    "IlceID": "9592"
+}, {
+    "IlceAdi": "KAĞIZMAN",
+    "IlceAdiEn": "KAGIZMAN",
+    "IlceID": "9593"
+}, {
+    "IlceAdi": "KARS",
+    "IlceAdiEn": "KARS",
+    "IlceID": "9594"
+}, {
+    "IlceAdi": "SARIKAMIŞ",
+    "IlceAdiEn": "SARIKAMIS",
+    "IlceID": "9595"
+}, {
+    "IlceAdi": "SELİM",
+    "IlceAdiEn": "SELIM",
+    "IlceID": "9596"
+}, {
+    "IlceAdi": "SUSUZ",
+    "IlceAdiEn": "SUSUZ",
+    "IlceID": "17880"
+}, {
+    "IlceAdi": "ABANA",
+    "IlceAdiEn": "ABANA",
+    "IlceID": "9597"
+}, {
+    "IlceAdi": "AĞLI",
+    "IlceAdiEn": "AGLI",
+    "IlceID": "9598"
+}, {
+    "IlceAdi": "ARAÇ",
+    "IlceAdiEn": "ARAC",
+    "IlceID": "9599"
+}, {
+    "IlceAdi": "AZDAVAY",
+    "IlceAdiEn": "AZDAVAY",
+    "IlceID": "9600"
+}, {
+    "IlceAdi": "BOZKURT",
+    "IlceAdiEn": "BOZKURT",
+    "IlceID": "9601"
+}, {
+    "IlceAdi": "ÇATALZEYTİN",
+    "IlceAdiEn": "CATALZEYTIN",
+    "IlceID": "9602"
+}, {
+    "IlceAdi": "CİDE",
+    "IlceAdiEn": "CIDE",
+    "IlceID": "9603"
+}, {
+    "IlceAdi": "DADAY",
+    "IlceAdiEn": "DADAY",
+    "IlceID": "9604"
+}, {
+    "IlceAdi": "DEVREKANİ",
+    "IlceAdiEn": "DEVREKANİ",
+    "IlceID": "17885"
+}, {
+    "IlceAdi": "DOĞANYURT",
+    "IlceAdiEn": "DOGANYURT",
+    "IlceID": "9605"
+}, {
+    "IlceAdi": "HANÖNÜ",
+    "IlceAdiEn": "HANONU",
+    "IlceID": "9606"
+}, {
+    "IlceAdi": "İHSANGAZİ",
+    "IlceAdiEn": "IHSANGAZI",
+    "IlceID": "9607"
+}, {
+    "IlceAdi": "İNEBOLU",
+    "IlceAdiEn": "INEBOLU",
+    "IlceID": "9608"
+}, {
+    "IlceAdi": "KASTAMONU",
+    "IlceAdiEn": "KASTAMONU",
+    "IlceID": "9609"
+}, {
+    "IlceAdi": "KÜRE",
+    "IlceAdiEn": "KURE",
+    "IlceID": "9610"
+}, {
+    "IlceAdi": "PINARBAŞI",
+    "IlceAdiEn": "PINARBASI",
+    "IlceID": "9611"
+}, {
+    "IlceAdi": "ŞENPAZAR",
+    "IlceAdiEn": "SENPAZAR",
+    "IlceID": "9612"
+}, {
+    "IlceAdi": "SEYDİLER",
+    "IlceAdiEn": "SEYDİLER",
+    "IlceID": "17886"
+}, {
+    "IlceAdi": "TAŞKÖPRÜ",
+    "IlceAdiEn": "TASKOPRU",
+    "IlceID": "9613"
+}, {
+    "IlceAdi": "TOSYA",
+    "IlceAdiEn": "TOSYA",
+    "IlceID": "9614"
+}, {
+    "IlceAdi": "AKKIŞLA",
+    "IlceAdiEn": "AKKISLA",
+    "IlceID": "9615"
+}, {
+    "IlceAdi": "BÜNYAN",
+    "IlceAdiEn": "BUNYAN",
+    "IlceID": "9616"
+}, {
+    "IlceAdi": "DEVELİ",
+    "IlceAdiEn": "DEVELI",
+    "IlceID": "9617"
+}, {
+    "IlceAdi": "FELAHİYE",
+    "IlceAdiEn": "FELAHIYE",
+    "IlceID": "9618"
+}, {
+    "IlceAdi": "İNCESU",
+    "IlceAdiEn": "INCESU",
+    "IlceID": "9619"
+}, {
+    "IlceAdi": "KAYSERİ",
+    "IlceAdiEn": "KAYSERI",
+    "IlceID": "9620"
+}, {
+    "IlceAdi": "ÖZVATAN",
+    "IlceAdiEn": "OZVATAN",
+    "IlceID": "9621"
+}, {
+    "IlceAdi": "PINARBAŞI",
+    "IlceAdiEn": "PINARBASI",
+    "IlceID": "9622"
+}, {
+    "IlceAdi": "SARIOĞLAN",
+    "IlceAdiEn": "SARIOGLAN",
+    "IlceID": "9623"
+}, {
+    "IlceAdi": "SARIZ",
+    "IlceAdiEn": "SARIZ",
+    "IlceID": "9624"
+}, {
+    "IlceAdi": "TOMARZA",
+    "IlceAdiEn": "TOMARZA",
+    "IlceID": "9625"
+}, {
+    "IlceAdi": "YAHYALI",
+    "IlceAdiEn": "YAHYALI",
+    "IlceID": "9626"
+}, {
+    "IlceAdi": "YEŞİLHİSAR",
+    "IlceAdiEn": "YESILHISAR",
+    "IlceID": "9627"
+}, {
+    "IlceAdi": "ELBEYLİ",
+    "IlceAdiEn": "ELBEYLI",
+    "IlceID": "9628"
+}, {
+    "IlceAdi": "KİLİS",
+    "IlceAdiEn": "KILIS",
+    "IlceID": "9629"
+}, {
+    "IlceAdi": "MUSABEYLİ",
+    "IlceAdiEn": "MUSABEYLI",
+    "IlceID": "9630"
+}, {
+    "IlceAdi": "POLATELİ",
+    "IlceAdiEn": "POLATELİ",
+    "IlceID": "17907"
+}, {
+    "IlceAdi": "BALISEYH",
+    "IlceAdiEn": "BALISEYH",
+    "IlceID": "9631"
+}, {
+    "IlceAdi": "CELEBI",
+    "IlceAdiEn": "CELEBI",
+    "IlceID": "9632"
+}, {
+    "IlceAdi": "DELICE",
+    "IlceAdiEn": "DELICE",
+    "IlceID": "9633"
+}, {
+    "IlceAdi": "KARAKECILI",
+    "IlceAdiEn": "KARAKECILI",
+    "IlceID": "9634"
+}, {
+    "IlceAdi": "KESKİN",
+    "IlceAdiEn": "KESKİN",
+    "IlceID": "17897"
+}, {
+    "IlceAdi": "KIRIKKALE",
+    "IlceAdiEn": "KIRIKKALE",
+    "IlceID": "9635"
+}, {
+    "IlceAdi": "SULAKYURT",
+    "IlceAdiEn": "SULAKYURT",
+    "IlceID": "9636"
+}, {
+    "IlceAdi": "BABAESKİ",
+    "IlceAdiEn": "BABAESKİ",
+    "IlceID": "17903"
+}, {
+    "IlceAdi": "DEMIRKOY",
+    "IlceAdiEn": "DEMIRKOY",
+    "IlceID": "9637"
+}, {
+    "IlceAdi": "KIRKLARELİ",
+    "IlceAdiEn": "KIRKLARELI",
+    "IlceID": "9638"
+}, {
+    "IlceAdi": "LULEBURGAZ",
+    "IlceAdiEn": "LULEBURGAZ",
+    "IlceID": "9639"
+}, {
+    "IlceAdi": "PEHLIVANKOY",
+    "IlceAdiEn": "PEHLIVANKOY",
+    "IlceID": "9640"
+}, {
+    "IlceAdi": "PINARHISAR",
+    "IlceAdiEn": "PINARHISAR",
+    "IlceID": "9641"
+}, {
+    "IlceAdi": "VIZE",
+    "IlceAdiEn": "VIZE",
+    "IlceID": "9642"
+}, {
+    "IlceAdi": "AKÇAKENT",
+    "IlceAdiEn": "AKÇAKENT",
+    "IlceID": "20039"
+}, {
+    "IlceAdi": "AKPINAR",
+    "IlceAdiEn": "AKPINAR",
+    "IlceID": "9643"
+}, {
+    "IlceAdi": "CICEKDAGI",
+    "IlceAdiEn": "CICEKDAGI",
+    "IlceID": "9644"
+}, {
+    "IlceAdi": "KAMAN",
+    "IlceAdiEn": "KAMAN",
+    "IlceID": "9645"
+}, {
+    "IlceAdi": "KIRŞEHİR",
+    "IlceAdiEn": "KIRSEHIR",
+    "IlceID": "9646"
+}, {
+    "IlceAdi": "MUCUR",
+    "IlceAdiEn": "MUCUR",
+    "IlceID": "9647"
+}, {
+    "IlceAdi": "ÇAYIROVA",
+    "IlceAdiEn": "CAYIROVA",
+    "IlceID": "9648"
+}, {
+    "IlceAdi": "DARICA",
+    "IlceAdiEn": "DARICA",
+    "IlceID": "9649"
+}, {
+    "IlceAdi": "DİLOVASI",
+    "IlceAdiEn": "DILOVASI",
+    "IlceID": "9650"
+}, {
+    "IlceAdi": "GEBZE",
+    "IlceAdiEn": "GEBZE",
+    "IlceID": "9651"
+}, {
+    "IlceAdi": "KANDIRA",
+    "IlceAdiEn": "KANDIRA",
+    "IlceID": "9652"
+}, {
+    "IlceAdi": "KARAMÜRSEL",
+    "IlceAdiEn": "KARAMURSEL",
+    "IlceID": "9653"
+}, {
+    "IlceAdi": "KARTEPE",
+    "IlceAdiEn": "KARTEPE",
+    "IlceID": "17902"
+}, {
+    "IlceAdi": "KOCAELİ",
+    "IlceAdiEn": "KOCAELI",
+    "IlceID": "9654"
+}, {
+    "IlceAdi": "KÖRFEZ",
+    "IlceAdiEn": "KORFEZ",
+    "IlceID": "9655"
+}, {
+    "IlceAdi": "AHIRLI",
+    "IlceAdiEn": "AHIRLI",
+    "IlceID": "9656"
+}, {
+    "IlceAdi": "AKÖREN",
+    "IlceAdiEn": "AKOREN",
+    "IlceID": "9657"
+}, {
+    "IlceAdi": "AKŞEHİR",
+    "IlceAdiEn": "AKSEHIR",
+    "IlceID": "9658"
+}, {
+    "IlceAdi": "ALTINEKİN",
+    "IlceAdiEn": "ALTINEKIN",
+    "IlceID": "9659"
+}, {
+    "IlceAdi": "BEYŞEHİR",
+    "IlceAdiEn": "BEYSEHIR",
+    "IlceID": "9660"
+}, {
+    "IlceAdi": "BOZKIR",
+    "IlceAdiEn": "BOZKIR",
+    "IlceID": "9661"
+}, {
+    "IlceAdi": "ÇELTİK",
+    "IlceAdiEn": "CELTIK",
+    "IlceID": "9662"
+}, {
+    "IlceAdi": "CİHANBEYLİ",
+    "IlceAdiEn": "CIHANBEYLI",
+    "IlceID": "9663"
+}, {
+    "IlceAdi": "ÇUMRA",
+    "IlceAdiEn": "CUMRA",
+    "IlceID": "9664"
+}, {
+    "IlceAdi": "DERBENT",
+    "IlceAdiEn": "DERBENT",
+    "IlceID": "9665"
+}, {
+    "IlceAdi": "DEREBUCAK",
+    "IlceAdiEn": "DEREBUCAK",
+    "IlceID": "9666"
+}, {
+    "IlceAdi": "DOĞANHİSAR",
+    "IlceAdiEn": "DOGANHISAR",
+    "IlceID": "9667"
+}, {
+    "IlceAdi": "EMİRGAZİ",
+    "IlceAdiEn": "EMIRGAZI",
+    "IlceID": "9668"
+}, {
+    "IlceAdi": "EREĞLİ",
+    "IlceAdiEn": "EREGLI",
+    "IlceID": "9669"
+}, {
+    "IlceAdi": "GÜNEYSINIR",
+    "IlceAdiEn": "GUNEYSINIR",
+    "IlceID": "9670"
+}, {
+    "IlceAdi": "HADİM",
+    "IlceAdiEn": "HADIM",
+    "IlceID": "16704"
+}, {
+    "IlceAdi": "HALKAPINAR",
+    "IlceAdiEn": "HALKAPINAR",
+    "IlceID": "9671"
+}, {
+    "IlceAdi": "HÜYÜK",
+    "IlceAdiEn": "HUYUK",
+    "IlceID": "9672"
+}, {
+    "IlceAdi": "ILGIN",
+    "IlceAdiEn": "ILGIN",
+    "IlceID": "9673"
+}, {
+    "IlceAdi": "KADINHANI",
+    "IlceAdiEn": "KADINHANI",
+    "IlceID": "9674"
+}, {
+    "IlceAdi": "KARAPINAR",
+    "IlceAdiEn": "KARAPINAR",
+    "IlceID": "9675"
+}, {
+    "IlceAdi": "KARATAY",
+    "IlceAdiEn": "KARATAY",
+    "IlceID": "17872"
+}, {
+    "IlceAdi": "KONYA",
+    "IlceAdiEn": "KONYA",
+    "IlceID": "9676"
+}, {
+    "IlceAdi": "KULU",
+    "IlceAdiEn": "KULU",
+    "IlceID": "9677"
+}, {
+    "IlceAdi": "MERAM",
+    "IlceAdiEn": "MERAM",
+    "IlceID": "17870"
+}, {
+    "IlceAdi": "SARAYÖNÜ",
+    "IlceAdiEn": "SARAYÖNÜ",
+    "IlceID": "17874"
+}, {
+    "IlceAdi": "SELÇUKLU",
+    "IlceAdiEn": "SELÇUKLU",
+    "IlceID": "17871"
+}, {
+    "IlceAdi": "SEYDİŞEHİR",
+    "IlceAdiEn": "SEYDISEHIR",
+    "IlceID": "9678"
+}, {
+    "IlceAdi": "TAŞKENT",
+    "IlceAdiEn": "TAŞKENT",
+    "IlceID": "17873"
+}, {
+    "IlceAdi": "TUZLUKÇU",
+    "IlceAdiEn": "TUZLUKCU",
+    "IlceID": "9679"
+}, {
+    "IlceAdi": "YALIHÜYÜK",
+    "IlceAdiEn": "YALIHUYUK",
+    "IlceID": "9680"
+}, {
+    "IlceAdi": "YUNAK",
+    "IlceAdiEn": "YUNAK",
+    "IlceID": "9681"
+}, {
+    "IlceAdi": "ALTINTAŞ",
+    "IlceAdiEn": "ALTINTAS",
+    "IlceID": "9682"
+}, {
+    "IlceAdi": "ASLANAPA",
+    "IlceAdiEn": "ASLANAPA",
+    "IlceID": "9683"
+}, {
+    "IlceAdi": "ÇAVDARHİSAR",
+    "IlceAdiEn": "CAVDARHISAR",
+    "IlceID": "9684"
+}, {
+    "IlceAdi": "DOMANİÇ",
+    "IlceAdiEn": "DOMANIC",
+    "IlceID": "9685"
+}, {
+    "IlceAdi": "DUMLUPINAR",
+    "IlceAdiEn": "DUMLUPINAR",
+    "IlceID": "17906"
+}, {
+    "IlceAdi": "EMET",
+    "IlceAdiEn": "EMET",
+    "IlceID": "9686"
+}, {
+    "IlceAdi": "GEDİZ",
+    "IlceAdiEn": "GEDIZ",
+    "IlceID": "9687"
+}, {
+    "IlceAdi": "HİSARCIK",
+    "IlceAdiEn": "HISARCIK",
+    "IlceID": "9688"
+}, {
+    "IlceAdi": "KÜTAHYA",
+    "IlceAdiEn": "KUTAHYA",
+    "IlceID": "9689"
+}, {
+    "IlceAdi": "PAZARLAR",
+    "IlceAdiEn": "PAZARLAR",
+    "IlceID": "9690"
+}, {
+    "IlceAdi": "ŞAPHANE",
+    "IlceAdiEn": "SAPHANE",
+    "IlceID": "9691"
+}, {
+    "IlceAdi": "SİMAV",
+    "IlceAdiEn": "SIMAV",
+    "IlceID": "9692"
+}, {
+    "IlceAdi": "TAVŞANLI",
+    "IlceAdiEn": "TAVSANLI",
+    "IlceID": "9693"
+}, {
+    "IlceAdi": "AKÇADAĞ",
+    "IlceAdiEn": "AKCADAG",
+    "IlceID": "9694"
+}, {
+    "IlceAdi": "ARAPGİR",
+    "IlceAdiEn": "ARAPGIR",
+    "IlceID": "9695"
+}, {
+    "IlceAdi": "ARGUVAN",
+    "IlceAdiEn": "ARGUVAN",
+    "IlceID": "9696"
+}, {
+    "IlceAdi": "DARENDE",
+    "IlceAdiEn": "DARENDE",
+    "IlceID": "9697"
+}, {
+    "IlceAdi": "DOĞANŞEHİR",
+    "IlceAdiEn": "DOGANSEHIR",
+    "IlceID": "9698"
+}, {
+    "IlceAdi": "DOĞANYOL",
+    "IlceAdiEn": "DOGANYOL",
+    "IlceID": "9699"
+}, {
+    "IlceAdi": "HEKİMHAN",
+    "IlceAdiEn": "HEKIMHAN",
+    "IlceID": "9700"
+}, {
+    "IlceAdi": "KALE",
+    "IlceAdiEn": "KALE",
+    "IlceID": "9701"
+}, {
+    "IlceAdi": "KULUNCAK",
+    "IlceAdiEn": "KULUNCAK",
+    "IlceID": "9702"
+}, {
+    "IlceAdi": "MALATYA",
+    "IlceAdiEn": "MALATYA",
+    "IlceID": "9703"
+}, {
+    "IlceAdi": "PÜTÜRGE",
+    "IlceAdiEn": "PUTURGE",
+    "IlceID": "9704"
+}, {
+    "IlceAdi": "YAZIHAN",
+    "IlceAdiEn": "YAZIHAN",
+    "IlceID": "9705"
+}, {
+    "IlceAdi": "YEŞİLYURT",
+    "IlceAdiEn": "YESILYURT",
+    "IlceID": "9706"
+}, {
+    "IlceAdi": "AHMETLİ",
+    "IlceAdiEn": "AHMETLI",
+    "IlceID": "9707"
+}, {
+    "IlceAdi": "AKHİSAR",
+    "IlceAdiEn": "AKHISAR",
+    "IlceID": "9708"
+}, {
+    "IlceAdi": "ALAŞEHİR",
+    "IlceAdiEn": "ALASEHIR",
+    "IlceID": "9709"
+}, {
+    "IlceAdi": "DEMİRCİ",
+    "IlceAdiEn": "DEMIRCI",
+    "IlceID": "9710"
+}, {
+    "IlceAdi": "GÖLMARMARA",
+    "IlceAdiEn": "GOLMARMARA",
+    "IlceID": "9711"
+}, {
+    "IlceAdi": "GÖRDES",
+    "IlceAdiEn": "GORDES",
+    "IlceID": "9712"
+}, {
+    "IlceAdi": "KIRKAĞAÇ",
+    "IlceAdiEn": "KIRKAGAC",
+    "IlceID": "9713"
+}, {
+    "IlceAdi": "KÖPRÜBAŞI",
+    "IlceAdiEn": "KOPRUBASI",
+    "IlceID": "9714"
+}, {
+    "IlceAdi": "KULA",
+    "IlceAdiEn": "KULA",
+    "IlceID": "9715"
+}, {
+    "IlceAdi": "MANİSA",
+    "IlceAdiEn": "MANISA",
+    "IlceID": "9716"
+}, {
+    "IlceAdi": "SALİHLİ",
+    "IlceAdiEn": "SALIHLI",
+    "IlceID": "9717"
+}, {
+    "IlceAdi": "SARIGÖL",
+    "IlceAdiEn": "SARIGOL",
+    "IlceID": "9718"
+}, {
+    "IlceAdi": "SARUHANLI",
+    "IlceAdiEn": "SARUHANLI",
+    "IlceID": "9719"
+}, {
+    "IlceAdi": "SELENDİ",
+    "IlceAdiEn": "SELENDI",
+    "IlceID": "9720"
+}, {
+    "IlceAdi": "SOMA",
+    "IlceAdiEn": "SOMA",
+    "IlceID": "9721"
+}, {
+    "IlceAdi": "TURGUTLU",
+    "IlceAdiEn": "TURGUTLU",
+    "IlceID": "9722"
+}, {
+    "IlceAdi": "DARGECİT",
+    "IlceAdiEn": "DARGECIT",
+    "IlceID": "9723"
+}, {
+    "IlceAdi": "DERİK",
+    "IlceAdiEn": "DERIK",
+    "IlceID": "9724"
+}, {
+    "IlceAdi": "KIZILTEPE",
+    "IlceAdiEn": "KIZILTEPE",
+    "IlceID": "9725"
+}, {
+    "IlceAdi": "MARDİN",
+    "IlceAdiEn": "MARDIN",
+    "IlceID": "9726"
+}, {
+    "IlceAdi": "MAZIDAĞI",
+    "IlceAdiEn": "MAZIDAGI",
+    "IlceID": "9727"
+}, {
+    "IlceAdi": "MİDYAT",
+    "IlceAdiEn": "MIDYAT",
+    "IlceID": "9728"
+}, {
+    "IlceAdi": "NUSAYBİN",
+    "IlceAdiEn": "NUSAYBIN",
+    "IlceID": "9729"
+}, {
+    "IlceAdi": "ÖMERLİ",
+    "IlceAdiEn": "OMERLI",
+    "IlceID": "9730"
+}, {
+    "IlceAdi": "SAVUR",
+    "IlceAdiEn": "SAVUR",
+    "IlceID": "17901"
+}, {
+    "IlceAdi": "ANAMUR",
+    "IlceAdiEn": "ANAMUR",
+    "IlceID": "9731"
+}, {
+    "IlceAdi": "AYDINCIK",
+    "IlceAdiEn": "AYDINCIK",
+    "IlceID": "9732"
+}, {
+    "IlceAdi": "BOZYAZI",
+    "IlceAdiEn": "BOZYAZI",
+    "IlceID": "9733"
+}, {
+    "IlceAdi": "ÇAMLIYAYLA",
+    "IlceAdiEn": "CAMLIYAYLA",
+    "IlceID": "9734"
+}, {
+    "IlceAdi": "ERDEMLİ",
+    "IlceAdiEn": "ERDEMLI",
+    "IlceID": "9735"
+}, {
+    "IlceAdi": "GÜLNAR",
+    "IlceAdiEn": "GULNAR",
+    "IlceID": "9736"
+}, {
+    "IlceAdi": "MERSİN",
+    "IlceAdiEn": "MERSIN",
+    "IlceID": "9737"
+}, {
+    "IlceAdi": "MUT",
+    "IlceAdiEn": "MUT",
+    "IlceID": "9738"
+}, {
+    "IlceAdi": "SİLİFKE",
+    "IlceAdiEn": "SILIFKE",
+    "IlceID": "9739"
+}, {
+    "IlceAdi": "TARSUS",
+    "IlceAdiEn": "TARSUS",
+    "IlceID": "9740"
+}, {
+    "IlceAdi": "BODRUM",
+    "IlceAdiEn": "BODRUM",
+    "IlceID": "9741"
+}, {
+    "IlceAdi": "DALAMAN",
+    "IlceAdiEn": "DALAMAN",
+    "IlceID": "9742"
+}, {
+    "IlceAdi": "DATÇA",
+    "IlceAdiEn": "DATCA",
+    "IlceID": "9743"
+}, {
+    "IlceAdi": "FETHİYE",
+    "IlceAdiEn": "FETHIYE",
+    "IlceID": "9744"
+}, {
+    "IlceAdi": "KÖYCEĞİZ",
+    "IlceAdiEn": "KOYCEGIZ",
+    "IlceID": "9745"
+}, {
+    "IlceAdi": "MARMARİS",
+    "IlceAdiEn": "MARMARİS",
+    "IlceID": "17883"
+}, {
+    "IlceAdi": "MİLAS",
+    "IlceAdiEn": "MILAS",
+    "IlceID": "9746"
+}, {
+    "IlceAdi": "MUĞLA",
+    "IlceAdiEn": "MUGLA",
+    "IlceID": "9747"
+}, {
+    "IlceAdi": "ORTACA",
+    "IlceAdiEn": "ORTACA",
+    "IlceID": "9748"
+}, {
+    "IlceAdi": "SEYDİKEMER",
+    "IlceAdiEn": "SEYDİKEMER",
+    "IlceID": "17884"
+}, {
+    "IlceAdi": "ULA",
+    "IlceAdiEn": "ULA",
+    "IlceID": "9749"
+}, {
+    "IlceAdi": "YATAĞAN",
+    "IlceAdiEn": "YATAGAN",
+    "IlceID": "9750"
+}, {
+    "IlceAdi": "BULANIK",
+    "IlceAdiEn": "BULANIK",
+    "IlceID": "9751"
+}, {
+    "IlceAdi": "HASKÖY",
+    "IlceAdiEn": "HASKOY",
+    "IlceID": "9752"
+}, {
+    "IlceAdi": "KORKUT",
+    "IlceAdiEn": "KORKUT",
+    "IlceID": "9753"
+}, {
+    "IlceAdi": "MALAZGİRT",
+    "IlceAdiEn": "MALAZGIRT",
+    "IlceID": "9754"
+}, {
+    "IlceAdi": "MUŞ",
+    "IlceAdiEn": "MUS",
+    "IlceID": "9755"
+}, {
+    "IlceAdi": "VARTO",
+    "IlceAdiEn": "VARTO",
+    "IlceID": "9756"
+}, {
+    "IlceAdi": "ACIGÖL",
+    "IlceAdiEn": "ACIGOL",
+    "IlceID": "9757"
+}, {
+    "IlceAdi": "AVANOS",
+    "IlceAdiEn": "AVANOS",
+    "IlceID": "17878"
+}, {
+    "IlceAdi": "HACIBEKTAŞ",
+    "IlceAdiEn": "HACIBEKTAS",
+    "IlceID": "9758"
+}, {
+    "IlceAdi": "KOZAKLI",
+    "IlceAdiEn": "KOZAKLI",
+    "IlceID": "9759"
+}, {
+    "IlceAdi": "NEVŞEHİR",
+    "IlceAdiEn": "NEVSEHIR",
+    "IlceID": "9760"
+}, {
+    "IlceAdi": "ÜRGÜP",
+    "IlceAdiEn": "URGUP",
+    "IlceID": "9761"
+}, {
+    "IlceAdi": "ALTUNHİSAR",
+    "IlceAdiEn": "ALTUNHISAR",
+    "IlceID": "9762"
+}, {
+    "IlceAdi": "BOR",
+    "IlceAdiEn": "BOR",
+    "IlceID": "9763"
+}, {
+    "IlceAdi": "ÇAMARDI",
+    "IlceAdiEn": "CAMARDI",
+    "IlceID": "9764"
+}, {
+    "IlceAdi": "ÇİFTLİK",
+    "IlceAdiEn": "CIFTLIK",
+    "IlceID": "9765"
+}, {
+    "IlceAdi": "NİĞDE",
+    "IlceAdiEn": "NIGDE",
+    "IlceID": "9766"
+}, {
+    "IlceAdi": "ULUKIŞLA",
+    "IlceAdiEn": "ULUKISLA",
+    "IlceID": "9767"
+}, {
+    "IlceAdi": "AKKUŞ",
+    "IlceAdiEn": "AKKUS",
+    "IlceID": "9768"
+}, {
+    "IlceAdi": "AYBASTI",
+    "IlceAdiEn": "AYBASTI",
+    "IlceID": "9769"
+}, {
+    "IlceAdi": "ÇAMAŞ",
+    "IlceAdiEn": "CAMAS",
+    "IlceID": "9770"
+}, {
+    "IlceAdi": "ÇATALPINAR",
+    "IlceAdiEn": "CATALPINAR",
+    "IlceID": "9771"
+}, {
+    "IlceAdi": "ÇAYBAŞI",
+    "IlceAdiEn": "CAYBASI",
+    "IlceID": "9772"
+}, {
+    "IlceAdi": "FATSA",
+    "IlceAdiEn": "FATSA",
+    "IlceID": "9773"
+}, {
+    "IlceAdi": "GÖLKÖY",
+    "IlceAdiEn": "GOLKOY",
+    "IlceID": "9774"
+}, {
+    "IlceAdi": "GÜLYALI",
+    "IlceAdiEn": "GULYALI",
+    "IlceID": "9775"
+}, {
+    "IlceAdi": "GÜRGENTEPE",
+    "IlceAdiEn": "GURGENTEPE",
+    "IlceID": "9776"
+}, {
+    "IlceAdi": "İKİZCE",
+    "IlceAdiEn": "IKIZCE",
+    "IlceID": "9777"
+}, {
+    "IlceAdi": "KABATAŞ",
+    "IlceAdiEn": "KABATAS",
+    "IlceID": "9778"
+}, {
+    "IlceAdi": "KORGAN",
+    "IlceAdiEn": "KORGAN",
+    "IlceID": "9779"
+}, {
+    "IlceAdi": "KUMRU",
+    "IlceAdiEn": "KUMRU",
+    "IlceID": "9780"
+}, {
+    "IlceAdi": "MESUDİYE",
+    "IlceAdiEn": "MESUDIYE",
+    "IlceID": "9781"
+}, {
+    "IlceAdi": "ORDU",
+    "IlceAdiEn": "ORDU",
+    "IlceID": "9782"
+}, {
+    "IlceAdi": "ÜNYE",
+    "IlceAdiEn": "UNYE",
+    "IlceID": "9783"
+}, {
+    "IlceAdi": "BAHÇE",
+    "IlceAdiEn": "BAHCE",
+    "IlceID": "9784"
+}, {
+    "IlceAdi": "DÜZİÇİ",
+    "IlceAdiEn": "DUZICI",
+    "IlceID": "9785"
+}, {
+    "IlceAdi": "HASANBEYLİ",
+    "IlceAdiEn": "HASANBEYLI",
+    "IlceID": "9786"
+}, {
+    "IlceAdi": "KADİRLİ",
+    "IlceAdiEn": "KADIRLI",
+    "IlceID": "9787"
+}, {
+    "IlceAdi": "OSMANİYE",
+    "IlceAdiEn": "OSMANIYE",
+    "IlceID": "9788"
+}, {
+    "IlceAdi": "SUMBAS",
+    "IlceAdiEn": "SUMBAS",
+    "IlceID": "9789"
+}, {
+    "IlceAdi": "TOPRAKKALE",
+    "IlceAdiEn": "TOPRAKKALE",
+    "IlceID": "9790"
+}, {
+    "IlceAdi": "ARDEŞEN",
+    "IlceAdiEn": "ARDESEN",
+    "IlceID": "9791"
+}, {
+    "IlceAdi": "ÇAMLIHEMŞİN",
+    "IlceAdiEn": "CAMLIHEMSIN",
+    "IlceID": "9792"
+}, {
+    "IlceAdi": "ÇAYELİ",
+    "IlceAdiEn": "CAYELI",
+    "IlceID": "9793"
+}, {
+    "IlceAdi": "FINDIKLI",
+    "IlceAdiEn": "FINDIKLI",
+    "IlceID": "9794"
+}, {
+    "IlceAdi": "HEMŞİN",
+    "IlceAdiEn": "HEMSIN",
+    "IlceID": "9795"
+}, {
+    "IlceAdi": "İKİZDERE",
+    "IlceAdiEn": "IKIZDERE",
+    "IlceID": "9796"
+}, {
+    "IlceAdi": "İYİDERE",
+    "IlceAdiEn": "IYIDERE",
+    "IlceID": "9797"
+}, {
+    "IlceAdi": "PAZAR",
+    "IlceAdiEn": "PAZAR",
+    "IlceID": "9798"
+}, {
+    "IlceAdi": "RİZE",
+    "IlceAdiEn": "RIZE",
+    "IlceID": "9799"
+}, {
+    "IlceAdi": "AKYAZI",
+    "IlceAdiEn": "AKYAZI",
+    "IlceID": "9800"
+}, {
+    "IlceAdi": "GEYVE",
+    "IlceAdiEn": "GEYVE",
+    "IlceID": "9801"
+}, {
+    "IlceAdi": "HENDEK",
+    "IlceAdiEn": "HENDEK",
+    "IlceID": "9802"
+}, {
+    "IlceAdi": "KARASU",
+    "IlceAdiEn": "KARASU",
+    "IlceID": "9803"
+}, {
+    "IlceAdi": "KAYNARCA",
+    "IlceAdiEn": "KAYNARCA",
+    "IlceID": "9804"
+}, {
+    "IlceAdi": "KOCAALİ",
+    "IlceAdiEn": "KOCAALI",
+    "IlceID": "9805"
+}, {
+    "IlceAdi": "PAMUKOVA",
+    "IlceAdiEn": "PAMUKOVA",
+    "IlceID": "9806"
+}, {
+    "IlceAdi": "SAKARYA",
+    "IlceAdiEn": "SAKARYA",
+    "IlceID": "9807"
+}, {
+    "IlceAdi": "TARAKLI",
+    "IlceAdiEn": "TARAKLI",
+    "IlceID": "9808"
+}, {
+    "IlceAdi": "19 MAYIS",
+    "IlceAdiEn": "19 MAYIS",
+    "IlceID": "9809"
+}, {
+    "IlceAdi": "ALAÇAM",
+    "IlceAdiEn": "ALACAM",
+    "IlceID": "9810"
+}, {
+    "IlceAdi": "ASARCIK",
+    "IlceAdiEn": "ASARCIK",
+    "IlceID": "9811"
+}, {
+    "IlceAdi": "ATAKUM",
+    "IlceAdiEn": "ATAKUM",
+    "IlceID": "17911"
+}, {
+    "IlceAdi": "AYVACIK",
+    "IlceAdiEn": "AYVACIK",
+    "IlceID": "9812"
+}, {
+    "IlceAdi": "BAFRA",
+    "IlceAdiEn": "BAFRA",
+    "IlceID": "9813"
+}, {
+    "IlceAdi": "ÇARŞAMBA",
+    "IlceAdiEn": "ÇARŞAMBA",
+    "IlceID": "9814"
+}, {
+    "IlceAdi": "HAVZA",
+    "IlceAdiEn": "HAVZA",
+    "IlceID": "9815"
+}, {
+    "IlceAdi": "KAVAK",
+    "IlceAdiEn": "KAVAK",
+    "IlceID": "9816"
+}, {
+    "IlceAdi": "LADİK",
+    "IlceAdiEn": "LADİK",
+    "IlceID": "9817"
+}, {
+    "IlceAdi": "SALIPAZARI",
+    "IlceAdiEn": "SALIPAZARI",
+    "IlceID": "9818"
+}, {
+    "IlceAdi": "SAMSUN",
+    "IlceAdiEn": "SAMSUN",
+    "IlceID": "9819"
+}, {
+    "IlceAdi": "TEKKEKÖY",
+    "IlceAdiEn": "TEKKEKÖY",
+    "IlceID": "9820"
+}, {
+    "IlceAdi": "TERME",
+    "IlceAdiEn": "TERME",
+    "IlceID": "9821"
+}, {
+    "IlceAdi": "VEZİRKÖPRÜ",
+    "IlceAdiEn": "VEZİRKÖPRÜ",
+    "IlceID": "9822"
+}, {
+    "IlceAdi": "YAKAKENT",
+    "IlceAdiEn": "YAKAKENT",
+    "IlceID": "9823"
+}, {
+    "IlceAdi": "AKÇAKALE",
+    "IlceAdiEn": "AKCAKALE",
+    "IlceID": "9824"
+}, {
+    "IlceAdi": "BİRECİK",
+    "IlceAdiEn": "BIRECIK",
+    "IlceID": "9825"
+}, {
+    "IlceAdi": "BOZOVA",
+    "IlceAdiEn": "BOZOVA",
+    "IlceID": "9826"
+}, {
+    "IlceAdi": "CEYLANPINAR",
+    "IlceAdiEn": "CEYLANPINAR",
+    "IlceID": "9827"
+}, {
+    "IlceAdi": "HALFETİ",
+    "IlceAdiEn": "HALFETI",
+    "IlceID": "9828"
+}, {
+    "IlceAdi": "HARRAN",
+    "IlceAdiEn": "HARRAN",
+    "IlceID": "9829"
+}, {
+    "IlceAdi": "HİLVAN",
+    "IlceAdiEn": "HILVAN",
+    "IlceID": "9830"
+}, {
+    "IlceAdi": "ŞANLIURFA",
+    "IlceAdiEn": "SANLIURFA",
+    "IlceID": "9831"
+}, {
+    "IlceAdi": "SİVEREK",
+    "IlceAdiEn": "SIVEREK",
+    "IlceID": "9832"
+}, {
+    "IlceAdi": "SURUÇ",
+    "IlceAdiEn": "SURUC",
+    "IlceID": "9833"
+}, {
+    "IlceAdi": "VİRANŞEHİR",
+    "IlceAdiEn": "VIRANSEHIR",
+    "IlceID": "9834"
+}, {
+    "IlceAdi": "BAYKAN",
+    "IlceAdiEn": "BAYKAN",
+    "IlceID": "9835"
+}, {
+    "IlceAdi": "ERUH",
+    "IlceAdiEn": "ERUH",
+    "IlceID": "9836"
+}, {
+    "IlceAdi": "KURTALAN",
+    "IlceAdiEn": "KURTALAN",
+    "IlceID": "9837"
+}, {
+    "IlceAdi": "PERVARİ",
+    "IlceAdiEn": "PERVARI",
+    "IlceID": "9838"
+}, {
+    "IlceAdi": "SİİRT",
+    "IlceAdiEn": "SIIRT",
+    "IlceID": "9839"
+}, {
+    "IlceAdi": "ŞIRVAN",
+    "IlceAdiEn": "ŞIRVAN",
+    "IlceID": "17888"
+}, {
+    "IlceAdi": "AYANCIK",
+    "IlceAdiEn": "AYANCIK",
+    "IlceID": "9840"
+}, {
+    "IlceAdi": "BOYABAT",
+    "IlceAdiEn": "BOYABAT",
+    "IlceID": "9841"
+}, {
+    "IlceAdi": "DİKMEN",
+    "IlceAdiEn": "DİKMEN",
+    "IlceID": "9842"
+}, {
+    "IlceAdi": "DURAĞAN",
+    "IlceAdiEn": "DURAĞAN",
+    "IlceID": "9843"
+}, {
+    "IlceAdi": "ERFELEK",
+    "IlceAdiEn": "ERFELEK",
+    "IlceID": "9844"
+}, {
+    "IlceAdi": "GERZE",
+    "IlceAdiEn": "GERZE",
+    "IlceID": "9845"
+}, {
+    "IlceAdi": "SARAYDÜZÜ",
+    "IlceAdiEn": "SARAYDÜZÜ",
+    "IlceID": "9846"
+}, {
+    "IlceAdi": "SİNOP",
+    "IlceAdiEn": "SINOP",
+    "IlceID": "9847"
+}, {
+    "IlceAdi": "TÜRKELİ",
+    "IlceAdiEn": "TÜRKELİ",
+    "IlceID": "9848"
+}, {
+    "IlceAdi": "BEYTÜŞŞEBAP",
+    "IlceAdiEn": "BEYTUSSEBAP",
+    "IlceID": "9849"
+}, {
+    "IlceAdi": "CİZRE",
+    "IlceAdiEn": "CIZRE",
+    "IlceID": "9850"
+}, {
+    "IlceAdi": "GÜÇLÜKONAK",
+    "IlceAdiEn": "GUCLUKONAK",
+    "IlceID": "9851"
+}, {
+    "IlceAdi": "İDİL",
+    "IlceAdiEn": "IDIL",
+    "IlceID": "9852"
+}, {
+    "IlceAdi": "SİLOPİ",
+    "IlceAdiEn": "SILOPI",
+    "IlceID": "9853"
+}, {
+    "IlceAdi": "ŞIRNAK",
+    "IlceAdiEn": "SIRNAK",
+    "IlceID": "9854"
+}, {
+    "IlceAdi": "ULUDERE",
+    "IlceAdiEn": "ULUDERE",
+    "IlceID": "9855"
+}, {
+    "IlceAdi": "AKINCILAR",
+    "IlceAdiEn": "AKINCILAR",
+    "IlceID": "9856"
+}, {
+    "IlceAdi": "ALTINYAYLA",
+    "IlceAdiEn": "ALTINYAYLA",
+    "IlceID": "9857"
+}, {
+    "IlceAdi": "DİVRİĞİ",
+    "IlceAdiEn": "DIVRIGI",
+    "IlceID": "9858"
+}, {
+    "IlceAdi": "DOĞANŞAR",
+    "IlceAdiEn": "DOGANSAR",
+    "IlceID": "9859"
+}, {
+    "IlceAdi": "GEMEREK",
+    "IlceAdiEn": "GEMEREK",
+    "IlceID": "9860"
+}, {
+    "IlceAdi": "GÖLOVA",
+    "IlceAdiEn": "GOLOVA",
+    "IlceID": "9861"
+}, {
+    "IlceAdi": "GÜRÜN",
+    "IlceAdiEn": "GURUN",
+    "IlceID": "9862"
+}, {
+    "IlceAdi": "HAFİK",
+    "IlceAdiEn": "HAFIK",
+    "IlceID": "9863"
+}, {
+    "IlceAdi": "İMRANLI",
+    "IlceAdiEn": "IMRANLI",
+    "IlceID": "9864"
+}, {
+    "IlceAdi": "KANGAL",
+    "IlceAdiEn": "KANGAL",
+    "IlceID": "9865"
+}, {
+    "IlceAdi": "KOYULHİSAR",
+    "IlceAdiEn": "KOYULHISAR",
+    "IlceID": "9866"
+}, {
+    "IlceAdi": "ŞARKIŞLA",
+    "IlceAdiEn": "SARKISLA",
+    "IlceID": "9867"
+}, {
+    "IlceAdi": "SİVAS",
+    "IlceAdiEn": "SIVAS",
+    "IlceID": "9868"
+}, {
+    "IlceAdi": "SUŞEHRİ",
+    "IlceAdiEn": "SUSEHRI",
+    "IlceID": "9869"
+}, {
+    "IlceAdi": "ULAŞ",
+    "IlceAdiEn": "ULAŞ",
+    "IlceID": "17920"
+}, {
+    "IlceAdi": "YILDIZELİ",
+    "IlceAdiEn": "YILDIZELI",
+    "IlceID": "9870"
+}, {
+    "IlceAdi": "ZARA",
+    "IlceAdiEn": "ZARA",
+    "IlceID": "9871"
+}, {
+    "IlceAdi": "ÇERKEZKÖY",
+    "IlceAdiEn": "CERKEZKOY",
+    "IlceID": "9872"
+}, {
+    "IlceAdi": "ÇORLU",
+    "IlceAdiEn": "CORLU",
+    "IlceID": "9873"
+}, {
+    "IlceAdi": "ERGENE",
+    "IlceAdiEn": "ERGENE",
+    "IlceID": "17904"
+}, {
+    "IlceAdi": "HAYRABOLU",
+    "IlceAdiEn": "HAYRABOLU",
+    "IlceID": "9874"
+}, {
+    "IlceAdi": "KAPAKLI",
+    "IlceAdiEn": "KAPAKLI",
+    "IlceID": "17905"
+}, {
+    "IlceAdi": "M.EREĞLİSİ",
+    "IlceAdiEn": "M.EREGLISI",
+    "IlceID": "9875"
+}, {
+    "IlceAdi": "MALKARA",
+    "IlceAdiEn": "MALKARA",
+    "IlceID": "9876"
+}, {
+    "IlceAdi": "SARAY",
+    "IlceAdiEn": "SARAY",
+    "IlceID": "9877"
+}, {
+    "IlceAdi": "ŞARKÖY",
+    "IlceAdiEn": "SARKOY",
+    "IlceID": "9878"
+}, {
+    "IlceAdi": "TEKİRDAĞ",
+    "IlceAdiEn": "TEKIRDAG",
+    "IlceID": "9879"
+}, {
+    "IlceAdi": "ALMUS",
+    "IlceAdiEn": "ALMUS",
+    "IlceID": "9880"
+}, {
+    "IlceAdi": "ARTOVA",
+    "IlceAdiEn": "ARTOVA",
+    "IlceID": "9881"
+}, {
+    "IlceAdi": "BAŞÇİFTLİK",
+    "IlceAdiEn": "BAŞÇİFTLİK",
+    "IlceID": "9882"
+}, {
+    "IlceAdi": "ERBAA",
+    "IlceAdiEn": "ERBAA",
+    "IlceID": "17910"
+}, {
+    "IlceAdi": "NİKSAR",
+    "IlceAdiEn": "NİKSAR",
+    "IlceID": "9883"
+}, {
+    "IlceAdi": "PAZAR",
+    "IlceAdiEn": "PAZAR",
+    "IlceID": "9884"
+}, {
+    "IlceAdi": "REŞADİYE",
+    "IlceAdiEn": "REŞADİYE",
+    "IlceID": "9885"
+}, {
+    "IlceAdi": "SULUSARAY",
+    "IlceAdiEn": "SULUSARAY",
+    "IlceID": "9886"
+}, {
+    "IlceAdi": "TOKAT",
+    "IlceAdiEn": "TOKAT",
+    "IlceID": "9887"
+}, {
+    "IlceAdi": "TURHAL",
+    "IlceAdiEn": "TURHAL",
+    "IlceID": "9888"
+}, {
+    "IlceAdi": "YEŞİLYURT",
+    "IlceAdiEn": "YEŞİLYURT",
+    "IlceID": "9889"
+}, {
+    "IlceAdi": "ZİLE",
+    "IlceAdiEn": "ZİLE",
+    "IlceID": "9890"
+}, {
+    "IlceAdi": "AKÇAABAT",
+    "IlceAdiEn": "AKCAABAT",
+    "IlceID": "9891"
+}, {
+    "IlceAdi": "ARAKLI",
+    "IlceAdiEn": "ARAKLI",
+    "IlceID": "9892"
+}, {
+    "IlceAdi": "ARSİN",
+    "IlceAdiEn": "ARSIN",
+    "IlceID": "9893"
+}, {
+    "IlceAdi": "BEŞİKDÜZÜ",
+    "IlceAdiEn": "BESIKDUZU",
+    "IlceID": "9894"
+}, {
+    "IlceAdi": "ÇARŞIBAŞI",
+    "IlceAdiEn": "CARSIBASI",
+    "IlceID": "9895"
+}, {
+    "IlceAdi": "ÇAYKARA",
+    "IlceAdiEn": "CAYKARA",
+    "IlceID": "9896"
+}, {
+    "IlceAdi": "DERNEKPAZARI",
+    "IlceAdiEn": "DERNEKPAZARI",
+    "IlceID": "9897"
+}, {
+    "IlceAdi": "DÜZKÖY",
+    "IlceAdiEn": "DUZKOY",
+    "IlceID": "9898"
+}, {
+    "IlceAdi": "HAYRAT",
+    "IlceAdiEn": "HAYRAT",
+    "IlceID": "9899"
+}, {
+    "IlceAdi": "KÖPRÜBAŞI",
+    "IlceAdiEn": "KOPRUBASI",
+    "IlceID": "9900"
+}, {
+    "IlceAdi": "OF",
+    "IlceAdiEn": "OF",
+    "IlceID": "9901"
+}, {
+    "IlceAdi": "ŞALPAZARI",
+    "IlceAdiEn": "SALPAZARI",
+    "IlceID": "9902"
+}, {
+    "IlceAdi": "SÜRMENE",
+    "IlceAdiEn": "SURMENE",
+    "IlceID": "9903"
+}, {
+    "IlceAdi": "TONYA",
+    "IlceAdiEn": "TONYA",
+    "IlceID": "9904"
+}, {
+    "IlceAdi": "TRABZON",
+    "IlceAdiEn": "TRABZON",
+    "IlceID": "9905"
+}, {
+    "IlceAdi": "VAKFIKEBİR",
+    "IlceAdiEn": "VAKFIKEBIR",
+    "IlceID": "9906"
+}, {
+    "IlceAdi": "YOMRA",
+    "IlceAdiEn": "YOMRA",
+    "IlceID": "9907"
+}, {
+    "IlceAdi": "ÇEMİŞGEZEK",
+    "IlceAdiEn": "CEMISGEZEK",
+    "IlceID": "9908"
+}, {
+    "IlceAdi": "HOZAT",
+    "IlceAdiEn": "HOZAT",
+    "IlceID": "9909"
+}, {
+    "IlceAdi": "NAZİMİYE",
+    "IlceAdiEn": "NAZIMIYE",
+    "IlceID": "9910"
+}, {
+    "IlceAdi": "OVACIK",
+    "IlceAdiEn": "OVACIK",
+    "IlceID": "9911"
+}, {
+    "IlceAdi": "PERTEK",
+    "IlceAdiEn": "PERTEK",
+    "IlceID": "9912"
+}, {
+    "IlceAdi": "PÜLÜMÜR",
+    "IlceAdiEn": "PULUMUR",
+    "IlceID": "9913"
+}, {
+    "IlceAdi": "TUNCELİ",
+    "IlceAdiEn": "TUNCELI",
+    "IlceID": "9914"
+}, {
+    "IlceAdi": "BANAZ",
+    "IlceAdiEn": "BANAZ",
+    "IlceID": "9915"
+}, {
+    "IlceAdi": "ESME",
+    "IlceAdiEn": "ESME",
+    "IlceID": "9916"
+}, {
+    "IlceAdi": "KARAHALLI",
+    "IlceAdiEn": "KARAHALLI",
+    "IlceID": "9917"
+}, {
+    "IlceAdi": "SİVASLI",
+    "IlceAdiEn": "SIVASLI",
+    "IlceID": "9918"
+}, {
+    "IlceAdi": "ULUBEY",
+    "IlceAdiEn": "USAK",
+    "IlceID": "17909"
+}, {
+    "IlceAdi": "UŞAK",
+    "IlceAdiEn": "USAK",
+    "IlceID": "9919"
+}, {
+    "IlceAdi": "ALTINOVA",
+    "IlceAdiEn": "ALTINOVA",
+    "IlceID": "9931"
+}, {
+    "IlceAdi": "ARMUTLU",
+    "IlceAdiEn": "ARMUTLU",
+    "IlceID": "9932"
+}, {
+    "IlceAdi": "ÇINARCIK",
+    "IlceAdiEn": "CINARCIK",
+    "IlceID": "9933"
+}, {
+    "IlceAdi": "TERMAL",
+    "IlceAdiEn": "TERMAL",
+    "IlceID": "9934"
+}, {
+    "IlceAdi": "YALOVA",
+    "IlceAdiEn": "YALOVA",
+    "IlceID": "9935"
+}, {
+    "IlceAdi": "AKDAĞMADENİ",
+    "IlceAdiEn": "AKDAGMADENI",
+    "IlceID": "9936"
+}, {
+    "IlceAdi": "AYDINCIK",
+    "IlceAdiEn": "AYDINCIK",
+    "IlceID": "9937"
+}, {
+    "IlceAdi": "BOĞAZLIYAN",
+    "IlceAdiEn": "BOGAZLIYAN",
+    "IlceID": "9938"
+}, {
+    "IlceAdi": "ÇANDIR",
+    "IlceAdiEn": "CANDIR",
+    "IlceID": "9939"
+}, {
+    "IlceAdi": "ÇAYIRALAN",
+    "IlceAdiEn": "CAYIRALAN",
+    "IlceID": "9940"
+}, {
+    "IlceAdi": "ÇEKEREK",
+    "IlceAdiEn": "CEKEREK",
+    "IlceID": "9941"
+}, {
+    "IlceAdi": "KADIŞEHRİ",
+    "IlceAdiEn": "KADISEHRI",
+    "IlceID": "9942"
+}, {
+    "IlceAdi": "SARAYKENT",
+    "IlceAdiEn": "SARAYKENT",
+    "IlceID": "9943"
+}, {
+    "IlceAdi": "SARIKAYA",
+    "IlceAdiEn": "SARIKAYA",
+    "IlceID": "9944"
+}, {
+    "IlceAdi": "ŞEFAATLİ",
+    "IlceAdiEn": "ŞEFAATLİ",
+    "IlceID": "17879"
+}, {
+    "IlceAdi": "SORGUN",
+    "IlceAdiEn": "SORGUN",
+    "IlceID": "9946"
+}, {
+    "IlceAdi": "YENİFAKILI",
+    "IlceAdiEn": "YENIFAKILI",
+    "IlceID": "9947"
+}, {
+    "IlceAdi": "YERKÖY",
+    "IlceAdiEn": "YERKOY",
+    "IlceID": "9948"
+}, {
+    "IlceAdi": "YOZGAT",
+    "IlceAdiEn": "YOZGAT",
+    "IlceID": "9949"
+}, {
+    "IlceAdi": "ALAPLI",
+    "IlceAdiEn": "ALAPLI",
+    "IlceID": "9950"
+}, {
+    "IlceAdi": "ÇAYCUMA",
+    "IlceAdiEn": "CAYCUMA",
+    "IlceID": "9951"
+}, {
+    "IlceAdi": "DEVREK",
+    "IlceAdiEn": "DEVREK",
+    "IlceID": "9952"
+}, {
+    "IlceAdi": "GÖKÇEBEY",
+    "IlceAdiEn": "GOKCEBEY",
+    "IlceID": "9953"
+}, {
+    "IlceAdi": "KARADENİZ EREĞLİ",
+    "IlceAdiEn": "KARADENIZ EREGLI",
+    "IlceID": "9954"
+}, {
+    "IlceAdi": "ZONGULDAK",
+    "IlceAdiEn": "ZONGULDAK",
+    "IlceID": "9955"
+}]
+
+module.exports = {
+    cities
+};
