@@ -75,7 +75,7 @@ const cronPrayerTimes = (client, cityToFind) => {
             }
         });
 
-        client.channels.cache.find(({ name }) => name === `gebedstijden-${city}`).send(embed);
+        client.channels.cache.find(({ name }) => name === `gebedstijden-${cityName}`).send(embed);
     }, null, false, 'Europe/Amsterdam');
 
     return cronjob;
