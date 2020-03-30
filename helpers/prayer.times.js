@@ -4,6 +4,7 @@ const fetch = require('isomorphic-fetch');
 const { formatDate } = require('./date');
 
 const finCity = (cities, cityToFind) => {
+    cityToFind = cityToFind.toLowerCase();
     const city = cities.find(({ IlceAdiEn, IlceAdi }) => IlceAdiEn.toLowerCase() === cityToFind || IlceAdi.toLowerCase() === cityToFind)
     return city;
 };

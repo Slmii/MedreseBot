@@ -134,7 +134,6 @@ module.exports = {
 
         const embed = setEmbed({
             title: `${surahData[surahNr].ename} | ${surahData[surahNr].tname} | سورة ${surahData[surahNr].name}`,
-            thumbnail: 'https://lh3.googleusercontent.com/proxy/TO8OOwWFIwWgWjlIc47qzSK3ysdv3qvlKg84Svj6XryQmbGGSWPaVkrihdN1Ci3K6NkVrc3AWquhjFTQoOplQktLlqDdbumwjCVxLd2hh78lASy931wriRgsMbVSRXraAdvi_miA8SNuwyO1Lw',
             fields,
             footer: {
                 text: `${message.guild.name} | Discord ID: ${message.guild.member(message.author).user.id}`,

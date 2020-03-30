@@ -43,7 +43,8 @@ module.exports = {
         }
 
         // Deconstruct valus from the city object
-        const { IlceID: cityId, IlceAdiEn: cityName } = city;
+        let { IlceID: cityId, IlceAdiEn: cityName } = city;
+        cityName = cityName.toLowerCase();
 
         // If there is more than 1 argument, then the date from/to are given
         // Get prayer times from a specific city
@@ -70,7 +71,7 @@ module.exports = {
 
         // If there is no date(s) from/to then get by default the prayer times from today
         const embed = setEmbed({
-            title: `Gebedstijden voor \`${cityName.toLowerCase()}\``,
+            title: `Gebedstijden voor \`${cityName}\``,
             fields: [
                 {
                     name: ':calendar_spiral: Datum',
