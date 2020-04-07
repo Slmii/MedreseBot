@@ -7,7 +7,7 @@ const METHOD_NAME  = 'verwijderen';
 module.exports = {
     active: true,
     name: METHOD_NAME,
-    description: 'Verwijder een rol',
+    description: 'Rol verwijderen van jezelf',
     args: true,
     maxArgs: 1,
     usages: [

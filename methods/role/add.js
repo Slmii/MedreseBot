@@ -8,7 +8,7 @@ module.exports = {
     active: true,
     admin: true,
     name: METHOD_NAME,
-    description: 'Voeg een rol toe aan een gebruiker.',
+    description: 'Rol toewijzen aan een tagged gebruiker.',
     args: true,
     minArgs: 2,
     maxArgs: 2,

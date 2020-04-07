@@ -13,7 +13,7 @@ const countries = [
 module.exports = {
     active: true,
     name: COMMAND_NAME,
-    description: `Toon gebedstijden van vandaag of van een specifiek datum in de toekomst. Datum mag maximaal 30 dagen in de toekomst zijn. Zonder datum worden de tijden altijd van vandaag weergeven. \nBeschikbaar voor de volgende landen: \n${countries.map(country => `* ${country}`).join('\n')}`,
+    description: `Toon gebedstijden van vandaag of van een aangegeven datum in de toekomst. Datum mag maximaal 30 dagen in de toekomst zijn. Zonder een aangegeven datum worden de tijden altijd van vandaag weergeven.\n\n**Gebruik geen spaties voor plaatsen die bestaan uit meerdere woorden.**\n\nBeschikbaar voor de volgende landen: \n${countries.map(country => `* ${country}`).join('\n')}`,
     args: true,
     minArgs: 1,
     maxArgs: 2,
@@ -23,13 +23,15 @@ module.exports = {
     examples: [
         `${COMMAND_NAME} emmen`,
         `${COMMAND_NAME} emmen 05.01.2020`,
+        `${COMMAND_NAME} denhaag 05.01.2020`,
+        `${COMMAND_NAME} denhelder 05.01.2020`
     ],
     aliases: [
         'prayertimes',
         'prayer',
         'gebed'
     ],
-    cooldown: 60,
+    cooldown: 20,
 	async execute(message, args) {
         const cityToFind = args[0].toLowerCase().trim();
         const city       = finCity(cities, cityToFind);

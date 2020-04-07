@@ -30,7 +30,7 @@ module.exports = {
         // Sort commands
         const commandNames = sortByProperty(activeCommands, 'name').map(({ name }) => name);
         // Get the entered command name for help
-        const commandName = args[0].toLowerCase();
+        const commandName = args[0] ? args[0].toLowerCase() : '';
 
         if (!args.length) {
             const embed = setEmbed({

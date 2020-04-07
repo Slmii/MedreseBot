@@ -19,7 +19,7 @@ const surahData  = {};
 })();
 
 const COMMAND_NAME = 'quran';
-const maxAyahs = 5;
+const maxAyahs = 10;
 const languages = [
     {
         name: 'Engels',
@@ -32,6 +32,10 @@ const languages = [
     {
         name: 'Turks',
         abbr: 'tr'
+    },
+    {
+        name: 'Nederlands',
+        abbr: 'nl'
     }
 ];
 
@@ -115,7 +119,7 @@ module.exports = {
 
             fields = ayahs.map(ayah => ({
                 // Increment the ayahFromNr so we can show the correct number of Ayah
-                name: `Ayah: ${ayahFromNr++}`,
+                name: `${surahNr}:${ayahFromNr++}`,
                 value: ayah
             }));
         } else {
@@ -126,7 +130,7 @@ module.exports = {
 
             fields = [
                 {
-                    name: `Ayah: ${ayahNr}`,
+                    name: `${surahNr}:${ayahNr}`,
                     value: ayah
                 }
             ]

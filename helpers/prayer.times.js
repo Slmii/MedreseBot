@@ -5,7 +5,7 @@ const { formatDate } = require('./date');
 
 const finCity = (cities, cityToFind) => {
     cityToFind = cityToFind.toLowerCase();
-    const city = cities.find(({ IlceAdiEn, IlceAdi }) => IlceAdiEn.toLowerCase() === cityToFind || IlceAdi.toLowerCase() === cityToFind)
+    const city = cities.find(({ IlceAdiEn, IlceAdi }) => IlceAdiEn.replace(' ', '').toLowerCase() === cityToFind || IlceAdi.replace(' ', '').toLowerCase() === cityToFind)
     return city;
 };
 
