@@ -51,7 +51,8 @@ module.exports = {
                         name: `Rollen [${roles.map(role => role).length}]`,
                         value: sortByProperty(roles, 'name').map(role => role).join(' ')
                     }
-                ]
+                ],
+                message
             });
     
             return message.channel.send(embed);
@@ -86,7 +87,8 @@ module.exports = {
                     name: `Rollen [${updatedRoles.map(role => role).length}]`,
                     value: sortByProperty(updatedRoles, 'name').map(role => role).join(' ')
                 }
-            ]
+            ],
+            message
         });
 
         return message.channel.send(embed);

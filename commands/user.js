@@ -1,6 +1,5 @@
 const { formatDate }              = require('../helpers/date');
 const { setEmbed, setErrorEmbed } = require('../helpers/embed');
-const { renderResults }           = require('../helpers/utils');
 
 const COMMAND_NAME = 'userinfo';
 
@@ -66,10 +65,7 @@ module.exports = {
                     value: member.roles.cache.map(role => role).join(' ')
                 },
             ],
-            footer: {
-                text: `${message.guild.name} | Discord ID: ${member.user.id}`,
-                iconURL: message.guild.iconURL()
-            }
+            message
         });
 
         return message.channel.send(embed);        

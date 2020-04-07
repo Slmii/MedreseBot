@@ -114,10 +114,7 @@ module.exports = {
                 },
 
             ],
-            footer: {
-                text: `${message.guild.name} | Discord ID: ${message.guild.member(message.author).user.id}`,
-                iconURL: message.guild.iconURL()
-            }
+            message
         });
 
         return message.channel.send(embed);

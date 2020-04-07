@@ -29,7 +29,8 @@ module.exports = {
     
                 const embed = setEmbed({
                     title,
-                    description: store
+                    description: store,
+                    message
                 });
     
                 return message.channel.send(embed);
@@ -38,7 +39,8 @@ module.exports = {
             const embed = setEmbed({
                 title: `Boek \`${bookCommand}\` niet gevonden.`,
                 description: 'De onderstaande boeken zijn beschikbaar:',
-                fields: renderOrderBooksFields
+                fields: renderOrderBooksFields,
+                message
             });
     
             return message.channel.send(embed);
@@ -47,7 +49,8 @@ module.exports = {
         const embed = setEmbed({
             title: 'De boeken zijn te bestellen via https://www.lucideinkt.nl.',
             description: 'Gebruik `.bestellen [boek]` voor een specifiek boek.',
-            fields: renderOrderBooksFields
+            fields: renderOrderBooksFields,
+            message
         });
 
         return message.channel.send(embed);

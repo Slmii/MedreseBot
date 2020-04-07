@@ -133,16 +133,13 @@ module.exports = {
                     name: `${surahNr}:${ayahNr}`,
                     value: ayah
                 }
-            ]
+            ];
         }
 
         const embed = setEmbed({
             title: `${surahData[surahNr].ename} | ${surahData[surahNr].tname} | سورة ${surahData[surahNr].name}`,
             fields,
-            footer: {
-                text: `${message.guild.name} | Discord ID: ${message.guild.member(message.author).user.id}`,
-                iconURL: message.guild.iconURL()
-            }
+            message
         });
 
         return message.channel.send(embed);

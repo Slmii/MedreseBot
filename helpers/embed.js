@@ -7,7 +7,7 @@ const COLOR  = [148,54,52];
 const setEmbed = config => {
     const embed = new Discord.MessageEmbed();
 
-    const { author, title, description, fields, thumbnail, footer } = config;
+    const { author, title, description, fields, thumbnail, message } = config;
     
     if (author) {
         embed.setAuthor(author.name, author.iconURL || '');
@@ -33,8 +33,11 @@ const setEmbed = config => {
         embed.setThumbnail(thumbnail);
     }
 
-    if (footer) {
-        embed.setFooter(footer.text || '', footer.iconURL);
+    if (message) {
+        embed.setFooter(
+            `${message.guild.name} | Discord ID: ${message.guild.member(message.author).user.id}`, 
+            message.guild.iconURL()
+        );
     }
 
     embed

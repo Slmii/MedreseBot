@@ -21,7 +21,8 @@ module.exports = {
         const embed = setEmbed({
             title: 'Risale i Nur Boeken.',
             description: 'De boeken zijn gratis online te lezen.',
-            fields: renderReadBooksFields
+            fields: renderReadBooksFields,
+            message
         });
     
         return message.channel.send(embed);
