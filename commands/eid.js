@@ -65,7 +65,7 @@ module.exports = {
             title: `Eid gebedstijden voor \`${cityName}\``,
             fields: [
                 {
-                    name: '**Eid al-Fitr**',
+                    name: 'Eid al-Fitr',
                     value: ':mosque:\u200B',
                     inline: true
                 },
@@ -83,7 +83,7 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: '**Eid al-Adha**',
+                    name: 'Eid al-Adha',
                     value: ':goat:\u200B',
                     inline: true
                 },

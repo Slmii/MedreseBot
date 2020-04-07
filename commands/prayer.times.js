@@ -90,27 +90,27 @@ module.exports = {
                 },
                 {
                     name: 'Fajr',
-                    value: `**${prayerTime.Imsak}**`
+                    value: prayerTime.Imsak
                 },
                 {
                     name: 'Zonsopkomst',
-                    value: `**${prayerTime.Gunes}**`
+                    value: prayerTime.Gunes
                 },
                 {
                     name: 'Dhuhr',
-                    value: `**${prayerTime.Ogle}**`
+                    value: prayerTime.Ogle
                 },
                 {
                     name: 'Asr',
-                    value: `**${prayerTime.Ikindi}**`
+                    value: prayerTime.Ikindi
                 },
                 {
                     name: 'Maghrib',
-                    value: `**${prayerTime.Aksam}**`
+                    value: prayerTime.Aksam
                 },
                 {
                     name: 'Isha',
-                    value: `**${prayerTime.Yatsi}**`
+                    value: prayerTime.Yatsi
                 },
 
             ],
