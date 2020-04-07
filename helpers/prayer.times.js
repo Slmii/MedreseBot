@@ -28,12 +28,24 @@ const getPrayerTimes = async ({ cityId, date }) => {
         });
     } catch (error) {
         console.log(error);
-        return error
+        return error;
+    }
+};
+
+const getEidTimes = async ({ cityId }) => {
+    try {
+        const response = await fetch(`https://ezanvakti.herokuapp.com/bayram?ilce=${cityId}`);
+        const data     = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+        return error;
     }
 };
 
 module.exports = {
     finCity,
-    getPrayerTimes
+    getPrayerTimes,
+    getEidTimes
 };
     

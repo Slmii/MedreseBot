@@ -84,7 +84,7 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: ':kaaba: Hijri',
+                    name: ':mosque: Hijri',
                     value: prayerTime.HicriTarihUzun,
                     inline: true
                 },
