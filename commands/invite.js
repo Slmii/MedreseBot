@@ -1,7 +1,6 @@
 const COMMAND_NAME = 'invite';
 
 module.exports = {
-    admin: true,
     active: true,
     name: COMMAND_NAME,
     description: 'Uitnodiging voor de server.',
